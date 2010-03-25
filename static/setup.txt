@@ -1,0 +1,414 @@
+plugin.tx_sexybookmarks_pi1 {
+	jQueryNoConflict = {$plugin.tx_sexybookmarks_pi1.jQueryNoConflict}
+	jsInFooter = {$plugin.tx_sexybookmarks_pi1.jsInFooter}
+
+	jQueryLibrary = {$plugin.tx_sexybookmarks_pi1.file.jQueryLibrary}
+	jQueryEasing = {$plugin.tx_sexybookmarks_pi1.file.jQueryEasing}
+	jsFile = {$plugin.tx_sexybookmarks_pi1.file.jsFile}
+	cssFile = {$plugin.tx_sexybookmarks_pi1.file.cssFile}
+
+	bookmarkCenter = {$plugin.tx_sexybookmarks_pi1.bookmarkCenter}
+	bookmarkExpandable = {$plugin.tx_sexybookmarks_pi1.bookmarkExpandable}
+	bookmarkBackground = {$plugin.tx_sexybookmarks_pi1.bookmarkBackground}
+
+	bookmarks = {$plugin.tx_sexybookmarks_pi1.bookmarks}
+	
+	bookmarkConf {
+		misterwong = COA
+		misterwong {
+			10 = TEXT
+			10.value = <li class="sexy-misterwong">
+			20 = COA
+			20.htmlSpecialChars = 1
+			20.wrap = <a href="|" target="_blank">
+			20 {
+				10 = TEXT
+				10.value = http://www.mister-wong.de/index.php?action=addurl
+				20 = COA
+				20.wrap = &bm_url=|
+				20 {
+					10 = TEXT
+					10.data = getIndpEnv:TYPO3_SITE_URL
+					10.rawUrlEncode = 1
+					20 = TEXT
+					20.typolink.value = x
+					20.typolink.parameter.data = TSFE:id
+					20.typolink.returnLast = url
+					20.rawUrlEncode = 1
+				}
+				30 = TEXT
+				30.wrap = &bm_description=|
+				30.field = subtitle // title
+				30.rawUrlEncode = 1
+			}
+			30 = TEXT
+			30.value = Share this on Mr. Wong
+			30 = TEXT
+			30.value = </a></li>
+		}
+		
+		twitter = COA
+		twitter {
+			10 = TEXT
+			10.value = <li class="sexy-twitter">
+			20 = COA
+			20.htmlSpecialChars = 1
+			20.wrap = <a href="|" target="_blank">
+			20 {
+				10 = TEXT
+				10.value = http://twitter.com/home
+				20 = COA
+				20.wrap = ?status=|
+				20 {
+					10 = TEXT
+					10.data = getIndpEnv:TYPO3_SITE_URL
+					10.rawUrlEncode = 1
+					20 = TEXT
+					20.typolink.value = x
+					20.typolink.parameter.data = TSFE:id
+					20.typolink.returnLast = url
+					20.rawUrlEncode = 1
+				}
+				30 = TEXT
+				30.wrap = %20|
+				30.field = subtitle // title
+				30.rawUrlEncode = 1
+			}
+			30 = TEXT
+			30.value = Share this on Twitter
+			40 = TEXT
+			40.value = </a></li>
+		}
+		
+		delicious = COA
+		delicious {
+			10 = TEXT
+			10.value = <li class="sexy-delicious">
+			20 = COA
+			20.htmlSpecialChars = 1
+			20.wrap = <a href="|" target="_blank">
+			20 {
+				10 = TEXT
+				10.value = http://del.icio.us/post
+				20 = COA
+				20.wrap = ?url=|
+				20 {
+					10 = TEXT
+					10.data = getIndpEnv:TYPO3_SITE_URL
+					10.rawUrlEncode = 1
+					20 = TEXT
+					20.typolink.value = x
+					20.typolink.parameter.data = TSFE:id
+					20.typolink.returnLast = url
+					20.rawUrlEncode = 1
+				}
+				30 = TEXT
+				30.wrap = &title=|
+				30.field = subtitle // title
+				30.rawUrlEncode = 1
+			}
+			30 = TEXT
+			30.value = Share this on del.icio.us
+			40 = TEXT
+			40.value = </a></li>
+		}
+		
+		digg = COA
+		digg {
+			10 = TEXT
+			10.value = <li class="sexy-digg">
+			20 = COA
+			20.htmlSpecialChars = 1
+			20.wrap = <a href="|" target="_blank">
+			20 {
+				10 = TEXT
+				10.value = http://digg.com/submit?phase=2
+				20 = COA
+				20.wrap = &url=|
+				20 {
+					10 = TEXT
+					10.data = getIndpEnv:TYPO3_SITE_URL
+					10.rawUrlEncode = 1
+					20 = TEXT
+					20.typolink.value = x
+					20.typolink.parameter.data = TSFE:id
+					20.typolink.returnLast = url
+					20.rawUrlEncode = 1
+				}
+				30 = TEXT
+				30.wrap = &title=|
+				30.field = title
+				30.rawUrlEncode = 1
+				40 = TEXT
+				40.wrap = &bm_description=|
+				40.field = subtitle // title
+				40.rawUrlEncode = 1
+			}
+			30 = TEXT
+			30.value = Share this on digg.us
+			40 = TEXT
+			40.value = </a></li>
+		}
+		
+		reddit = COA
+		reddit {
+			10 = TEXT
+			10.value = <li class="sexy-reddit">
+			20 = COA
+			20.htmlSpecialChars = 1
+			20.wrap = <a href="|" target="_blank">
+			20 {
+				10 = TEXT
+				10.value = http://reddit.com/submit
+				20 = COA
+				20.wrap = ?url=|
+				20 {
+					10 = TEXT
+					10.data = getIndpEnv:TYPO3_SITE_URL
+					10.rawUrlEncode = 1
+					20 = TEXT
+					20.typolink.value = x
+					20.typolink.parameter.data = TSFE:id
+					20.typolink.returnLast = url
+					20.rawUrlEncode = 1
+				}
+				30 = TEXT
+				30.wrap = &title=|
+				30.field = subtitle // title
+				30.rawUrlEncode = 1
+			}
+			30 = TEXT
+			30.value = Share this on reddit.com
+			40 = TEXT
+			40.value = </a></li>
+		}
+		
+		technorati = COA
+		technorati {
+			10 = TEXT
+			10.value = <li class="sexy-technorati">
+			20 = COA
+			20.htmlSpecialChars = 1
+			20.wrap = <a href="|" target="_blank">
+			20 {
+				10 = TEXT
+				10.value = http://technorati.com/faves/
+				20 = COA
+				20.wrap = ?add=|
+				20 {
+					10 = TEXT
+					10.data = getIndpEnv:TYPO3_SITE_URL
+					10.rawUrlEncode = 1
+					20 = TEXT
+					20.typolink.value = x
+					20.typolink.parameter.data = TSFE:id
+					20.typolink.returnLast = url
+					20.rawUrlEncode = 1
+				}
+			}
+			30 = TEXT
+			30.value = Share this on technorati.com
+			40 = TEXT
+			40.value = </a></li>
+		}
+		
+		google = COA
+		google {
+			10 = TEXT
+			10.value = <li class="sexy-google">
+			20 = COA
+			20.htmlSpecialChars = 1
+			20.wrap = <a href="|" target="_blank">
+			20 {
+				10 = TEXT
+				10.value = http://www.google.com/bookmarks/mark?op=add&hl=de&annotation=&labels=
+				20 = COA
+				20.wrap = &bkmk=|
+				20 {
+					10 = TEXT
+					10.data = getIndpEnv:TYPO3_SITE_URL
+					10.rawUrlEncode = 1
+					20 = TEXT
+					20.typolink.value = x
+					20.typolink.parameter.data = TSFE:id
+					20.typolink.returnLast = url
+					20.rawUrlEncode = 1
+				}
+				30 = TEXT
+				30.wrap = &title=|
+				30.field = subtitle // title
+				30.rawUrlEncode = 1
+			}
+			30 = TEXT
+			30.value = Share this on google.com
+			40 = TEXT
+			40.value = </a></li>
+		}
+		
+		facebook = COA
+		facebook {
+			10 = TEXT
+			10.value = <li class="sexy-facebook">
+			20 = COA
+			20.htmlSpecialChars = 1
+			20.wrap = <a href="|" target="_blank">
+			20 {
+				10 = TEXT
+				10.value = http://www.facebook.com/sharer.php
+				20 = COA
+				20.wrap = ?u=|
+				20 {
+					10 = TEXT
+					10.data = getIndpEnv:TYPO3_SITE_URL
+					10.rawUrlEncode = 1
+					20 = TEXT
+					20.typolink.value = x
+					20.typolink.parameter.data = TSFE:id
+					20.typolink.returnLast = url
+					20.rawUrlEncode = 1
+				}
+				30 = TEXT
+				30.wrap = &t=|
+				30.field = subtitle // title
+				30.rawUrlEncode = 1
+			}
+			30 = TEXT
+			30.value = Share this on facebook
+			40 = TEXT
+			40.value = </a></li>
+		}
+		
+		stumbleupon = COA
+		stumbleupon {
+			10 = TEXT
+			10.value = <li class="sexy-stumbleupon">
+			20 = COA
+			20.htmlSpecialChars = 1
+			20.wrap = <a href="|" target="_blank">
+			20 {
+				10 = TEXT
+				10.value = http://www.stumbleupon.com/submit
+				20 = COA
+				20.wrap = ?url=|
+				20 {
+					10 = TEXT
+					10.data = getIndpEnv:TYPO3_SITE_URL
+					10.rawUrlEncode = 1
+					20 = TEXT
+					20.typolink.value = x
+					20.typolink.parameter.data = TSFE:id
+					20.typolink.returnLast = url
+					20.rawUrlEncode = 1
+				}
+				30 = TEXT
+				30.wrap = &title=|
+				30.field = subtitle // title
+				30.rawUrlEncode = 1
+			}
+			30 = TEXT
+			30.value = Share this on facebook
+			40 = TEXT
+			40.value = </a></li>
+		}
+		
+		propeller = COA
+		propeller {
+			10 = TEXT
+			10.value = <li class="sexy-propeller">
+			20 = COA
+			20.htmlSpecialChars = 1
+			20.wrap = <a href="|" target="_blank">
+			20 {
+				10 = TEXT
+				10.value = http://www.propeller.com/submit/
+				20 = COA
+				20.wrap = ?U=|
+				20 {
+					10 = TEXT
+					10.data = getIndpEnv:TYPO3_SITE_URL
+					10.rawUrlEncode = 1
+					20 = TEXT
+					20.typolink.value = x
+					20.typolink.parameter.data = TSFE:id
+					20.typolink.returnLast = url
+					20.rawUrlEncode = 1
+				}
+				30 = TEXT
+				30.wrap = &T=|
+				30.field = subtitle // title
+				30.rawUrlEncode = 1
+			}
+			30 = TEXT
+			30.value = Share this on facebook
+			40 = TEXT
+			40.value = </a></li>
+		}
+		
+		newsvine = COA
+		newsvine {
+			10 = TEXT
+			10.value = <li class="sexy-newsvine">
+			20 = COA
+			20.htmlSpecialChars = 1
+			20.wrap = <a href="|" target="_blank">
+			20 {
+				10 = TEXT
+				10.value = http://www.newsvine.com/_wine/save?popoff=1&tags=
+				20 = COA
+				20.wrap = &u=|
+				20 {
+					10 = TEXT
+					10.data = getIndpEnv:TYPO3_SITE_URL
+					10.rawUrlEncode = 1
+					20 = TEXT
+					20.typolink.value = x
+					20.typolink.parameter.data = TSFE:id
+					20.typolink.returnLast = url
+					20.rawUrlEncode = 1
+				}
+				30 = TEXT
+				30.wrap = &blurb=|
+				30.field = subtitle // title
+				30.rawUrlEncode = 1
+			}
+			30 = TEXT
+			30.value = Share this on facebook
+			40 = TEXT
+			40.value = </a></li>
+		}
+		
+		jumptags = COA
+		jumptags {
+			10 = TEXT
+			10.value = <li class="sexy-jumptags">
+			20 = COA
+			20.htmlSpecialChars = 1
+			20.wrap = <a href="|" target="_blank">
+			20 {
+				10 = TEXT
+				10.value = http://www.jumptags.com/add/
+				20 = COA
+				20.wrap = ?url=|
+				20 {
+					10 = TEXT
+					10.data = getIndpEnv:TYPO3_SITE_URL
+					10.rawUrlEncode = 1
+					20 = TEXT
+					20.typolink.value = x
+					20.typolink.parameter.data = TSFE:id
+					20.typolink.returnLast = url
+					20.rawUrlEncode = 1
+				}
+				30 = TEXT
+				30.wrap = &title=|
+				30.field = subtitle // title
+				30.rawUrlEncode = 1
+			}
+			30 = TEXT
+			30.value = Share this on facebook
+			40 = TEXT
+			40.value = </a></li>
+		}
+		
+	}
+}
