@@ -67,9 +67,24 @@ class tx_sexybookmarks_pi1 extends tslib_pibase {
 
 		if ($this->cObj->data['list_type'] == $this->extKey.'_pi1') {
 			// content
-		} else {
-			// template
+			// Set the Flexform information
+			$this->pi_initPIflexForm();
+			$piFlexForm = $this->cObj->data['pi_flexform'];
+			foreach ($piFlexForm['data'] as $sheet => $data) {
+				foreach ($data as $lang => $value) {
+					foreach ($value as $key => $val) {
+						$this->lConf[$key] = $this->pi_getFFvalue($piFlexForm, $key, $sheet);
+					}
+				}
+			}
+			if ($this->lConf['bookmarks']) {
+				$this->conf['bookmarks'] = $this->lConf['bookmarks'];
+			}
+			$this->conf['bookmarkCenter']     = $this->lConf['bookmarkCenter'];
+			$this->conf['bookmarkExpandable'] = $this->lConf['bookmarkExpandable'];
+			$this->conf['bookmarkBackground'] = $this->lConf['bookmarkBackground'];
 		}
+
 		return $this->pi_wrapInBaseClass($this->parseTemplate());
 	}
 
@@ -85,13 +100,6 @@ class tx_sexybookmarks_pi1 extends tslib_pibase {
 			$this->contentKey = "sexybookmarks_key";
 		}
 
-		// define the jQuery mode and function
-		if ($this->conf['jQueryNoConflict']) {
-			$jQueryNoConflict = "jQuery.noConflict();";
-		} else {
-			$jQueryNoConflict = "";
-		}
-
 		// add the JS file
 		$this->addJsFile($this->conf['jsFile']);
 
@@ -102,15 +110,15 @@ class tx_sexybookmarks_pi1 extends tslib_pibase {
 		$this->addResources();
 
 		$classes = array();
-		$classes[] = "sexy-bookmarks";
-		if ($this->conf['bookmarkBackground']) {
-			$classes[] = "sexy-bookmarks-bg-".$this->conf['bookmarkBackground'];
+		$classes[] = "sexybookmarks";
+		if ($this->conf['bookmarkCenter']) {
+			$classes[] = "sexybookmarks-center";
 		}
 		if ($this->conf['bookmarkExpandable']) {
-			$classes[] = "sexy-bookmarks-expand";
+			$classes[] = "sexybookmarks-expand";
 		}
-		if ($this->conf['bookmarkCenter']) {
-			$classes[] = "sexy-bookmarks-center";
+		if ($this->conf['bookmarkBackground']) {
+			$classes[] = "sexybookmarks-bg-".$this->conf['bookmarkBackground'];
 		}
 
 		$bookmarkContent = null;
@@ -126,14 +134,11 @@ class tx_sexybookmarks_pi1 extends tslib_pibase {
 			}
 		}
 
-		$content = '
-<div class="'.implode(" ", $classes).'">
-	<ul class="socials">
-		'.$bookmarkContent.'
-	</ul>
-	<div style="clear:both;"></div>
-</div>';
-		return $content;
+		$GLOBALS['TSFE']->register['classes'] = implode(" ", $classes);
+
+		$return_string = $this->cObj->stdWrap($bookmarkContent, $this->conf['stdWrap.']);
+
+		return $return_string;
 	}
 
 

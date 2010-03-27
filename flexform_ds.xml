@@ -1,0 +1,104 @@
+<T3DataStructure>
+	<meta>
+		<langDisable>1</langDisable>
+	</meta>
+	<sheets>
+		<general>
+			<ROOT>
+				<TCEforms>
+					<sheetTitle>LLL:EXT:sexybookmarks/locallang_db.xml:tt_content.pi_flexform.sheet_general</sheetTitle>
+				</TCEforms>
+				<type>array</type>
+				<el>
+					<bookmarks>
+						<TCEforms>
+							<exclude>1</exclude>
+							<label>LLL:EXT:sexybookmarks/locallang_db.xml:tt_content.pi_flexform.bookmarks</label>
+							<config>
+								<type>select</type>
+								<size>20</size>
+								<maxitems>1000</maxitems>
+								<itemsProcFunc>tx_sexybookmarks_itemsProcFunc->getBookmarks</itemsProcFunc>
+							</config>
+						</TCEforms>
+					</bookmarks>
+				</el>
+			</ROOT>
+		</general>
+		<settings>
+			<ROOT>
+				<TCEforms>
+					<sheetTitle>LLL:EXT:sexybookmarks/locallang_db.xml:tt_content.pi_flexform.sheet_settings</sheetTitle>
+				</TCEforms>
+				<type>array</type>
+				<el>
+					<bookmarkCenter>
+						<TCEforms>
+							<exclude>1</exclude>
+							<label>LLL:EXT:sexybookmarks/locallang_db.xml:tt_content.tx_sexybookmarks.bookmarkCenter</label>
+							<config>
+								<type>check</type>
+								<default>0</default>
+							</config>
+						</TCEforms>
+					</bookmarkCenter>
+					<bookmarkExpandable>
+						<TCEforms>
+							<exclude>1</exclude>
+							<label>LLL:EXT:sexybookmarks/locallang_db.xml:tt_content.tx_sexybookmarks.bookmarkExpandable</label>
+							<config>
+								<type>check</type>
+								<default>0</default>
+							</config>
+						</TCEforms>
+					</bookmarkExpandable>
+					<bookmarkBackground>
+						<TCEforms>
+							<exclude>1</exclude>
+							<label>LLL:EXT:sexybookmarks/locallang_db.xml:tt_content.tx_sexybookmarks.style</label>
+							<config>
+								<type>select</type>
+								<size>1</size>
+								<maxitems>1</maxitems>
+								<items type="array">
+									<numIndex index="0" type="array">
+										<numIndex index="0">none</numIndex>
+										<numIndex index="1"></numIndex>
+									</numIndex>
+									<numIndex index="1" type="array">
+										<numIndex index="0">sexy</numIndex>
+										<numIndex index="1">sexy</numIndex>
+									</numIndex>
+									<numIndex index="2" type="array">
+										<numIndex index="0">caring</numIndex>
+										<numIndex index="1">caring</numIndex>
+									</numIndex>
+									<numIndex index="3" type="array">
+										<numIndex index="0">caring-old</numIndex>
+										<numIndex index="1">caring-old</numIndex>
+									</numIndex>
+									<numIndex index="4" type="array">
+										<numIndex index="0">love</numIndex>
+										<numIndex index="1">love</numIndex>
+									</numIndex>
+									<numIndex index="5" type="array">
+										<numIndex index="0">wealth</numIndex>
+										<numIndex index="1">wealth</numIndex>
+									</numIndex>
+									<numIndex index="6" type="array">
+										<numIndex index="0">enjoy</numIndex>
+										<numIndex index="1">enjoy</numIndex>
+									</numIndex>
+									<numIndex index="7" type="array">
+										<numIndex index="0">german</numIndex>
+										<numIndex index="1">german</numIndex>
+									</numIndex>
+								</items>
+							</config>
+						</TCEforms>
+					</bookmarkBackground>
+				</el>
+			</ROOT>
+		</settings>
+	</sheets>
+</T3DataStructure>

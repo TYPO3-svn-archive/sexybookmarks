@@ -1,5 +1,4 @@
 plugin.tx_sexybookmarks_pi1 {
-	jQueryNoConflict = {$plugin.tx_sexybookmarks_pi1.jQueryNoConflict}
 	jsInFooter = {$plugin.tx_sexybookmarks_pi1.jsInFooter}
 
 	jQueryLibrary = {$plugin.tx_sexybookmarks_pi1.file.jQueryLibrary}
@@ -11,82 +10,103 @@ plugin.tx_sexybookmarks_pi1 {
 	bookmarkExpandable = {$plugin.tx_sexybookmarks_pi1.bookmarkExpandable}
 	bookmarkBackground = {$plugin.tx_sexybookmarks_pi1.bookmarkBackground}
 
+	stdWrap {
+		dataWrap = <div class="{register:classes}"><ul class="socials"> | </ul><div style="clear:both;"></div></div>
+		required = 1
+	}
+
 	bookmarks = {$plugin.tx_sexybookmarks_pi1.bookmarks}
-	
 	bookmarkConf {
-		misterwong = COA
-		misterwong {
+		favorite = COA
+		favorite {
 			10 = TEXT
-			10.value = <li class="sexy-misterwong">
+			10.value = <li class="sexy-favorite">
 			20 = COA
-			20.htmlSpecialChars = 1
-			20.wrap = <a href="|" target="_blank">
+			20.wrap = <a href="|" class="external">
 			20 {
 				10 = TEXT
-				10.value = http://www.mister-wong.de/index.php?action=addurl
-				20 = COA
-				20.wrap = &bm_url=|
-				20 {
-					10 = TEXT
-					10.data = getIndpEnv:TYPO3_SITE_URL
-					10.rawUrlEncode = 1
-					20 = TEXT
-					20.typolink.value = x
-					20.typolink.parameter.data = TSFE:id
-					20.typolink.returnLast = url
-					20.rawUrlEncode = 1
-				}
-				30 = TEXT
-				30.wrap = &bm_description=|
-				30.field = subtitle // title
-				30.rawUrlEncode = 1
+				10.data = getIndpEnv:TYPO3_SITE_URL
+				20 = TEXT
+				20.typolink.value = x
+				20.typolink.parameter.data = TSFE:id
+				20.typolink.returnLast = url
 			}
 			30 = TEXT
-			30.value = Share this on Mr. Wong
-			30 = TEXT
-			30.value = </a></li>
-		}
-		
-		twitter = COA
-		twitter {
-			10 = TEXT
-			10.value = <li class="sexy-twitter">
-			20 = COA
-			20.htmlSpecialChars = 1
-			20.wrap = <a href="|" target="_blank">
-			20 {
-				10 = TEXT
-				10.value = http://twitter.com/home
-				20 = COA
-				20.wrap = ?status=|
-				20 {
-					10 = TEXT
-					10.data = getIndpEnv:TYPO3_SITE_URL
-					10.rawUrlEncode = 1
-					20 = TEXT
-					20.typolink.value = x
-					20.typolink.parameter.data = TSFE:id
-					20.typolink.returnLast = url
-					20.rawUrlEncode = 1
-				}
-				30 = TEXT
-				30.wrap = %20|
-				30.field = subtitle // title
-				30.rawUrlEncode = 1
-			}
-			30 = TEXT
-			30.value = Share this on Twitter
+			30.value = Add this to your favorite
 			40 = TEXT
 			40.value = </a></li>
 		}
-		
+		scriptstyle = COA
+		scriptstyle {
+			10 = TEXT
+			10.value = <li class="sexy-scriptstyle">
+			20 = COA
+			20.htmlSpecialChars = 1
+			20.wrap = <a href="|" class="external">
+			20 {
+				10 = TEXT
+				10.value = http://scriptandstyle.com/submit
+				20 = COA
+				20.wrap = ?url=|
+				20 {
+					10 = TEXT
+					10.data = getIndpEnv:TYPO3_SITE_URL
+					10.rawUrlEncode = 1
+					20 = TEXT
+					20.typolink.value = x
+					20.typolink.parameter.data = TSFE:id
+					20.typolink.returnLast = url
+					20.rawUrlEncode = 1
+				}
+				30 = TEXT
+				30.wrap = &title=|
+				30.data = page:subtitle // page:title
+				30.rawUrlEncode = 1
+			}
+			30 = TEXT
+			30.value = Submit this to Script &amp; Style
+			40 = TEXT
+			40.value = </a></li>
+		}
+		blinklist = COA
+		blinklist {
+			10 = TEXT
+			10.value = <li class="sexy-blinklist">
+			20 = COA
+			20.htmlSpecialChars = 1
+			20.wrap = <a href="|" class="external">
+			20 {
+				10 = TEXT
+				10.value = http://www.blinklist.com/index.php
+				20 = COA
+				20.wrap = ?Action=Blink/addblink.php&Url=|
+				20 {
+					10 = TEXT
+					10.data = getIndpEnv:TYPO3_SITE_URL
+					10.rawUrlEncode = 1
+					20 = TEXT
+					20.typolink.value = x
+					20.typolink.parameter.data = TSFE:id
+					20.typolink.returnLast = url
+					20.rawUrlEncode = 1
+				}
+				30 = TEXT
+				30.wrap = &Title=|
+				30.data = page:subtitle // page:title
+				30.rawUrlEncode = 1
+			}
+			30 = TEXT
+			30.value = Share this on Blinklist
+			40 = TEXT
+			40.value = </a></li>
+		}
 		delicious = COA
 		delicious {
 			10 = TEXT
 			10.value = <li class="sexy-delicious">
 			20 = COA
 			20.htmlSpecialChars = 1
-			20.wrap = <a href="|" target="_blank">
+			20.wrap = <a href="|" class="external">
 			20 {
 				10 = TEXT
 				10.value = http://del.icio.us/post
@@ -104,7 +124,7 @@ plugin.tx_sexybookmarks_pi1 {
 				}
 				30 = TEXT
 				30.wrap = &title=|
-				30.field = subtitle // title
+				30.data = page:subtitle // page:title
 				30.rawUrlEncode = 1
 			}
 			30 = TEXT
@@ -112,19 +132,18 @@ plugin.tx_sexybookmarks_pi1 {
 			40 = TEXT
 			40.value = </a></li>
 		}
-		
 		digg = COA
 		digg {
 			10 = TEXT
 			10.value = <li class="sexy-digg">
 			20 = COA
 			20.htmlSpecialChars = 1
-			20.wrap = <a href="|" target="_blank">
+			20.wrap = <a href="|" class="external">
 			20 {
 				10 = TEXT
-				10.value = http://digg.com/submit?phase=2
+				10.value = http://digg.com/submit
 				20 = COA
-				20.wrap = &url=|
+				20.wrap = ?phase=2&url=|
 				20 {
 					10 = TEXT
 					10.data = getIndpEnv:TYPO3_SITE_URL
@@ -137,26 +156,61 @@ plugin.tx_sexybookmarks_pi1 {
 				}
 				30 = TEXT
 				30.wrap = &title=|
-				30.field = title
+				30.data = page:title
 				30.rawUrlEncode = 1
 				40 = TEXT
 				40.wrap = &bm_description=|
-				40.field = subtitle // title
+				40.data = page:subtitle // page:title
 				40.rawUrlEncode = 1
 			}
 			30 = TEXT
-			30.value = Share this on digg.us
+			30.value = Digg this!
 			40 = TEXT
 			40.value = </a></li>
 		}
-		
+		diigo = COA
+		diigo {
+			10 = TEXT
+			10.value = <li class="sexy-diigo">
+			20 = COA
+			20.htmlSpecialChars = 1
+			20.wrap = <a href="|" class="external">
+			20 {
+				10 = TEXT
+				10.value = http://www.diigo.com/post
+				20 = COA
+				20.wrap = ?url=|
+				20 {
+					10 = TEXT
+					10.data = getIndpEnv:TYPO3_SITE_URL
+					10.rawUrlEncode = 1
+					20 = TEXT
+					20.typolink.value = x
+					20.typolink.parameter.data = TSFE:id
+					20.typolink.returnLast = url
+					20.rawUrlEncode = 1
+				}
+				30 = TEXT
+				30.wrap = &title=|
+				30.data = page:title
+				30.rawUrlEncode = 1
+				40 = TEXT
+				40.wrap = &desc=|
+				40.data = page:subtitle
+				40.rawUrlEncode = 1
+			}
+			30 = TEXT
+			30.value = Post this on Diigo
+			40 = TEXT
+			40.value = </a></li>
+		}
 		reddit = COA
 		reddit {
 			10 = TEXT
 			10.value = <li class="sexy-reddit">
 			20 = COA
 			20.htmlSpecialChars = 1
-			20.wrap = <a href="|" target="_blank">
+			20.wrap = <a href="|" class="external">
 			20 {
 				10 = TEXT
 				10.value = http://reddit.com/submit
@@ -174,56 +228,26 @@ plugin.tx_sexybookmarks_pi1 {
 				}
 				30 = TEXT
 				30.wrap = &title=|
-				30.field = subtitle // title
+				30.data = page:subtitle // page:title
 				30.rawUrlEncode = 1
 			}
 			30 = TEXT
-			30.value = Share this on reddit.com
+			30.value = Share this on Reddit
 			40 = TEXT
 			40.value = </a></li>
 		}
-		
-		technorati = COA
-		technorati {
+		yahoobuzz = COA
+		yahoobuzz {
 			10 = TEXT
-			10.value = <li class="sexy-technorati">
+			10.value = <li class="sexy-yahoobuzz">
 			20 = COA
 			20.htmlSpecialChars = 1
-			20.wrap = <a href="|" target="_blank">
+			20.wrap = <a href="|" class="external">
 			20 {
 				10 = TEXT
-				10.value = http://technorati.com/faves/
+				10.value = http://buzz.yahoo.com/submit/
 				20 = COA
-				20.wrap = ?add=|
-				20 {
-					10 = TEXT
-					10.data = getIndpEnv:TYPO3_SITE_URL
-					10.rawUrlEncode = 1
-					20 = TEXT
-					20.typolink.value = x
-					20.typolink.parameter.data = TSFE:id
-					20.typolink.returnLast = url
-					20.rawUrlEncode = 1
-				}
-			}
-			30 = TEXT
-			30.value = Share this on technorati.com
-			40 = TEXT
-			40.value = </a></li>
-		}
-		
-		google = COA
-		google {
-			10 = TEXT
-			10.value = <li class="sexy-google">
-			20 = COA
-			20.htmlSpecialChars = 1
-			20.wrap = <a href="|" target="_blank">
-			20 {
-				10 = TEXT
-				10.value = http://www.google.com/bookmarks/mark?op=add&hl=de&annotation=&labels=
-				20 = COA
-				20.wrap = &bkmk=|
+				20.wrap = ?submitUrl=|
 				20 {
 					10 = TEXT
 					10.data = getIndpEnv:TYPO3_SITE_URL
@@ -235,56 +259,26 @@ plugin.tx_sexybookmarks_pi1 {
 					20.rawUrlEncode = 1
 				}
 				30 = TEXT
-				30.wrap = &title=|
-				30.field = subtitle // title
+				30.wrap = &submitHeadline=|
+				30.data = page:title
 				30.rawUrlEncode = 1
+				40 = TEXT
+				40.wrap = &submitSummary=|
+				40.data = page:subtitle
+				40.rawUrlEncode = 1
 			}
 			30 = TEXT
-			30.value = Share this on google.com
+			30.value = Buzz up!
 			40 = TEXT
 			40.value = </a></li>
 		}
-		
-		facebook = COA
-		facebook {
-			10 = TEXT
-			10.value = <li class="sexy-facebook">
-			20 = COA
-			20.htmlSpecialChars = 1
-			20.wrap = <a href="|" target="_blank">
-			20 {
-				10 = TEXT
-				10.value = http://www.facebook.com/sharer.php
-				20 = COA
-				20.wrap = ?u=|
-				20 {
-					10 = TEXT
-					10.data = getIndpEnv:TYPO3_SITE_URL
-					10.rawUrlEncode = 1
-					20 = TEXT
-					20.typolink.value = x
-					20.typolink.parameter.data = TSFE:id
-					20.typolink.returnLast = url
-					20.rawUrlEncode = 1
-				}
-				30 = TEXT
-				30.wrap = &t=|
-				30.field = subtitle // title
-				30.rawUrlEncode = 1
-			}
-			30 = TEXT
-			30.value = Share this on facebook
-			40 = TEXT
-			40.value = </a></li>
-		}
-		
 		stumbleupon = COA
 		stumbleupon {
 			10 = TEXT
 			10.value = <li class="sexy-stumbleupon">
 			20 = COA
 			20.htmlSpecialChars = 1
-			20.wrap = <a href="|" target="_blank">
+			20.wrap = <a href="|" class="external">
 			20 {
 				10 = TEXT
 				10.value = http://www.stumbleupon.com/submit
@@ -302,27 +296,54 @@ plugin.tx_sexybookmarks_pi1 {
 				}
 				30 = TEXT
 				30.wrap = &title=|
-				30.field = subtitle // title
+				30.data = page:subtitle // page:title
 				30.rawUrlEncode = 1
 			}
 			30 = TEXT
-			30.value = Share this on facebook
+			30.value = Stumble upon something good? Share it on StumbleUpon
 			40 = TEXT
 			40.value = </a></li>
 		}
-		
-		propeller = COA
-		propeller {
+		technorati = COA
+		technorati {
 			10 = TEXT
-			10.value = <li class="sexy-propeller">
+			10.value = <li class="sexy-technorati">
 			20 = COA
 			20.htmlSpecialChars = 1
-			20.wrap = <a href="|" target="_blank">
+			20.wrap = <a href="|" class="external">
 			20 {
 				10 = TEXT
-				10.value = http://www.propeller.com/submit/
+				10.value = http://technorati.com/faves
 				20 = COA
-				20.wrap = ?U=|
+				20.wrap = ?add=|
+				20 {
+					10 = TEXT
+					10.data = getIndpEnv:TYPO3_SITE_URL
+					10.rawUrlEncode = 1
+					20 = TEXT
+					20.typolink.value = x
+					20.typolink.parameter.data = TSFE:id
+					20.typolink.returnLast = url
+					20.rawUrlEncode = 1
+				}
+			}
+			30 = TEXT
+			30.value = Share this on Technorati
+			40 = TEXT
+			40.value = </a></li>
+		}
+		mixx = COA
+		mixx {
+			10 = TEXT
+			10.value = <li class="sexy-mixx">
+			20 = COA
+			20.htmlSpecialChars = 1
+			20.wrap = <a href="|" class="external">
+			20 {
+				10 = TEXT
+				10.value = http://www.mixx.com/submit
+				20 = COA
+				20.wrap = ?page_url=|
 				20 {
 					10 = TEXT
 					10.data = getIndpEnv:TYPO3_SITE_URL
@@ -334,26 +355,277 @@ plugin.tx_sexybookmarks_pi1 {
 					20.rawUrlEncode = 1
 				}
 				30 = TEXT
-				30.wrap = &T=|
-				30.field = subtitle // title
+				30.wrap = &title=|
+				30.data = page:subtitle // page:title
 				30.rawUrlEncode = 1
 			}
 			30 = TEXT
-			30.value = Share this on facebook
+			30.value = Share this on Mixx
 			40 = TEXT
 			40.value = </a></li>
 		}
-		
+		myspace = COA
+		myspace {
+			10 = TEXT
+			10.value = <li class="sexy-myspace">
+			20 = COA
+			20.htmlSpecialChars = 1
+			20.wrap = <a href="|" class="external">
+			20 {
+				10 = TEXT
+				10.value = http://www.myspace.com/Modules/PostTo/Pages/
+				20 = COA
+				20.wrap = ?u=|
+				20 {
+					10 = TEXT
+					10.data = getIndpEnv:TYPO3_SITE_URL
+					10.rawUrlEncode = 1
+					20 = TEXT
+					20.typolink.value = x
+					20.typolink.parameter.data = TSFE:id
+					20.typolink.returnLast = url
+					20.rawUrlEncode = 1
+				}
+				30 = TEXT
+				30.wrap = &t=|
+				30.data = page:subtitle // page:title
+				30.rawUrlEncode = 1
+			}
+			30 = TEXT
+			30.value = Post this to MySpace
+			40 = TEXT
+			40.value = </a></li>
+		}
+		designfloat = COA
+		designfloat {
+			10 = TEXT
+			10.value = <li class="sexy-designfloat">
+			20 = COA
+			20.htmlSpecialChars = 1
+			20.wrap = <a href="|" class="external">
+			20 {
+				10 = TEXT
+				10.value = http://www.designfloat.com/submit.php
+				20 = COA
+				20.wrap = ?url=|
+				20 {
+					10 = TEXT
+					10.data = getIndpEnv:TYPO3_SITE_URL
+					10.rawUrlEncode = 1
+					20 = TEXT
+					20.typolink.value = x
+					20.typolink.parameter.data = TSFE:id
+					20.typolink.returnLast = url
+					20.rawUrlEncode = 1
+				}
+				30 = TEXT
+				30.wrap = &title=|
+				30.data = page:subtitle // page:title
+				30.rawUrlEncode = 1
+			}
+			30 = TEXT
+			30.value = Submit this to DesignFloat
+			40 = TEXT
+			40.value = </a></li>
+		}
+		facebook = COA
+		facebook {
+			10 = TEXT
+			10.value = <li class="sexy-facebook">
+			20 = COA
+			20.htmlSpecialChars = 1
+			20.wrap = <a href="|" class="external">
+			20 {
+				10 = TEXT
+				10.value = http://www.facebook.com/share.php
+				20 = COA
+				20.wrap = ?v=4&src=bm&u=
+				20 {
+					10 = TEXT
+					10.data = getIndpEnv:TYPO3_SITE_URL
+					10.rawUrlEncode = 1
+					20 = TEXT
+					20.typolink.value = x
+					20.typolink.parameter.data = TSFE:id
+					20.typolink.returnLast = url
+					20.rawUrlEncode = 1
+				}
+				30 = TEXT
+				30.wrap = &t=|
+				30.data = page:subtitle // page:title
+				30.rawUrlEncode = 1
+			}
+			30 = TEXT
+			30.value = Share this on Facebook
+			40 = TEXT
+			40.value = </a></li>
+		}
+		twitter = COA
+		twitter {
+			10 = TEXT
+			10.value = <li class="sexy-twitter">
+			20 = COA
+			20.htmlSpecialChars = 1
+			20.wrap = <a href="|" class="external">
+			20 {
+				10 = TEXT
+				10.value = http://twitter.com/home
+				20 = COA
+				20.wrap = ?status=|
+				20 {
+					10 = TEXT
+					10.data = getIndpEnv:TYPO3_SITE_URL
+					10.rawUrlEncode = 1
+					20 = TEXT
+					20.typolink.value = x
+					20.typolink.parameter.data = TSFE:id
+					20.typolink.returnLast = url
+					20.rawUrlEncode = 1
+				}
+				30 = TEXT
+				30.wrap = %20|
+				30.data = page:subtitle // page:title
+				30.rawUrlEncode = 1
+			}
+			30 = TEXT
+			30.value = Tweet This!
+			40 = TEXT
+			40.value = </a></li>
+		}
+		mail = COA
+		mail {
+			10 = TEXT
+			10.value = <li class="sexy-mail">
+			20 = COA
+			20.htmlSpecialChars = 1
+			20.wrap = <a href="|" class="external">
+			20 {
+				10 = TEXT
+				10.wrap = mailto:?subject=%22|%22
+				10.data = page:title
+				10.rawUrlEncode = 1
+				20 = TEXT
+				20.wrap = &body=I%20thought%20this%20article%20might%20interest%20you.%0A%0A%22|%22
+				20.data = page:subtitle
+				20.rawUrlEncode = 1
+				30 = COA
+				30.wrap = %0A%0AYou%20can%20read%20the%20full%20article%20here%3A%20|
+				30 {
+					10 = TEXT
+					10.data = getIndpEnv:TYPO3_SITE_URL
+					20 = TEXT
+					20.typolink.value = x
+					20.typolink.parameter.data = TSFE:id
+					20.typolink.returnLast = url
+				}
+			}
+			30 = TEXT
+			30.value = Email this to a friend?
+			40 = TEXT
+			40.value = </a></li>
+		}
+		tomuse = COA
+		tomuse {
+			10 = TEXT
+			10.value = <li class="sexy-tomuse">
+			20 = COA
+			20.htmlSpecialChars = 1
+			20.wrap = <a href="|" class="external">
+			20 {
+				10 = TEXT
+				10.wrap = mailto:tips@tomuse.com?subject=New%20tip%20submitted%20via%20the%20SexyBookmarks%20Plugin!&body=I%20would%20like%20to%20submit%20this%20article%3A%20%22|%22%20for%20possible%20inclusion%20on%20ToMuse.
+				10.data = page:title
+				10.rawUrlEncode = 1
+				20 = TEXT
+				20.wrap = %0A%0A%22|%22
+				20.data = page:subtitle
+				20.rawUrlEncode = 1
+				30 = COA
+				30.wrap = %0A%0AYou%20can%20read%20the%20full%20article%20here%3A%20|
+				30 {
+					10 = TEXT
+					10.data = getIndpEnv:TYPO3_SITE_URL
+					20 = TEXT
+					20.typolink.value = x
+					20.typolink.parameter.data = TSFE:id
+					20.typolink.returnLast = url
+				}
+			}
+			30 = TEXT
+			30.value = Suggest this article to ToMuse
+			40 = TEXT
+			40.value = </a></li>
+		}
+		comfeed = COA
+		comfeed {
+			10 = TEXT
+			10.value = <li class="sexy-comfeed">
+			20 = COA
+			20.htmlSpecialChars = 1
+			20.wrap = <a href="|" class="external">
+			20 {
+				10 = COA
+				10.wrap = |
+				10 {
+					10 = TEXT
+					10.data = getIndpEnv:TYPO3_SITE_URL
+					20 = TEXT
+					20.typolink.value = x
+					20.typolink.parameter.data = TSFE:id
+					20.typolink.returnLast = url
+				}
+			}
+			30 = TEXT
+			30.value = Subscribe to the comments for this post?
+			40 = TEXT
+			40.value = </a></li>
+		}
+		linkedin = COA
+		linkedin {
+			10 = TEXT
+			10.value = <li class="sexy-linkedin">
+			20 = COA
+			20.htmlSpecialChars = 1
+			20.wrap = <a href="|" class="external">
+			20 {
+				10 = TEXT
+				10.value = http://www.linkedin.com/shareArticle
+				20 = COA
+				20.wrap = ?mini=true&url=|
+				20 {
+					10 = TEXT
+					10.data = getIndpEnv:TYPO3_SITE_URL
+					10.rawUrlEncode = 1
+					20 = TEXT
+					20.typolink.value = x
+					20.typolink.parameter.data = TSFE:id
+					20.typolink.returnLast = url
+					20.rawUrlEncode = 1
+				}
+				30 = TEXT
+				30.wrap = &title=|
+				30.data = page:title
+				30.rawUrlEncode = 1
+				40 = TEXT
+				40.wrap = &summary=|
+				40.data = page:subtitle
+				40.rawUrlEncode = 1
+			}
+			30 = TEXT
+			30.value = Share this on Linkedin
+			40 = TEXT
+			40.value = </a></li>
+		}
 		newsvine = COA
 		newsvine {
 			10 = TEXT
 			10.value = <li class="sexy-newsvine">
 			20 = COA
 			20.htmlSpecialChars = 1
-			20.wrap = <a href="|" target="_blank">
+			20.wrap = <a href="|" class="external">
 			20 {
 				10 = TEXT
-				10.value = http://www.newsvine.com/_wine/save?popoff=1&tags=
+				10.value = http://www.newsvine.com/_tools/seed&amp;save
 				20 = COA
 				20.wrap = &u=|
 				20 {
@@ -367,23 +639,1550 @@ plugin.tx_sexybookmarks_pi1 {
 					20.rawUrlEncode = 1
 				}
 				30 = TEXT
-				30.wrap = &blurb=|
-				30.field = subtitle // title
+				30.wrap = &h=|
+				30.data = page:subtitle // page:title
 				30.rawUrlEncode = 1
 			}
 			30 = TEXT
-			30.value = Share this on facebook
+			30.value = Seed this on Newsvine
 			40 = TEXT
 			40.value = </a></li>
 		}
-		
+		devmarks = COA
+		devmarks {
+			10 = TEXT
+			10.value = <li class="sexy-devmarks">
+			20 = COA
+			20.htmlSpecialChars = 1
+			20.wrap = <a href="|" class="external">
+			20 {
+				10 = TEXT
+				10.value = http://devmarks.com/index.php
+				20 = COA
+				20.wrap = ?posturl=|
+				20 {
+					10 = TEXT
+					10.data = getIndpEnv:TYPO3_SITE_URL
+					10.rawUrlEncode = 1
+					20 = TEXT
+					20.typolink.value = x
+					20.typolink.parameter.data = TSFE:id
+					20.typolink.returnLast = url
+					20.rawUrlEncode = 1
+				}
+				30 = TEXT
+				30.wrap = &posttitle=|
+				30.data = page:title
+				30.rawUrlEncode = 1
+				40 = TEXT
+				40.wrap = &posttext=|
+				40.data = page:subtitle
+				40.rawUrlEncode = 1
+			}
+			30 = TEXT
+			30.value = Share this on Devmarks
+			40 = TEXT
+			40.value = </a></li>
+		}
+		google = COA
+		google {
+			10 = TEXT
+			10.value = <li class="sexy-google">
+			20 = COA
+			20.htmlSpecialChars = 1
+			20.wrap = <a href="|" class="external">
+			20 {
+				10 = TEXT
+				10.value = http://www.google.com/bookmarks/mark
+				20 = COA
+				20.wrap = ?op=add&bkmk=|
+				20 {
+					10 = TEXT
+					10.data = getIndpEnv:TYPO3_SITE_URL
+					10.rawUrlEncode = 1
+					20 = TEXT
+					20.typolink.value = x
+					20.typolink.parameter.data = TSFE:id
+					20.typolink.returnLast = url
+					20.rawUrlEncode = 1
+				}
+				30 = TEXT
+				30.wrap = &title=|
+				30.data = page:subtitle // page:title
+				30.rawUrlEncode = 1
+			}
+			30 = TEXT
+			30.value = Add this to Google Bookmarks
+			40 = TEXT
+			40.value = </a></li>
+		}
+		misterwong = COA
+		misterwong {
+			10 = TEXT
+			10.value = <li class="sexy-misterwong">
+			20 = COA
+			20.htmlSpecialChars = 1
+			20.wrap = <a href="|" class="external">
+			20 {
+				10 = TEXT
+				10.value = http://www.mister-wong.com/addurl/
+				20 = COA
+				20.wrap = ?bm_url=|
+				20 {
+					10 = TEXT
+					10.data = getIndpEnv:TYPO3_SITE_URL
+					10.rawUrlEncode = 1
+					20 = TEXT
+					20.typolink.value = x
+					20.typolink.parameter.data = TSFE:id
+					20.typolink.returnLast = url
+					20.rawUrlEncode = 1
+				}
+				30 = TEXT
+				30.wrap = &bm_description=|
+				30.data = page:subtitle // page:title
+				30.rawUrlEncode = 1
+			}
+			30 = TEXT
+			30.value = Add this to Mister Wong
+			40 = TEXT
+			40.value = </a></li>
+		}
+		izeby = COA
+		izeby {
+			10 = TEXT
+			10.value = <li class="sexy-izeby">
+			20 = COA
+			20.htmlSpecialChars = 1
+			20.wrap = <a href="|" class="external">
+			20 {
+				10 = TEXT
+				10.value = http://izeby.com/submit.php
+				20 = COA
+				20.wrap = ?url=|
+				20 {
+					10 = TEXT
+					10.data = getIndpEnv:TYPO3_SITE_URL
+					10.rawUrlEncode = 1
+					20 = TEXT
+					20.typolink.value = x
+					20.typolink.parameter.data = TSFE:id
+					20.typolink.returnLast = url
+					20.rawUrlEncode = 1
+				}
+			}
+			30 = TEXT
+			30.value = Add this to Izeby
+			40 = TEXT
+			40.value = </a></li>
+		}
+		tipd = COA
+		tipd {
+			10 = TEXT
+			10.value = <li class="sexy-tipd">
+			20 = COA
+			20.htmlSpecialChars = 1
+			20.wrap = <a href="|" class="external">
+			20 {
+				10 = TEXT
+				10.value = http://tipd.com/submit.php
+				20 = COA
+				20.wrap = ?url=|
+				20 {
+					10 = TEXT
+					10.data = getIndpEnv:TYPO3_SITE_URL
+					10.rawUrlEncode = 1
+					20 = TEXT
+					20.typolink.value = x
+					20.typolink.parameter.data = TSFE:id
+					20.typolink.returnLast = url
+					20.rawUrlEncode = 1
+				}
+			}
+			30 = TEXT
+			30.value = Share this on Tipd
+			40 = TEXT
+			40.value = </a></li>
+		}
+		pfbuzz = COA
+		pfbuzz {
+			10 = TEXT
+			10.value = <li class="sexy-pfbuzz">
+			20 = COA
+			20.htmlSpecialChars = 1
+			20.wrap = <a href="|" class="external">
+			20 {
+				10 = TEXT
+				10.value = http://pfbuzz.com/submit
+				20 = COA
+				20.wrap = ?url=|
+				20 {
+					10 = TEXT
+					10.data = getIndpEnv:TYPO3_SITE_URL
+					10.rawUrlEncode = 1
+					20 = TEXT
+					20.typolink.value = x
+					20.typolink.parameter.data = TSFE:id
+					20.typolink.returnLast = url
+					20.rawUrlEncode = 1
+				}
+				30 = TEXT
+				30.wrap = &title=|
+				30.data = page:subtitle // page:title
+				30.rawUrlEncode = 1
+			}
+			30 = TEXT
+			30.value = Share this on PFBuzz
+			40 = TEXT
+			40.value = </a></li>
+		}
+		friendfeed = COA
+		friendfeed {
+			10 = TEXT
+			10.value = <li class="sexy-friendfeed">
+			20 = COA
+			20.htmlSpecialChars = 1
+			20.wrap = <a href="|" class="external">
+			20 {
+				10 = TEXT
+				10.value = http://www.friendfeed.com/share
+				20 = COA
+				20.wrap = ?link=|
+				20 {
+					10 = TEXT
+					10.data = getIndpEnv:TYPO3_SITE_URL
+					10.rawUrlEncode = 1
+					20 = TEXT
+					20.typolink.value = x
+					20.typolink.parameter.data = TSFE:id
+					20.typolink.returnLast = url
+					20.rawUrlEncode = 1
+				}
+				30 = TEXT
+				30.wrap = &title=|
+				30.data = page:subtitle // page:title
+				30.rawUrlEncode = 1
+			}
+			30 = TEXT
+			30.value = Share this on FriendFeed
+			40 = TEXT
+			40.value = </a></li>
+		}
+		blogmarks = COA
+		blogmarks {
+			10 = TEXT
+			10.value = <li class="sexy-blogmarks">
+			20 = COA
+			20.htmlSpecialChars = 1
+			20.wrap = <a href="|" class="external">
+			20 {
+				10 = TEXT
+				10.value = http://blogmarks.net/my/new.php
+				20 = COA
+				20.wrap = ?mini=1&simple=1&url=|
+				20 {
+					10 = TEXT
+					10.data = getIndpEnv:TYPO3_SITE_URL
+					10.rawUrlEncode = 1
+					20 = TEXT
+					20.typolink.value = x
+					20.typolink.parameter.data = TSFE:id
+					20.typolink.returnLast = url
+					20.rawUrlEncode = 1
+				}
+				30 = TEXT
+				30.wrap = &title=|
+				30.data = page:subtitle // page:title
+				30.rawUrlEncode = 1
+			}
+			30 = TEXT
+			30.value = Mark this on BlogMarks
+			40 = TEXT
+			40.value = </a></li>
+		}
+		twittley = COA
+		twittley {
+			10 = TEXT
+			10.value = <li class="sexy-twittley">
+			20 = COA
+			20.htmlSpecialChars = 1
+			20.wrap = <a href="|" class="external">
+			20 {
+				10 = TEXT
+				10.value = http://twittley.com/submit/
+				20 = COA
+				20.wrap = ?url=|
+				20 {
+					10 = TEXT
+					10.data = getIndpEnv:TYPO3_SITE_URL
+					10.rawUrlEncode = 1
+					20 = TEXT
+					20.typolink.value = x
+					20.typolink.parameter.data = TSFE:id
+					20.typolink.returnLast = url
+					20.rawUrlEncode = 1
+				}
+				30 = TEXT
+				30.wrap = &title=|
+				30.data = page:subtitle // page:title
+				30.rawUrlEncode = 1
+			}
+			30 = TEXT
+			30.value = Submit this to Twittley
+			40 = TEXT
+			40.value = </a></li>
+		}
+		fwisp = COA
+		fwisp {
+			10 = TEXT
+			10.value = <li class="sexy-fwisp">
+			20 = COA
+			20.htmlSpecialChars = 1
+			20.wrap = <a href="|" class="external">
+			20 {
+				10 = TEXT
+				10.value = http://fwisp.com/submit
+				20 = COA
+				20.wrap = ?url=|
+				20 {
+					10 = TEXT
+					10.data = getIndpEnv:TYPO3_SITE_URL
+					10.rawUrlEncode = 1
+					20 = TEXT
+					20.typolink.value = x
+					20.typolink.parameter.data = TSFE:id
+					20.typolink.returnLast = url
+					20.rawUrlEncode = 1
+				}
+			}
+			30 = TEXT
+			30.value = Share this on Fwisp
+			40 = TEXT
+			40.value = </a></li>
+		}
+		designmoo = COA
+		designmoo {
+			10 = TEXT
+			10.value = <li class="sexy-designmoo">
+			20 = COA
+			20.htmlSpecialChars = 1
+			20.wrap = <a href="|" class="external">
+			20 {
+				10 = TEXT
+				10.value = http://designmoo.com/submit
+				20 = COA
+				20.wrap = ?url=|
+				20 {
+					10 = TEXT
+					10.data = getIndpEnv:TYPO3_SITE_URL
+					10.rawUrlEncode = 1
+					20 = TEXT
+					20.typolink.value = x
+					20.typolink.parameter.data = TSFE:id
+					20.typolink.returnLast = url
+					20.rawUrlEncode = 1
+				}
+				30 = TEXT
+				30.wrap = &title=|
+				30.data = page:title
+				30.rawUrlEncode = 1
+				40 = TEXT
+				40.wrap = &body=|
+				40.data = page:subtitle
+				40.rawUrlEncode = 1
+			}
+			30 = TEXT
+			30.value = Moo this on DesignMoo
+			40 = TEXT
+			40.value = </a></li>
+		}
+		bobrdobr = COA
+		bobrdobr {
+			10 = TEXT
+			10.value = <li class="sexy-bobrdobr">
+			20 = COA
+			20.htmlSpecialChars = 1
+			20.wrap = <a href="|" class="external">
+			20 {
+				10 = TEXT
+				10.value = http://bobrdobr.ru/addext.html
+				20 = COA
+				20.wrap = ?url=|
+				20 {
+					10 = TEXT
+					10.data = getIndpEnv:TYPO3_SITE_URL
+					10.rawUrlEncode = 1
+					20 = TEXT
+					20.typolink.value = x
+					20.typolink.parameter.data = TSFE:id
+					20.typolink.returnLast = url
+					20.rawUrlEncode = 1
+				}
+				30 = TEXT
+				30.wrap = &title=|
+				30.data = page:subtitle // page:title
+				30.rawUrlEncode = 1
+			}
+			30 = TEXT
+			30.value = Share this on BobrDobr
+			40 = TEXT
+			40.value = </a></li>
+		}
+		yandex = COA
+		yandex {
+			10 = TEXT
+			10.value = <li class="sexy-yandex">
+			20 = COA
+			20.htmlSpecialChars = 1
+			20.wrap = <a href="|" class="external">
+			20 {
+				10 = TEXT
+				10.value = http://zakladki.yandex.ru/userarea/links/addfromfav.asp
+				20 = COA
+				20.wrap = ?bAddLink_x=1&lurl=|
+				20 {
+					10 = TEXT
+					10.data = getIndpEnv:TYPO3_SITE_URL
+					10.rawUrlEncode = 1
+					20 = TEXT
+					20.typolink.value = x
+					20.typolink.parameter.data = TSFE:id
+					20.typolink.returnLast = url
+					20.rawUrlEncode = 1
+				}
+				30 = TEXT
+				30.wrap = &lname=|
+				30.data = page:subtitle // page:title
+				30.rawUrlEncode = 1
+			}
+			30 = TEXT
+			30.value = Add this to Yandex.Bookmarks
+			40 = TEXT
+			40.value = </a></li>
+		}
+		memoryru = COA
+		memoryru {
+			10 = TEXT
+			10.value = <li class="sexy-memoryru">
+			20 = COA
+			20.htmlSpecialChars = 1
+			20.wrap = <a href="|" class="external">
+			20 {
+				10 = TEXT
+				10.value = http://memori.ru/link/
+				20 = COA
+				20.wrap = ?sm=1&u_data[url]=|
+				20 {
+					10 = TEXT
+					10.data = getIndpEnv:TYPO3_SITE_URL
+					10.rawUrlEncode = 1
+					20 = TEXT
+					20.typolink.value = x
+					20.typolink.parameter.data = TSFE:id
+					20.typolink.returnLast = url
+					20.rawUrlEncode = 1
+				}
+				30 = TEXT
+				30.wrap = &u_data[name]=|
+				30.data = page:subtitle // page:title
+				30.rawUrlEncode = 1
+			}
+			30 = TEXT
+			30.value = Add this to Memory.ru
+			40 = TEXT
+			40.value = </a></li>
+		}
+		100zakladok = COA
+		100zakladok {
+			10 = TEXT
+			10.value = <li class="sexy-100zakladok">
+			20 = COA
+			20.htmlSpecialChars = 1
+			20.wrap = <a href="|" class="external">
+			20 {
+				10 = TEXT
+				10.value = http://www.100zakladok.ru/save/
+				20 = COA
+				20.wrap = ?bmurl=|
+				20 {
+					10 = TEXT
+					10.data = getIndpEnv:TYPO3_SITE_URL
+					10.rawUrlEncode = 1
+					20 = TEXT
+					20.typolink.value = x
+					20.typolink.parameter.data = TSFE:id
+					20.typolink.returnLast = url
+					20.rawUrlEncode = 1
+				}
+				30 = TEXT
+				30.wrap = &bmtitle=|
+				30.data = page:subtitle // page:title
+				30.rawUrlEncode = 1
+			}
+			30 = TEXT
+			30.value = Add this to 100 bookmarks
+			40 = TEXT
+			40.value = </a></li>
+		}
+		moemesto = COA
+		moemesto {
+			10 = TEXT
+			10.value = <li class="sexy-moemesto">
+			20 = COA
+			20.htmlSpecialChars = 1
+			20.wrap = <a href="|" class="external">
+			20 {
+				10 = TEXT
+				10.value = http://moemesto.ru/post.php
+				20 = COA
+				20.wrap = ?url=|
+				20 {
+					10 = TEXT
+					10.data = getIndpEnv:TYPO3_SITE_URL
+					10.rawUrlEncode = 1
+					20 = TEXT
+					20.typolink.value = x
+					20.typolink.parameter.data = TSFE:id
+					20.typolink.returnLast = url
+					20.rawUrlEncode = 1
+				}
+				30 = TEXT
+				30.wrap = &title=|
+				30.data = page:subtitle // page:title
+				30.rawUrlEncode = 1
+			}
+			30 = TEXT
+			30.value = Add this to MyPlace
+			40 = TEXT
+			40.value = </a></li>
+		}
+		hackernews = COA
+		hackernews {
+			10 = TEXT
+			10.value = <li class="sexy-hackernews">
+			20 = COA
+			20.htmlSpecialChars = 1
+			20.wrap = <a href="|" class="external">
+			20 {
+				10 = TEXT
+				10.value = http://news.ycombinator.com/submitlink
+				20 = COA
+				20.wrap = ?u=|
+				20 {
+					10 = TEXT
+					10.data = getIndpEnv:TYPO3_SITE_URL
+					10.rawUrlEncode = 1
+					20 = TEXT
+					20.typolink.value = x
+					20.typolink.parameter.data = TSFE:id
+					20.typolink.returnLast = url
+					20.rawUrlEncode = 1
+				}
+				30 = TEXT
+				30.wrap = &t=|
+				30.data = page:subtitle // page:title
+				30.rawUrlEncode = 1
+			}
+			30 = TEXT
+			30.value = Submit this to Hacker News
+			40 = TEXT
+			40.value = </a></li>
+		}
+		printfriendly = COA
+		printfriendly {
+			10 = TEXT
+			10.value = <li class="sexy-printfriendly">
+			20 = COA
+			20.htmlSpecialChars = 1
+			20.wrap = <a href="|" class="external">
+			20 {
+				10 = TEXT
+				10.value = http://www.printfriendly.com/print
+				20 = COA
+				20.wrap = ?url=|
+				20 {
+					10 = TEXT
+					10.data = getIndpEnv:TYPO3_SITE_URL
+					10.rawUrlEncode = 1
+					20 = TEXT
+					20.typolink.value = x
+					20.typolink.parameter.data = TSFE:id
+					20.typolink.returnLast = url
+					20.rawUrlEncode = 1
+				}
+			}
+			30 = TEXT
+			30.value = Send this page to Print Friendly
+			40 = TEXT
+			40.value = </a></li>
+		}
+		designbump = COA
+		designbump {
+			10 = TEXT
+			10.value = <li class="sexy-designbump">
+			20 = COA
+			20.htmlSpecialChars = 1
+			20.wrap = <a href="|" class="external">
+			20 {
+				10 = TEXT
+				10.value = http://designbump.com/submit
+				20 = COA
+				20.wrap = ?url=|
+				20 {
+					10 = TEXT
+					10.data = getIndpEnv:TYPO3_SITE_URL
+					10.rawUrlEncode = 1
+					20 = TEXT
+					20.typolink.value = x
+					20.typolink.parameter.data = TSFE:id
+					20.typolink.returnLast = url
+					20.rawUrlEncode = 1
+				}
+				30 = TEXT
+				30.wrap = &title=|
+				30.data = page:title
+				30.rawUrlEncode = 1
+				40 = TEXT
+				40.wrap = &body=|
+				40.data = page:subtitle
+				40.rawUrlEncode = 1
+			}
+			30 = TEXT
+			30.value = Submit this to Hacker News
+			40 = TEXT
+			40.value = </a></li>
+		}
+		ning = COA
+		ning {
+			10 = TEXT
+			10.value = <li class="sexy-ning">
+			20 = COA
+			20.htmlSpecialChars = 1
+			20.wrap = <a href="|" class="external">
+			20 {
+				10 = TEXT
+				10.value = http://bookmarks.ning.com/addItem.php
+				20 = COA
+				20.wrap = ?url=|
+				20 {
+					10 = TEXT
+					10.data = getIndpEnv:TYPO3_SITE_URL
+					10.rawUrlEncode = 1
+					20 = TEXT
+					20.typolink.value = x
+					20.typolink.parameter.data = TSFE:id
+					20.typolink.returnLast = url
+					20.rawUrlEncode = 1
+				}
+				30 = TEXT
+				30.wrap = &T=|
+				30.data = page:subtitle // page:title
+				30.rawUrlEncode = 1
+			}
+			30 = TEXT
+			30.value = Add this to Ning
+			40 = TEXT
+			40.value = </a></li>
+		}
+		identica = COA
+		identica {
+			10 = TEXT
+			10.value = <li class="sexy-identica">
+			20 = COA
+			20.htmlSpecialChars = 1
+			20.wrap = <a href="|" class="external">
+			20 {
+				10 = TEXT
+				10.value = http://identi.ca/index.php
+				20 = TEXT
+				20.wrap = ?action=newnotice&amp;status_textarea=Reading:+&quot;|&quot;
+				20.data = page:subtitle // page:title
+				20.rawUrlEncode = 1
+				30 = COA
+				30.wrap = +-+from+|
+				30 {
+					10 = TEXT
+					10.data = getIndpEnv:TYPO3_SITE_URL
+					10.rawUrlEncode = 1
+					20 = TEXT
+					20.typolink.value = x
+					20.typolink.parameter.data = TSFE:id
+					20.typolink.returnLast = url
+					20.rawUrlEncode = 1
+				}
+			}
+			30 = TEXT
+			30.value = Post this to Identica
+			40 = TEXT
+			40.value = </a></li>
+		}
+		xerpi = COA
+		xerpi {
+			10 = TEXT
+			10.value = <li class="sexy-xerpi">
+			20 = COA
+			20.htmlSpecialChars = 1
+			20.wrap = <a href="|" class="external">
+			20 {
+				10 = TEXT
+				10.value = http://www.xerpi.com/block/add_link_from_extension
+				20 = COA
+				20.wrap = ?url=|
+				20 {
+					10 = TEXT
+					10.data = getIndpEnv:TYPO3_SITE_URL
+					10.rawUrlEncode = 1
+					20 = TEXT
+					20.typolink.value = x
+					20.typolink.parameter.data = TSFE:id
+					20.typolink.returnLast = url
+					20.rawUrlEncode = 1
+				}
+				30 = TEXT
+				30.wrap = &title=|
+				30.data = page:subtitle // page:title
+				30.rawUrlEncode = 1
+			}
+			30 = TEXT
+			30.value = Save this to Xerpi
+			40 = TEXT
+			40.value = </a></li>
+		}
+		wikio = COA
+		wikio {
+			10 = TEXT
+			10.value = <li class="sexy-wikio">
+			20 = COA
+			20.htmlSpecialChars = 1
+			20.wrap = <a href="|" class="external">
+			20 {
+				10 = TEXT
+				10.value = http://www.wikio.com/sharethis
+				20 = COA
+				20.wrap = ?url=|
+				20 {
+					10 = TEXT
+					10.data = getIndpEnv:TYPO3_SITE_URL
+					10.rawUrlEncode = 1
+					20 = TEXT
+					20.typolink.value = x
+					20.typolink.parameter.data = TSFE:id
+					20.typolink.returnLast = url
+					20.rawUrlEncode = 1
+				}
+				30 = TEXT
+				30.wrap = &title=|
+				30.data = page:subtitle // page:title
+				30.rawUrlEncode = 1
+			}
+			30 = TEXT
+			30.value = Share this on Wikio
+			40 = TEXT
+			40.value = </a></li>
+		}
+		techmeme = COA
+		techmeme {
+			10 = TEXT
+			10.value = <li class="sexy-techmeme">
+			20 = COA
+			20.htmlSpecialChars = 1
+			20.wrap = <a href="|" class="external">
+			20 {
+				10 = TEXT
+				10.value = http://twitter.com/home/
+				20 = COA
+				20.wrap = ?status=Tip+@Techmeme+|
+				20 {
+					10 = TEXT
+					10.data = getIndpEnv:TYPO3_SITE_URL
+					10.rawUrlEncode = 1
+					20 = TEXT
+					20.typolink.value = x
+					20.typolink.parameter.data = TSFE:id
+					20.typolink.returnLast = url
+					20.rawUrlEncode = 1
+				}
+				30 = TEXT
+				30.wrap = +&quot;|&quot;
+				30.data = page:subtitle // page:title
+				30.rawUrlEncode = 1
+			}
+			30 = TEXT
+			30.value = Tip this to TechMeme
+			40 = TEXT
+			40.value = </a></li>
+		}
+		sphinn = COA
+		sphinn {
+			10 = TEXT
+			10.value = <li class="sexy-sphinn">
+			20 = COA
+			20.htmlSpecialChars = 1
+			20.wrap = <a href="|" class="external">
+			20 {
+				10 = TEXT
+				10.value = http://sphinn.com/index.php
+				20 = COA
+				20.wrap = ?c=post&m=submit&link=|
+				20 {
+					10 = TEXT
+					10.data = getIndpEnv:TYPO3_SITE_URL
+					10.rawUrlEncode = 1
+					20 = TEXT
+					20.typolink.value = x
+					20.typolink.parameter.data = TSFE:id
+					20.typolink.returnLast = url
+					20.rawUrlEncode = 1
+				}
+			}
+			30 = TEXT
+			30.value = Sphinn this on Sphinn
+			40 = TEXT
+			40.value = </a></li>
+		}
+		posterous = COA
+		posterous {
+			10 = TEXT
+			10.value = <li class="sexy-posterous">
+			20 = COA
+			20.htmlSpecialChars = 1
+			20.wrap = <a href="|" class="external">
+			20 {
+				10 = TEXT
+				10.value = http://posterous.com/share
+				20 = COA
+				20.wrap = ?linkto=|
+				20 {
+					10 = TEXT
+					10.data = getIndpEnv:TYPO3_SITE_URL
+					10.rawUrlEncode = 1
+					20 = TEXT
+					20.typolink.value = x
+					20.typolink.parameter.data = TSFE:id
+					20.typolink.returnLast = url
+					20.rawUrlEncode = 1
+				}
+				30 = TEXT
+				30.wrap = &title=|
+				30.data = page:title
+				30.rawUrlEncode = 1
+				40 = TEXT
+				40.wrap = &selection=|
+				40.data = page:subtitle
+				40.rawUrlEncode = 1
+			}
+			30 = TEXT
+			30.value = Post this to Posterous
+			40 = TEXT
+			40.value = </a></li>
+		}
+		globalgrind = COA
+		globalgrind {
+			10 = TEXT
+			10.value = <li class="sexy-globalgrind">
+			20 = COA
+			20.htmlSpecialChars = 1
+			20.wrap = <a href="|" class="external">
+			20 {
+				10 = TEXT
+				10.value = http://globalgrind.com/submission/submit.aspx
+				20 = COA
+				20.wrap = ?type=Article&url=|
+				20 {
+					10 = TEXT
+					10.data = getIndpEnv:TYPO3_SITE_URL
+					10.rawUrlEncode = 1
+					20 = TEXT
+					20.typolink.value = x
+					20.typolink.parameter.data = TSFE:id
+					20.typolink.returnLast = url
+					20.rawUrlEncode = 1
+				}
+				30 = TEXT
+				30.wrap = &title=|
+				30.data = page:subtitle // page:title
+				30.rawUrlEncode = 1
+			}
+			30 = TEXT
+			30.value = Grind this! on Global Grind
+			40 = TEXT
+			40.value = </a></li>
+		}
+		pingfm = COA
+		pingfm {
+			10 = TEXT
+			10.value = <li class="sexy-pingfm">
+			20 = COA
+			20.htmlSpecialChars = 1
+			20.wrap = <a href="|" class="external">
+			20 {
+				10 = TEXT
+				10.value = http://ping.fm/ref/
+				20 = COA
+				20.wrap = ?link=|
+				20 {
+					10 = TEXT
+					10.data = getIndpEnv:TYPO3_SITE_URL
+					10.rawUrlEncode = 1
+					20 = TEXT
+					20.typolink.value = x
+					20.typolink.parameter.data = TSFE:id
+					20.typolink.returnLast = url
+					20.rawUrlEncode = 1
+				}
+				30 = TEXT
+				30.wrap = &title=|
+				30.data = page:title
+				30.rawUrlEncode = 1
+				40 = TEXT
+				40.wrap = &body=|
+				40.data = page:subtitle
+				40.rawUrlEncode = 1
+			}
+			30 = TEXT
+			30.value = Ping this on Ping.fm
+			40 = TEXT
+			40.value = </a></li>
+		}
+		nujij = COA
+		nujij {
+			10 = TEXT
+			10.value = <li class="sexy-nujij">
+			20 = COA
+			20.htmlSpecialChars = 1
+			20.wrap = <a href="|" class="external">
+			20 {
+				10 = TEXT
+				10.value = http://nujij.nl/jij.lynkx
+				20 = COA
+				20.wrap = ?u=|
+				20 {
+					10 = TEXT
+					10.data = getIndpEnv:TYPO3_SITE_URL
+					10.rawUrlEncode = 1
+					20 = TEXT
+					20.typolink.value = x
+					20.typolink.parameter.data = TSFE:id
+					20.typolink.returnLast = url
+					20.rawUrlEncode = 1
+				}
+				30 = TEXT
+				30.wrap = &t=|
+				30.data = page:title
+				30.rawUrlEncode = 1
+				40 = TEXT
+				40.wrap = &b=|
+				40.data = page:subtitle
+				40.rawUrlEncode = 1
+			}
+			30 = TEXT
+			30.value = Submit this to NUjij
+			40 = TEXT
+			40.value = </a></li>
+		}
+		ekudos = COA
+		ekudos {
+			10 = TEXT
+			10.value = <li class="sexy-ekudos">
+			20 = COA
+			20.htmlSpecialChars = 1
+			20.wrap = <a href="|" class="external">
+			20 {
+				10 = TEXT
+				10.value = http://www.ekudos.nl/artikel/nieuw
+				20 = COA
+				20.wrap = ?url=|
+				20 {
+					10 = TEXT
+					10.data = getIndpEnv:TYPO3_SITE_URL
+					10.rawUrlEncode = 1
+					20 = TEXT
+					20.typolink.value = x
+					20.typolink.parameter.data = TSFE:id
+					20.typolink.returnLast = url
+					20.rawUrlEncode = 1
+				}
+				30 = TEXT
+				30.wrap = &title=|
+				30.data = page:title
+				30.rawUrlEncode = 1
+				40 = TEXT
+				40.wrap = &desc=|
+				40.data = page:subtitle
+				40.rawUrlEncode = 1
+			}
+			30 = TEXT
+			30.value = Submit this to eKudos
+			40 = TEXT
+			40.value = </a></li>
+		}
+		netvouz = COA
+		netvouz {
+			10 = TEXT
+			10.value = <li class="sexy-netvouz">
+			20 = COA
+			20.htmlSpecialChars = 1
+			20.wrap = <a href="|" class="external">
+			20 {
+				10 = TEXT
+				10.value = http://www.netvouz.com/action/submitBookmark
+				20 = COA
+				20.wrap = ?popup=no&url=|
+				20 {
+					10 = TEXT
+					10.data = getIndpEnv:TYPO3_SITE_URL
+					10.rawUrlEncode = 1
+					20 = TEXT
+					20.typolink.value = x
+					20.typolink.parameter.data = TSFE:id
+					20.typolink.returnLast = url
+					20.rawUrlEncode = 1
+				}
+				30 = TEXT
+				30.wrap = &title=|
+				30.data = page:subtitle // page:title
+				30.rawUrlEncode = 1
+			}
+			30 = TEXT
+			30.value = Submit this to Netvouz
+			40 = TEXT
+			40.value = </a></li>
+		}
+		netvibes = COA
+		netvibes {
+			10 = TEXT
+			10.value = <li class="sexy-netvibes">
+			20 = COA
+			20.htmlSpecialChars = 1
+			20.wrap = <a href="|" class="external">
+			20 {
+				10 = TEXT
+				10.value = http://www.netvibes.com/share
+				20 = COA
+				20.wrap = ?url=|
+				20 {
+					10 = TEXT
+					10.data = getIndpEnv:TYPO3_SITE_URL
+					10.rawUrlEncode = 1
+					20 = TEXT
+					20.typolink.value = x
+					20.typolink.parameter.data = TSFE:id
+					20.typolink.returnLast = url
+					20.rawUrlEncode = 1
+				}
+				30 = TEXT
+				30.wrap = &title=|
+				30.data = page:subtitle // page:title
+				30.rawUrlEncode = 1
+			}
+			30 = TEXT
+			30.value = Submit this to Netvibes
+			40 = TEXT
+			40.value = </a></li>
+		}
+		fleck = COA
+		fleck {
+			10 = TEXT
+			10.value = <li class="sexy-fleck">
+			20 = COA
+			20.htmlSpecialChars = 1
+			20.wrap = <a href="|" class="external">
+			20 {
+				10 = TEXT
+				10.value = http://beta3.fleck.com/bookmarklet.php
+				20 = COA
+				20.wrap = ?url=|
+				20 {
+					10 = TEXT
+					10.data = getIndpEnv:TYPO3_SITE_URL
+					10.rawUrlEncode = 1
+					20 = TEXT
+					20.typolink.value = x
+					20.typolink.parameter.data = TSFE:id
+					20.typolink.returnLast = url
+					20.rawUrlEncode = 1
+				}
+				30 = TEXT
+				30.wrap = &title=|
+				30.data = page:subtitle // page:title
+				30.rawUrlEncode = 1
+			}
+			30 = TEXT
+			30.value = Share this on Fleck
+			40 = TEXT
+			40.value = </a></li>
+		}
+		blogospherenews = COA
+		blogospherenews {
+			10 = TEXT
+			10.value = <li class="sexy-blogospherenews">
+			20 = COA
+			20.htmlSpecialChars = 1
+			20.wrap = <a href="|" class="external">
+			20 {
+				10 = TEXT
+				10.value = http://www.blogospherenews.com/submit.php
+				20 = COA
+				20.wrap = ?url=|
+				20 {
+					10 = TEXT
+					10.data = getIndpEnv:TYPO3_SITE_URL
+					10.rawUrlEncode = 1
+					20 = TEXT
+					20.typolink.value = x
+					20.typolink.parameter.data = TSFE:id
+					20.typolink.returnLast = url
+					20.rawUrlEncode = 1
+				}
+				30 = TEXT
+				30.wrap = &title=|
+				30.data = page:subtitle // page:title
+				30.rawUrlEncode = 1
+			}
+			30 = TEXT
+			30.value = Share this on Blogosphere News
+			40 = TEXT
+			40.value = </a></li>
+		}
+		webblend = COA
+		webblend {
+			10 = TEXT
+			10.value = <li class="sexy-webblend">
+			20 = COA
+			20.htmlSpecialChars = 1
+			20.wrap = <a href="|" class="external">
+			20 {
+				10 = TEXT
+				10.value = http://thewebblend.com/submit
+				20 = COA
+				20.wrap = ?url=|
+				20 {
+					10 = TEXT
+					10.data = getIndpEnv:TYPO3_SITE_URL
+					10.rawUrlEncode = 1
+					20 = TEXT
+					20.typolink.value = x
+					20.typolink.parameter.data = TSFE:id
+					20.typolink.returnLast = url
+					20.rawUrlEncode = 1
+				}
+				30 = TEXT
+				30.wrap = &title=|
+				30.data = page:title
+				30.rawUrlEncode = 1
+				40 = TEXT
+				40.wrap = &body=|
+				40.data = page:subtitle
+				40.rawUrlEncode = 1
+			}
+			30 = TEXT
+			30.value = Blend this!
+			40 = TEXT
+			40.value = </a></li>
+		}
+		wykop = COA
+		wykop {
+			10 = TEXT
+			10.value = <li class="sexy-wykop">
+			20 = COA
+			20.htmlSpecialChars = 1
+			20.wrap = <a href="|" class="external">
+			20 {
+				10 = TEXT
+				10.value = http://www.wykop.pl/dodaj
+				20 = COA
+				20.wrap = ?url=|
+				20 {
+					10 = TEXT
+					10.data = getIndpEnv:TYPO3_SITE_URL
+					10.rawUrlEncode = 1
+					20 = TEXT
+					20.typolink.value = x
+					20.typolink.parameter.data = TSFE:id
+					20.typolink.returnLast = url
+					20.rawUrlEncode = 1
+				}
+				30 = TEXT
+				30.wrap = &title=|
+				30.data = page:subtitle // page:title
+				30.rawUrlEncode = 1
+			}
+			30 = TEXT
+			30.value = Add this to Wykop!
+			40 = TEXT
+			40.value = </a></li>
+		}
+		blogengage = COA
+		blogengage {
+			10 = TEXT
+			10.value = <li class="sexy-blogengage">
+			20 = COA
+			20.htmlSpecialChars = 1
+			20.wrap = <a href="|" class="external">
+			20 {
+				10 = TEXT
+				10.value = http://www.blogengage.com/submit.php
+				20 = COA
+				20.wrap = ?url=|
+				20 {
+					10 = TEXT
+					10.data = getIndpEnv:TYPO3_SITE_URL
+					10.rawUrlEncode = 1
+					20 = TEXT
+					20.typolink.value = x
+					20.typolink.parameter.data = TSFE:id
+					20.typolink.returnLast = url
+					20.rawUrlEncode = 1
+				}
+			}
+			30 = TEXT
+			30.value = Engage with this article!
+			40 = TEXT
+			40.value = </a></li>
+		}
+		hyves = COA
+		hyves {
+			10 = TEXT
+			10.value = <li class="sexy-hyves">
+			20 = COA
+			20.htmlSpecialChars = 1
+			20.wrap = <a href="|" class="external">
+			20 {
+				10 = TEXT
+				10.value = http://www.hyves.nl/profilemanage/add/tips/
+				20 = TEXT
+				20.wrap = ?name=|
+				20.data = page:title
+				20.rawUrlEncode = 1
+				30 = TEXT
+				30.wrap = &text=|
+				30.data = page:subtitle
+				30.rawUrlEncode = 1
+				40 = COA
+				40.wrap = +-+|&rating=5
+				40 {
+					10 = TEXT
+					10.data = getIndpEnv:TYPO3_SITE_URL
+					10.rawUrlEncode = 1
+					20 = TEXT
+					20.typolink.value = x
+					20.typolink.parameter.data = TSFE:id
+					20.typolink.returnLast = url
+					20.rawUrlEncode = 1
+				}
+			}
+			30 = TEXT
+			30.value = Share this on Hyves
+			40 = TEXT
+			40.value = </a></li>
+		}
+		pusha = COA
+		pusha {
+			10 = TEXT
+			10.value = <li class="sexy-pusha">
+			20 = COA
+			20.htmlSpecialChars = 1
+			20.wrap = <a href="|" class="external">
+			20 {
+				10 = TEXT
+				10.value = http://www.pusha.se/posta
+				20 = COA
+				20.wrap = ?url=|
+				20 {
+					10 = TEXT
+					10.data = getIndpEnv:TYPO3_SITE_URL
+					10.rawUrlEncode = 1
+					20 = TEXT
+					20.typolink.value = x
+					20.typolink.parameter.data = TSFE:id
+					20.typolink.returnLast = url
+					20.rawUrlEncode = 1
+				}
+				30 = TEXT
+				30.wrap = &title=|
+				30.data = page:subtitle // page:title
+				30.rawUrlEncode = 1
+			}
+			30 = TEXT
+			30.value = Push this on Pusha
+			40 = TEXT
+			40.value = </a></li>
+		}
+		hatena = COA
+		hatena {
+			10 = TEXT
+			10.value = <li class="sexy-hatena">
+			20 = COA
+			20.htmlSpecialChars = 1
+			20.wrap = <a href="|" class="external">
+			20 {
+				10 = TEXT
+				10.value = http://b.hatena.ne.jp/add
+				20 = COA
+				20.wrap = ?mode=confirm&url=|
+				20 {
+					10 = TEXT
+					10.data = getIndpEnv:TYPO3_SITE_URL
+					10.rawUrlEncode = 1
+					20 = TEXT
+					20.typolink.value = x
+					20.typolink.parameter.data = TSFE:id
+					20.typolink.returnLast = url
+					20.rawUrlEncode = 1
+				}
+				30 = TEXT
+				30.wrap = &title=|
+				30.data = page:subtitle // page:title
+				30.rawUrlEncode = 1
+			}
+			30 = TEXT
+			30.value = Bookmarks this on Hatena Bookmarks
+			40 = TEXT
+			40.value = </a></li>
+		}
+		mylinkvault = COA
+		mylinkvault {
+			10 = TEXT
+			10.value = <li class="sexy-mylinkvault">
+			20 = COA
+			20.htmlSpecialChars = 1
+			20.wrap = <a href="|" class="external">
+			20 {
+				10 = TEXT
+				10.value = http://www.mylinkvault.com/link-page.php
+				20 = COA
+				20.wrap = ?u=|
+				20 {
+					10 = TEXT
+					10.data = getIndpEnv:TYPO3_SITE_URL
+					10.rawUrlEncode = 1
+					20 = TEXT
+					20.typolink.value = x
+					20.typolink.parameter.data = TSFE:id
+					20.typolink.returnLast = url
+					20.rawUrlEncode = 1
+				}
+				30 = TEXT
+				30.wrap = &n=|
+				30.data = page:subtitle // page:title
+				30.rawUrlEncode = 1
+			}
+			30 = TEXT
+			30.value = Store this link on MyLinkVault
+			40 = TEXT
+			40.value = </a></li>
+		}
+		slashdot = COA
+		slashdot {
+			10 = TEXT
+			10.value = <li class="sexy-slashdot">
+			20 = COA
+			20.htmlSpecialChars = 1
+			20.wrap = <a href="|" class="external">
+			20 {
+				10 = TEXT
+				10.value = http://slashdot.org/bookmark.pl
+				20 = COA
+				20.wrap = ?url=|
+				20 {
+					10 = TEXT
+					10.data = getIndpEnv:TYPO3_SITE_URL
+					10.rawUrlEncode = 1
+					20 = TEXT
+					20.typolink.value = x
+					20.typolink.parameter.data = TSFE:id
+					20.typolink.returnLast = url
+					20.rawUrlEncode = 1
+				}
+				30 = TEXT
+				30.wrap = &title=|
+				30.data = page:subtitle // page:title
+				30.rawUrlEncode = 1
+			}
+			30 = TEXT
+			30.value = Submit this to SlashDot
+			40 = TEXT
+			40.value = </a></li>
+		}
+		squidoo = COA
+		squidoo {
+			10 = TEXT
+			10.value = <li class="sexy-squidoo">
+			20 = COA
+			20.htmlSpecialChars = 1
+			20.wrap = <a href="|" class="external">
+			20 {
+				10 = TEXT
+				10.value = http://www.squidoo.com/lensmaster/bookmark
+				20 = COA
+				20.wrap = ?|
+				20 {
+					10 = TEXT
+					10.data = getIndpEnv:TYPO3_SITE_URL
+					10.rawUrlEncode = 1
+					20 = TEXT
+					20.typolink.value = x
+					20.typolink.parameter.data = TSFE:id
+					20.typolink.returnLast = url
+					20.rawUrlEncode = 1
+				}
+			}
+			30 = TEXT
+			30.value = Add to a lense on Squidoo
+			40 = TEXT
+			40.value = </a></li>
+		}
+		propeller = COA
+		propeller {
+			10 = TEXT
+			10.value = <li class="sexy-propeller">
+			20 = COA
+			20.htmlSpecialChars = 1
+			20.wrap = <a href="|" class="external">
+			20 {
+				10 = TEXT
+				10.value = http://www.propeller.com/submit/
+				20 = COA
+				20.wrap = ?url=|
+				20 {
+					10 = TEXT
+					10.data = getIndpEnv:TYPO3_SITE_URL
+					10.rawUrlEncode = 1
+					20 = TEXT
+					20.typolink.value = x
+					20.typolink.parameter.data = TSFE:id
+					20.typolink.returnLast = url
+					20.rawUrlEncode = 1
+				}
+			}
+			30 = TEXT
+			30.value = Submit this story to Propeller
+			40 = TEXT
+			40.value = </a></li>
+		}
+		faqpal = COA
+		faqpal {
+			10 = TEXT
+			10.value = <li class="sexy-faqpal">
+			20 = COA
+			20.htmlSpecialChars = 1
+			20.wrap = <a href="|" class="external">
+			20 {
+				10 = TEXT
+				10.value = http://www.faqpal.com/submit
+				20 = COA
+				20.wrap = ?url=|
+				20 {
+					10 = TEXT
+					10.data = getIndpEnv:TYPO3_SITE_URL
+					10.rawUrlEncode = 1
+					20 = TEXT
+					20.typolink.value = x
+					20.typolink.parameter.data = TSFE:id
+					20.typolink.returnLast = url
+					20.rawUrlEncode = 1
+				}
+			}
+			30 = TEXT
+			30.value = Submit this to FAQpal
+			40 = TEXT
+			40.value = </a></li>
+		}
+		evernote = COA
+		evernote {
+			10 = TEXT
+			10.value = <li class="sexy-evernote">
+			20 = COA
+			20.htmlSpecialChars = 1
+			20.wrap = <a href="|" class="external">
+			20 {
+				10 = TEXT
+				10.value = http://www.evernote.com/clip.action
+				20 = COA
+				20.wrap = ?url=|
+				20 {
+					10 = TEXT
+					10.data = getIndpEnv:TYPO3_SITE_URL
+					10.rawUrlEncode = 1
+					20 = TEXT
+					20.typolink.value = x
+					20.typolink.parameter.data = TSFE:id
+					20.typolink.returnLast = url
+					20.rawUrlEncode = 1
+				}
+				30 = TEXT
+				30.wrap = &title=|
+				30.data = page:subtitle // page:title
+				30.rawUrlEncode = 1
+			}
+			30 = TEXT
+			30.value = Clip this to Evernote
+			40 = TEXT
+			40.value = </a></li>
+		}
+		meneame = COA
+		meneame {
+			10 = TEXT
+			10.value = <li class="sexy-meneame">
+			20 = COA
+			20.htmlSpecialChars = 1
+			20.wrap = <a href="|" class="external">
+			20 {
+				10 = TEXT
+				10.value = http://meneame.net/submit.php
+				20 = COA
+				20.wrap = ?url=|
+				20 {
+					10 = TEXT
+					10.data = getIndpEnv:TYPO3_SITE_URL
+					10.rawUrlEncode = 1
+					20 = TEXT
+					20.typolink.value = x
+					20.typolink.parameter.data = TSFE:id
+					20.typolink.returnLast = url
+					20.rawUrlEncode = 1
+				}
+			}
+			30 = TEXT
+			30.value = Submit this to Meneame
+			40 = TEXT
+			40.value = </a></li>
+		}
+		bitacoras = COA
+		bitacoras {
+			10 = TEXT
+			10.value = <li class="sexy-bitacoras">
+			20 = COA
+			20.htmlSpecialChars = 1
+			20.wrap = <a href="|" class="external">
+			20 {
+				10 = TEXT
+				10.value = http://bitacoras.com/anotaciones/
+				20 = COA
+				20.wrap = |
+				20 {
+					10 = TEXT
+					10.data = getIndpEnv:TYPO3_SITE_URL
+					10.rawUrlEncode = 1
+					20 = TEXT
+					20.typolink.value = x
+					20.typolink.parameter.data = TSFE:id
+					20.typolink.returnLast = url
+					20.rawUrlEncode = 1
+				}
+			}
+			30 = TEXT
+			30.value = Submit this to Bitacoras
+			40 = TEXT
+			40.value = </a></li>
+		}
 		jumptags = COA
 		jumptags {
 			10 = TEXT
 			10.value = <li class="sexy-jumptags">
 			20 = COA
 			20.htmlSpecialChars = 1
-			20.wrap = <a href="|" target="_blank">
+			20.wrap = <a href="|" class="external">
 			20 {
 				10 = TEXT
 				10.value = http://www.jumptags.com/add/
@@ -401,14 +2200,305 @@ plugin.tx_sexybookmarks_pi1 {
 				}
 				30 = TEXT
 				30.wrap = &title=|
-				30.field = subtitle // title
+				30.data = page:subtitle // page:title
 				30.rawUrlEncode = 1
 			}
 			30 = TEXT
-			30.value = Share this on facebook
+			30.value = Submit this link to JumpTags
 			40 = TEXT
 			40.value = </a></li>
 		}
-		
+		bebo = COA
+		bebo {
+			10 = TEXT
+			10.value = <li class="sexy-bebo">
+			20 = COA
+			20.htmlSpecialChars = 1
+			20.wrap = <a href="|" class="external">
+			20 {
+				10 = TEXT
+				10.value = http://www.bebo.com/c/share
+				20 = COA
+				20.wrap = ?Url=|
+				20 {
+					10 = TEXT
+					10.data = getIndpEnv:TYPO3_SITE_URL
+					10.rawUrlEncode = 1
+					20 = TEXT
+					20.typolink.value = x
+					20.typolink.parameter.data = TSFE:id
+					20.typolink.returnLast = url
+					20.rawUrlEncode = 1
+				}
+				30 = TEXT
+				30.wrap = &Title=|
+				30.data = page:subtitle // page:title
+				30.rawUrlEncode = 1
+			}
+			30 = TEXT
+			30.value = Share this on Bebo
+			40 = TEXT
+			40.value = </a></li>
+		}
+		n4g = COA
+		n4g {
+			10 = TEXT
+			10.value = <li class="sexy-n4g">
+			20 = COA
+			20.htmlSpecialChars = 1
+			20.wrap = <a href="|" class="external">
+			20 {
+				10 = TEXT
+				10.value = http://www.n4g.com/tips.aspx
+				20 = COA
+				20.wrap = ?url=|
+				20 {
+					10 = TEXT
+					10.data = getIndpEnv:TYPO3_SITE_URL
+					10.rawUrlEncode = 1
+					20 = TEXT
+					20.typolink.value = x
+					20.typolink.parameter.data = TSFE:id
+					20.typolink.returnLast = url
+					20.rawUrlEncode = 1
+				}
+				30 = TEXT
+				30.wrap = &title=|
+				30.data = page:subtitle // page:title
+				30.rawUrlEncode = 1
+			}
+			30 = TEXT
+			30.value = Submit tip to N4G
+			40 = TEXT
+			40.value = </a></li>
+		}
+		strands = COA
+		strands {
+			10 = TEXT
+			10.value = <li class="sexy-strands">
+			20 = COA
+			20.htmlSpecialChars = 1
+			20.wrap = <a href="|" class="external">
+			20 {
+				10 = TEXT
+				10.value = http://www.strands.com/tools/share/webpage
+				20 = COA
+				20.wrap = ?url=|
+				20 {
+					10 = TEXT
+					10.data = getIndpEnv:TYPO3_SITE_URL
+					10.rawUrlEncode = 1
+					20 = TEXT
+					20.typolink.value = x
+					20.typolink.parameter.data = TSFE:id
+					20.typolink.returnLast = url
+					20.rawUrlEncode = 1
+				}
+				30 = TEXT
+				30.wrap = &title=|
+				30.data = page:subtitle // page:title
+				30.rawUrlEncode = 1
+			}
+			30 = TEXT
+			30.value = Submit this to Strands
+			40 = TEXT
+			40.value = </a></li>
+		}
+		orkut = COA
+		orkut {
+			10 = TEXT
+			10.value = <li class="sexy-orkut">
+			20 = COA
+			20.htmlSpecialChars = 1
+			20.wrap = <a href="|" class="external">
+			20 {
+				10 = TEXT
+				10.value = http://promote.orkut.com/preview
+				20 = COA
+				20.wrap = ?nt=orkut.com&du=|
+				20 {
+					10 = TEXT
+					10.data = getIndpEnv:TYPO3_SITE_URL
+					10.rawUrlEncode = 1
+					20 = TEXT
+					20.typolink.value = x
+					20.typolink.parameter.data = TSFE:id
+					20.typolink.returnLast = url
+					20.rawUrlEncode = 1
+				}
+				30 = TEXT
+				30.wrap = &tt=|
+				30.data = page:title
+				30.rawUrlEncode = 1
+				40 = TEXT
+				40.wrap = &cn=|
+				40.data = page:subtitle
+				40.rawUrlEncode = 1
+			}
+			30 = TEXT
+			30.value = Promote this on Orkut
+			40 = TEXT
+			40.value = </a></li>
+		}
+		tumblr = COA
+		tumblr {
+			10 = TEXT
+			10.value = <li class="sexy-tumblr">
+			20 = COA
+			20.htmlSpecialChars = 1
+			20.wrap = <a href="|" class="external">
+			20 {
+				10 = TEXT
+				10.value = http://www.tumblr.com/share
+				20 = COA
+				20.wrap = ?v=3&u=|
+				20 {
+					10 = TEXT
+					10.data = getIndpEnv:TYPO3_SITE_URL
+					10.rawUrlEncode = 1
+					20 = TEXT
+					20.typolink.value = x
+					20.typolink.parameter.data = TSFE:id
+					20.typolink.returnLast = url
+					20.rawUrlEncode = 1
+				}
+				30 = TEXT
+				30.wrap = &t=|
+				30.data = page:subtitle // page:title
+				30.rawUrlEncode = 1
+			}
+			30 = TEXT
+			30.value = Share this on Tumblr
+			40 = TEXT
+			40.value = </a></li>
+		}
+		stumpedia = COA
+		stumpedia {
+			10 = TEXT
+			10.value = <li class="sexy-stumpedia">
+			20 = COA
+			20.htmlSpecialChars = 1
+			20.wrap = <a href="|" class="external">
+			20 {
+				10 = TEXT
+				10.value = http://www.stumpedia.com/submit
+				20 = COA
+				20.wrap = ?url=|
+				20 {
+					10 = TEXT
+					10.data = getIndpEnv:TYPO3_SITE_URL
+					10.rawUrlEncode = 1
+					20 = TEXT
+					20.typolink.value = x
+					20.typolink.parameter.data = TSFE:id
+					20.typolink.returnLast = url
+					20.rawUrlEncode = 1
+				}
+				30 = TEXT
+				30.wrap = &title=|
+				30.data = page:subtitle // page:title
+				30.rawUrlEncode = 1
+			}
+			30 = TEXT
+			30.value = Add this to Stumpedia
+			40 = TEXT
+			40.value = </a></li>
+		}
+		current = COA
+		current {
+			10 = TEXT
+			10.value = <li class="sexy-current">
+			20 = COA
+			20.htmlSpecialChars = 1
+			20.wrap = <a href="|" class="external">
+			20 {
+				10 = TEXT
+				10.value = http://current.com/clipper.htm
+				20 = COA
+				20.wrap = ?url=|
+				20 {
+					10 = TEXT
+					10.data = getIndpEnv:TYPO3_SITE_URL
+					10.rawUrlEncode = 1
+					20 = TEXT
+					20.typolink.value = x
+					20.typolink.parameter.data = TSFE:id
+					20.typolink.returnLast = url
+					20.rawUrlEncode = 1
+				}
+				30 = TEXT
+				30.wrap = &title=|
+				30.data = page:subtitle // page:title
+				30.rawUrlEncode = 1
+			}
+			30 = TEXT
+			30.value = Post this to Current
+			40 = TEXT
+			40.value = </a></li>
+		}
+		blogger = COA
+		blogger {
+			10 = TEXT
+			10.value = <li class="sexy-blogger">
+			20 = COA
+			20.htmlSpecialChars = 1
+			20.wrap = <a href="|" class="external">
+			20 {
+				10 = TEXT
+				10.value = http://www.blogger.com/blog_this.pyra
+				20 = COA
+				20.wrap = ?t&pli=1&u=|
+				20 {
+					10 = TEXT
+					10.data = getIndpEnv:TYPO3_SITE_URL
+					10.rawUrlEncode = 1
+					20 = TEXT
+					20.typolink.value = x
+					20.typolink.parameter.data = TSFE:id
+					20.typolink.returnLast = url
+					20.rawUrlEncode = 1
+				}
+				30 = TEXT
+				30.wrap = &n=|
+				30.data = page:subtitle // page:title
+				30.rawUrlEncode = 1
+			}
+			30 = TEXT
+			30.value = Blog this on Blogger
+			40 = TEXT
+			40.value = </a></li>
+		}
+		plurk = COA
+		plurk {
+			10 = TEXT
+			10.value = <li class="sexy-plurk">
+			20 = COA
+			20.htmlSpecialChars = 1
+			20.wrap = <a href="|" class="external">
+			20 {
+				10 = TEXT
+				10.value = http://www.plurk.com/m
+				20 = TEXT
+				20.wrap = ?content=|
+				20.data = page:subtitle // page:title
+				20.rawUrlEncode = 1
+				30 = COA
+				30.wrap = &+-+|&qualifier=shares
+				30 {
+					10 = TEXT
+					10.data = getIndpEnv:TYPO3_SITE_URL
+					10.rawUrlEncode = 1
+					20 = TEXT
+					20.typolink.value = x
+					20.typolink.parameter.data = TSFE:id
+					20.typolink.returnLast = url
+					20.rawUrlEncode = 1
+				}
+			}
+			30 = TEXT
+			30.value = Share this on Plurk
+			40 = TEXT
+			40.value = </a></li>
+		}
 	}
 }

@@ -1,5 +1,4 @@
 <?php
-
 if (!defined ('TYPO3_MODE')) {
 	die ('Access denied.');
 }
@@ -27,4 +26,6 @@ t3lib_extMgm::addPiFlexFormValue($_EXTKEY.'_pi1', 'FILE:EXT:'.$_EXTKEY.'/flexfor
 if (TYPO3_MODE == 'BE') {
 	$TBE_MODULES_EXT['xMOD_db_new_content_el']['addElClasses']['tx_sexybookmarks_pi1_wizicon'] = t3lib_extMgm::extPath($_EXTKEY).'pi1/class.tx_sexybookmarks_pi1_wizicon.php';
 }
+
+require_once(t3lib_extMgm::extPath($_EXTKEY).'lib/class.tx_sexybookmarks_itemsProcFunc.php');
 ?>
