@@ -25,11 +25,7 @@ plugin.tx_sexybookmarks_pi1 {
 			20.wrap = <a href="|" class="external">
 			20 {
 				10 = TEXT
-				10.data = getIndpEnv:TYPO3_SITE_URL
-				20 = TEXT
-				20.typolink.value = x
-				20.typolink.parameter.data = TSFE:id
-				20.typolink.returnLast = url
+				10.data = getIndpEnv:TYPO3_REQUEST_URL
 			}
 			30 = TEXT
 			30.value = Add this to your favorite
@@ -50,13 +46,8 @@ plugin.tx_sexybookmarks_pi1 {
 				20.wrap = ?url=|
 				20 {
 					10 = TEXT
-					10.data = getIndpEnv:TYPO3_SITE_URL
+					10.data = getIndpEnv:TYPO3_REQUEST_URL
 					10.rawUrlEncode = 1
-					20 = TEXT
-					20.typolink.value = x
-					20.typolink.parameter.data = TSFE:id
-					20.typolink.returnLast = url
-					20.rawUrlEncode = 1
 				}
 				30 = TEXT
 				30.wrap = &title=|
@@ -82,13 +73,8 @@ plugin.tx_sexybookmarks_pi1 {
 				20.wrap = ?Action=Blink/addblink.php&Url=|
 				20 {
 					10 = TEXT
-					10.data = getIndpEnv:TYPO3_SITE_URL
+					10.data = getIndpEnv:TYPO3_REQUEST_URL
 					10.rawUrlEncode = 1
-					20 = TEXT
-					20.typolink.value = x
-					20.typolink.parameter.data = TSFE:id
-					20.typolink.returnLast = url
-					20.rawUrlEncode = 1
 				}
 				30 = TEXT
 				30.wrap = &Title=|
@@ -114,13 +100,8 @@ plugin.tx_sexybookmarks_pi1 {
 				20.wrap = ?url=|
 				20 {
 					10 = TEXT
-					10.data = getIndpEnv:TYPO3_SITE_URL
+					10.data = getIndpEnv:TYPO3_REQUEST_URL
 					10.rawUrlEncode = 1
-					20 = TEXT
-					20.typolink.value = x
-					20.typolink.parameter.data = TSFE:id
-					20.typolink.returnLast = url
-					20.rawUrlEncode = 1
 				}
 				30 = TEXT
 				30.wrap = &title=|
@@ -146,13 +127,8 @@ plugin.tx_sexybookmarks_pi1 {
 				20.wrap = ?phase=2&url=|
 				20 {
 					10 = TEXT
-					10.data = getIndpEnv:TYPO3_SITE_URL
+					10.data = getIndpEnv:TYPO3_REQUEST_URL
 					10.rawUrlEncode = 1
-					20 = TEXT
-					20.typolink.value = x
-					20.typolink.parameter.data = TSFE:id
-					20.typolink.returnLast = url
-					20.rawUrlEncode = 1
 				}
 				30 = TEXT
 				30.wrap = &title=|
@@ -182,13 +158,8 @@ plugin.tx_sexybookmarks_pi1 {
 				20.wrap = ?url=|
 				20 {
 					10 = TEXT
-					10.data = getIndpEnv:TYPO3_SITE_URL
+					10.data = getIndpEnv:TYPO3_REQUEST_URL
 					10.rawUrlEncode = 1
-					20 = TEXT
-					20.typolink.value = x
-					20.typolink.parameter.data = TSFE:id
-					20.typolink.returnLast = url
-					20.rawUrlEncode = 1
 				}
 				30 = TEXT
 				30.wrap = &title=|
@@ -218,13 +189,8 @@ plugin.tx_sexybookmarks_pi1 {
 				20.wrap = ?url=|
 				20 {
 					10 = TEXT
-					10.data = getIndpEnv:TYPO3_SITE_URL
+					10.data = getIndpEnv:TYPO3_REQUEST_URL
 					10.rawUrlEncode = 1
-					20 = TEXT
-					20.typolink.value = x
-					20.typolink.parameter.data = TSFE:id
-					20.typolink.returnLast = url
-					20.rawUrlEncode = 1
 				}
 				30 = TEXT
 				30.wrap = &title=|
@@ -250,13 +216,8 @@ plugin.tx_sexybookmarks_pi1 {
 				20.wrap = ?submitUrl=|
 				20 {
 					10 = TEXT
-					10.data = getIndpEnv:TYPO3_SITE_URL
+					10.data = getIndpEnv:TYPO3_REQUEST_URL
 					10.rawUrlEncode = 1
-					20 = TEXT
-					20.typolink.value = x
-					20.typolink.parameter.data = TSFE:id
-					20.typolink.returnLast = url
-					20.rawUrlEncode = 1
 				}
 				30 = TEXT
 				30.wrap = &submitHeadline=|
@@ -286,13 +247,8 @@ plugin.tx_sexybookmarks_pi1 {
 				20.wrap = ?url=|
 				20 {
 					10 = TEXT
-					10.data = getIndpEnv:TYPO3_SITE_URL
+					10.data = getIndpEnv:TYPO3_REQUEST_URL
 					10.rawUrlEncode = 1
-					20 = TEXT
-					20.typolink.value = x
-					20.typolink.parameter.data = TSFE:id
-					20.typolink.returnLast = url
-					20.rawUrlEncode = 1
 				}
 				30 = TEXT
 				30.wrap = &title=|
@@ -318,13 +274,8 @@ plugin.tx_sexybookmarks_pi1 {
 				20.wrap = ?add=|
 				20 {
 					10 = TEXT
-					10.data = getIndpEnv:TYPO3_SITE_URL
+					10.data = getIndpEnv:TYPO3_REQUEST_URL
 					10.rawUrlEncode = 1
-					20 = TEXT
-					20.typolink.value = x
-					20.typolink.parameter.data = TSFE:id
-					20.typolink.returnLast = url
-					20.rawUrlEncode = 1
 				}
 			}
 			30 = TEXT
@@ -346,13 +297,8 @@ plugin.tx_sexybookmarks_pi1 {
 				20.wrap = ?page_url=|
 				20 {
 					10 = TEXT
-					10.data = getIndpEnv:TYPO3_SITE_URL
+					10.data = getIndpEnv:TYPO3_REQUEST_URL
 					10.rawUrlEncode = 1
-					20 = TEXT
-					20.typolink.value = x
-					20.typolink.parameter.data = TSFE:id
-					20.typolink.returnLast = url
-					20.rawUrlEncode = 1
 				}
 				30 = TEXT
 				30.wrap = &title=|
@@ -378,13 +324,8 @@ plugin.tx_sexybookmarks_pi1 {
 				20.wrap = ?u=|
 				20 {
 					10 = TEXT
-					10.data = getIndpEnv:TYPO3_SITE_URL
+					10.data = getIndpEnv:TYPO3_REQUEST_URL
 					10.rawUrlEncode = 1
-					20 = TEXT
-					20.typolink.value = x
-					20.typolink.parameter.data = TSFE:id
-					20.typolink.returnLast = url
-					20.rawUrlEncode = 1
 				}
 				30 = TEXT
 				30.wrap = &t=|
@@ -410,13 +351,8 @@ plugin.tx_sexybookmarks_pi1 {
 				20.wrap = ?url=|
 				20 {
 					10 = TEXT
-					10.data = getIndpEnv:TYPO3_SITE_URL
+					10.data = getIndpEnv:TYPO3_REQUEST_URL
 					10.rawUrlEncode = 1
-					20 = TEXT
-					20.typolink.value = x
-					20.typolink.parameter.data = TSFE:id
-					20.typolink.returnLast = url
-					20.rawUrlEncode = 1
 				}
 				30 = TEXT
 				30.wrap = &title=|
@@ -442,13 +378,8 @@ plugin.tx_sexybookmarks_pi1 {
 				20.wrap = ?v=4&src=bm&u=
 				20 {
 					10 = TEXT
-					10.data = getIndpEnv:TYPO3_SITE_URL
+					10.data = getIndpEnv:TYPO3_REQUEST_URL
 					10.rawUrlEncode = 1
-					20 = TEXT
-					20.typolink.value = x
-					20.typolink.parameter.data = TSFE:id
-					20.typolink.returnLast = url
-					20.rawUrlEncode = 1
 				}
 				30 = TEXT
 				30.wrap = &t=|
@@ -474,13 +405,8 @@ plugin.tx_sexybookmarks_pi1 {
 				20.wrap = ?status=|
 				20 {
 					10 = TEXT
-					10.data = getIndpEnv:TYPO3_SITE_URL
+					10.data = getIndpEnv:TYPO3_REQUEST_URL
 					10.rawUrlEncode = 1
-					20 = TEXT
-					20.typolink.value = x
-					20.typolink.parameter.data = TSFE:id
-					20.typolink.returnLast = url
-					20.rawUrlEncode = 1
 				}
 				30 = TEXT
 				30.wrap = %20|
@@ -512,11 +438,7 @@ plugin.tx_sexybookmarks_pi1 {
 				30.wrap = %0A%0AYou%20can%20read%20the%20full%20article%20here%3A%20|
 				30 {
 					10 = TEXT
-					10.data = getIndpEnv:TYPO3_SITE_URL
-					20 = TEXT
-					20.typolink.value = x
-					20.typolink.parameter.data = TSFE:id
-					20.typolink.returnLast = url
+					10.data = getIndpEnv:TYPO3_REQUEST_URL
 				}
 			}
 			30 = TEXT
@@ -544,11 +466,7 @@ plugin.tx_sexybookmarks_pi1 {
 				30.wrap = %0A%0AYou%20can%20read%20the%20full%20article%20here%3A%20|
 				30 {
 					10 = TEXT
-					10.data = getIndpEnv:TYPO3_SITE_URL
-					20 = TEXT
-					20.typolink.value = x
-					20.typolink.parameter.data = TSFE:id
-					20.typolink.returnLast = url
+					10.data = getIndpEnv:TYPO3_REQUEST_URL
 				}
 			}
 			30 = TEXT
@@ -568,11 +486,7 @@ plugin.tx_sexybookmarks_pi1 {
 				10.wrap = |
 				10 {
 					10 = TEXT
-					10.data = getIndpEnv:TYPO3_SITE_URL
-					20 = TEXT
-					20.typolink.value = x
-					20.typolink.parameter.data = TSFE:id
-					20.typolink.returnLast = url
+					10.data = getIndpEnv:TYPO3_REQUEST_URL
 				}
 			}
 			30 = TEXT
@@ -594,13 +508,8 @@ plugin.tx_sexybookmarks_pi1 {
 				20.wrap = ?mini=true&url=|
 				20 {
 					10 = TEXT
-					10.data = getIndpEnv:TYPO3_SITE_URL
+					10.data = getIndpEnv:TYPO3_REQUEST_URL
 					10.rawUrlEncode = 1
-					20 = TEXT
-					20.typolink.value = x
-					20.typolink.parameter.data = TSFE:id
-					20.typolink.returnLast = url
-					20.rawUrlEncode = 1
 				}
 				30 = TEXT
 				30.wrap = &title=|
@@ -630,13 +539,8 @@ plugin.tx_sexybookmarks_pi1 {
 				20.wrap = &u=|
 				20 {
 					10 = TEXT
-					10.data = getIndpEnv:TYPO3_SITE_URL
+					10.data = getIndpEnv:TYPO3_REQUEST_URL
 					10.rawUrlEncode = 1
-					20 = TEXT
-					20.typolink.value = x
-					20.typolink.parameter.data = TSFE:id
-					20.typolink.returnLast = url
-					20.rawUrlEncode = 1
 				}
 				30 = TEXT
 				30.wrap = &h=|
@@ -662,13 +566,8 @@ plugin.tx_sexybookmarks_pi1 {
 				20.wrap = ?posturl=|
 				20 {
 					10 = TEXT
-					10.data = getIndpEnv:TYPO3_SITE_URL
+					10.data = getIndpEnv:TYPO3_REQUEST_URL
 					10.rawUrlEncode = 1
-					20 = TEXT
-					20.typolink.value = x
-					20.typolink.parameter.data = TSFE:id
-					20.typolink.returnLast = url
-					20.rawUrlEncode = 1
 				}
 				30 = TEXT
 				30.wrap = &posttitle=|
@@ -698,13 +597,8 @@ plugin.tx_sexybookmarks_pi1 {
 				20.wrap = ?op=add&bkmk=|
 				20 {
 					10 = TEXT
-					10.data = getIndpEnv:TYPO3_SITE_URL
+					10.data = getIndpEnv:TYPO3_REQUEST_URL
 					10.rawUrlEncode = 1
-					20 = TEXT
-					20.typolink.value = x
-					20.typolink.parameter.data = TSFE:id
-					20.typolink.returnLast = url
-					20.rawUrlEncode = 1
 				}
 				30 = TEXT
 				30.wrap = &title=|
@@ -730,13 +624,8 @@ plugin.tx_sexybookmarks_pi1 {
 				20.wrap = ?bm_url=|
 				20 {
 					10 = TEXT
-					10.data = getIndpEnv:TYPO3_SITE_URL
+					10.data = getIndpEnv:TYPO3_REQUEST_URL
 					10.rawUrlEncode = 1
-					20 = TEXT
-					20.typolink.value = x
-					20.typolink.parameter.data = TSFE:id
-					20.typolink.returnLast = url
-					20.rawUrlEncode = 1
 				}
 				30 = TEXT
 				30.wrap = &bm_description=|
@@ -762,13 +651,8 @@ plugin.tx_sexybookmarks_pi1 {
 				20.wrap = ?url=|
 				20 {
 					10 = TEXT
-					10.data = getIndpEnv:TYPO3_SITE_URL
+					10.data = getIndpEnv:TYPO3_REQUEST_URL
 					10.rawUrlEncode = 1
-					20 = TEXT
-					20.typolink.value = x
-					20.typolink.parameter.data = TSFE:id
-					20.typolink.returnLast = url
-					20.rawUrlEncode = 1
 				}
 			}
 			30 = TEXT
@@ -790,13 +674,8 @@ plugin.tx_sexybookmarks_pi1 {
 				20.wrap = ?url=|
 				20 {
 					10 = TEXT
-					10.data = getIndpEnv:TYPO3_SITE_URL
+					10.data = getIndpEnv:TYPO3_REQUEST_URL
 					10.rawUrlEncode = 1
-					20 = TEXT
-					20.typolink.value = x
-					20.typolink.parameter.data = TSFE:id
-					20.typolink.returnLast = url
-					20.rawUrlEncode = 1
 				}
 			}
 			30 = TEXT
@@ -818,13 +697,8 @@ plugin.tx_sexybookmarks_pi1 {
 				20.wrap = ?url=|
 				20 {
 					10 = TEXT
-					10.data = getIndpEnv:TYPO3_SITE_URL
+					10.data = getIndpEnv:TYPO3_REQUEST_URL
 					10.rawUrlEncode = 1
-					20 = TEXT
-					20.typolink.value = x
-					20.typolink.parameter.data = TSFE:id
-					20.typolink.returnLast = url
-					20.rawUrlEncode = 1
 				}
 				30 = TEXT
 				30.wrap = &title=|
@@ -850,13 +724,8 @@ plugin.tx_sexybookmarks_pi1 {
 				20.wrap = ?link=|
 				20 {
 					10 = TEXT
-					10.data = getIndpEnv:TYPO3_SITE_URL
+					10.data = getIndpEnv:TYPO3_REQUEST_URL
 					10.rawUrlEncode = 1
-					20 = TEXT
-					20.typolink.value = x
-					20.typolink.parameter.data = TSFE:id
-					20.typolink.returnLast = url
-					20.rawUrlEncode = 1
 				}
 				30 = TEXT
 				30.wrap = &title=|
@@ -882,13 +751,8 @@ plugin.tx_sexybookmarks_pi1 {
 				20.wrap = ?mini=1&simple=1&url=|
 				20 {
 					10 = TEXT
-					10.data = getIndpEnv:TYPO3_SITE_URL
+					10.data = getIndpEnv:TYPO3_REQUEST_URL
 					10.rawUrlEncode = 1
-					20 = TEXT
-					20.typolink.value = x
-					20.typolink.parameter.data = TSFE:id
-					20.typolink.returnLast = url
-					20.rawUrlEncode = 1
 				}
 				30 = TEXT
 				30.wrap = &title=|
@@ -914,13 +778,8 @@ plugin.tx_sexybookmarks_pi1 {
 				20.wrap = ?url=|
 				20 {
 					10 = TEXT
-					10.data = getIndpEnv:TYPO3_SITE_URL
+					10.data = getIndpEnv:TYPO3_REQUEST_URL
 					10.rawUrlEncode = 1
-					20 = TEXT
-					20.typolink.value = x
-					20.typolink.parameter.data = TSFE:id
-					20.typolink.returnLast = url
-					20.rawUrlEncode = 1
 				}
 				30 = TEXT
 				30.wrap = &title=|
@@ -946,13 +805,8 @@ plugin.tx_sexybookmarks_pi1 {
 				20.wrap = ?url=|
 				20 {
 					10 = TEXT
-					10.data = getIndpEnv:TYPO3_SITE_URL
+					10.data = getIndpEnv:TYPO3_REQUEST_URL
 					10.rawUrlEncode = 1
-					20 = TEXT
-					20.typolink.value = x
-					20.typolink.parameter.data = TSFE:id
-					20.typolink.returnLast = url
-					20.rawUrlEncode = 1
 				}
 			}
 			30 = TEXT
@@ -974,13 +828,8 @@ plugin.tx_sexybookmarks_pi1 {
 				20.wrap = ?url=|
 				20 {
 					10 = TEXT
-					10.data = getIndpEnv:TYPO3_SITE_URL
+					10.data = getIndpEnv:TYPO3_REQUEST_URL
 					10.rawUrlEncode = 1
-					20 = TEXT
-					20.typolink.value = x
-					20.typolink.parameter.data = TSFE:id
-					20.typolink.returnLast = url
-					20.rawUrlEncode = 1
 				}
 				30 = TEXT
 				30.wrap = &title=|
@@ -1010,13 +859,8 @@ plugin.tx_sexybookmarks_pi1 {
 				20.wrap = ?url=|
 				20 {
 					10 = TEXT
-					10.data = getIndpEnv:TYPO3_SITE_URL
+					10.data = getIndpEnv:TYPO3_REQUEST_URL
 					10.rawUrlEncode = 1
-					20 = TEXT
-					20.typolink.value = x
-					20.typolink.parameter.data = TSFE:id
-					20.typolink.returnLast = url
-					20.rawUrlEncode = 1
 				}
 				30 = TEXT
 				30.wrap = &title=|
@@ -1042,13 +886,8 @@ plugin.tx_sexybookmarks_pi1 {
 				20.wrap = ?bAddLink_x=1&lurl=|
 				20 {
 					10 = TEXT
-					10.data = getIndpEnv:TYPO3_SITE_URL
+					10.data = getIndpEnv:TYPO3_REQUEST_URL
 					10.rawUrlEncode = 1
-					20 = TEXT
-					20.typolink.value = x
-					20.typolink.parameter.data = TSFE:id
-					20.typolink.returnLast = url
-					20.rawUrlEncode = 1
 				}
 				30 = TEXT
 				30.wrap = &lname=|
@@ -1074,13 +913,8 @@ plugin.tx_sexybookmarks_pi1 {
 				20.wrap = ?sm=1&u_data[url]=|
 				20 {
 					10 = TEXT
-					10.data = getIndpEnv:TYPO3_SITE_URL
+					10.data = getIndpEnv:TYPO3_REQUEST_URL
 					10.rawUrlEncode = 1
-					20 = TEXT
-					20.typolink.value = x
-					20.typolink.parameter.data = TSFE:id
-					20.typolink.returnLast = url
-					20.rawUrlEncode = 1
 				}
 				30 = TEXT
 				30.wrap = &u_data[name]=|
@@ -1106,13 +940,8 @@ plugin.tx_sexybookmarks_pi1 {
 				20.wrap = ?bmurl=|
 				20 {
 					10 = TEXT
-					10.data = getIndpEnv:TYPO3_SITE_URL
+					10.data = getIndpEnv:TYPO3_REQUEST_URL
 					10.rawUrlEncode = 1
-					20 = TEXT
-					20.typolink.value = x
-					20.typolink.parameter.data = TSFE:id
-					20.typolink.returnLast = url
-					20.rawUrlEncode = 1
 				}
 				30 = TEXT
 				30.wrap = &bmtitle=|
@@ -1138,13 +967,8 @@ plugin.tx_sexybookmarks_pi1 {
 				20.wrap = ?url=|
 				20 {
 					10 = TEXT
-					10.data = getIndpEnv:TYPO3_SITE_URL
+					10.data = getIndpEnv:TYPO3_REQUEST_URL
 					10.rawUrlEncode = 1
-					20 = TEXT
-					20.typolink.value = x
-					20.typolink.parameter.data = TSFE:id
-					20.typolink.returnLast = url
-					20.rawUrlEncode = 1
 				}
 				30 = TEXT
 				30.wrap = &title=|
@@ -1170,13 +994,8 @@ plugin.tx_sexybookmarks_pi1 {
 				20.wrap = ?u=|
 				20 {
 					10 = TEXT
-					10.data = getIndpEnv:TYPO3_SITE_URL
+					10.data = getIndpEnv:TYPO3_REQUEST_URL
 					10.rawUrlEncode = 1
-					20 = TEXT
-					20.typolink.value = x
-					20.typolink.parameter.data = TSFE:id
-					20.typolink.returnLast = url
-					20.rawUrlEncode = 1
 				}
 				30 = TEXT
 				30.wrap = &t=|
@@ -1202,13 +1021,8 @@ plugin.tx_sexybookmarks_pi1 {
 				20.wrap = ?url=|
 				20 {
 					10 = TEXT
-					10.data = getIndpEnv:TYPO3_SITE_URL
+					10.data = getIndpEnv:TYPO3_REQUEST_URL
 					10.rawUrlEncode = 1
-					20 = TEXT
-					20.typolink.value = x
-					20.typolink.parameter.data = TSFE:id
-					20.typolink.returnLast = url
-					20.rawUrlEncode = 1
 				}
 			}
 			30 = TEXT
@@ -1230,13 +1044,8 @@ plugin.tx_sexybookmarks_pi1 {
 				20.wrap = ?url=|
 				20 {
 					10 = TEXT
-					10.data = getIndpEnv:TYPO3_SITE_URL
+					10.data = getIndpEnv:TYPO3_REQUEST_URL
 					10.rawUrlEncode = 1
-					20 = TEXT
-					20.typolink.value = x
-					20.typolink.parameter.data = TSFE:id
-					20.typolink.returnLast = url
-					20.rawUrlEncode = 1
 				}
 				30 = TEXT
 				30.wrap = &title=|
@@ -1266,13 +1075,8 @@ plugin.tx_sexybookmarks_pi1 {
 				20.wrap = ?url=|
 				20 {
 					10 = TEXT
-					10.data = getIndpEnv:TYPO3_SITE_URL
+					10.data = getIndpEnv:TYPO3_REQUEST_URL
 					10.rawUrlEncode = 1
-					20 = TEXT
-					20.typolink.value = x
-					20.typolink.parameter.data = TSFE:id
-					20.typolink.returnLast = url
-					20.rawUrlEncode = 1
 				}
 				30 = TEXT
 				30.wrap = &T=|
@@ -1302,13 +1106,8 @@ plugin.tx_sexybookmarks_pi1 {
 				30.wrap = +-+from+|
 				30 {
 					10 = TEXT
-					10.data = getIndpEnv:TYPO3_SITE_URL
+					10.data = getIndpEnv:TYPO3_REQUEST_URL
 					10.rawUrlEncode = 1
-					20 = TEXT
-					20.typolink.value = x
-					20.typolink.parameter.data = TSFE:id
-					20.typolink.returnLast = url
-					20.rawUrlEncode = 1
 				}
 			}
 			30 = TEXT
@@ -1330,13 +1129,8 @@ plugin.tx_sexybookmarks_pi1 {
 				20.wrap = ?url=|
 				20 {
 					10 = TEXT
-					10.data = getIndpEnv:TYPO3_SITE_URL
+					10.data = getIndpEnv:TYPO3_REQUEST_URL
 					10.rawUrlEncode = 1
-					20 = TEXT
-					20.typolink.value = x
-					20.typolink.parameter.data = TSFE:id
-					20.typolink.returnLast = url
-					20.rawUrlEncode = 1
 				}
 				30 = TEXT
 				30.wrap = &title=|
@@ -1362,13 +1156,8 @@ plugin.tx_sexybookmarks_pi1 {
 				20.wrap = ?url=|
 				20 {
 					10 = TEXT
-					10.data = getIndpEnv:TYPO3_SITE_URL
+					10.data = getIndpEnv:TYPO3_REQUEST_URL
 					10.rawUrlEncode = 1
-					20 = TEXT
-					20.typolink.value = x
-					20.typolink.parameter.data = TSFE:id
-					20.typolink.returnLast = url
-					20.rawUrlEncode = 1
 				}
 				30 = TEXT
 				30.wrap = &title=|
@@ -1394,13 +1183,8 @@ plugin.tx_sexybookmarks_pi1 {
 				20.wrap = ?status=Tip+@Techmeme+|
 				20 {
 					10 = TEXT
-					10.data = getIndpEnv:TYPO3_SITE_URL
+					10.data = getIndpEnv:TYPO3_REQUEST_URL
 					10.rawUrlEncode = 1
-					20 = TEXT
-					20.typolink.value = x
-					20.typolink.parameter.data = TSFE:id
-					20.typolink.returnLast = url
-					20.rawUrlEncode = 1
 				}
 				30 = TEXT
 				30.wrap = +&quot;|&quot;
@@ -1426,13 +1210,8 @@ plugin.tx_sexybookmarks_pi1 {
 				20.wrap = ?c=post&m=submit&link=|
 				20 {
 					10 = TEXT
-					10.data = getIndpEnv:TYPO3_SITE_URL
+					10.data = getIndpEnv:TYPO3_REQUEST_URL
 					10.rawUrlEncode = 1
-					20 = TEXT
-					20.typolink.value = x
-					20.typolink.parameter.data = TSFE:id
-					20.typolink.returnLast = url
-					20.rawUrlEncode = 1
 				}
 			}
 			30 = TEXT
@@ -1454,13 +1233,8 @@ plugin.tx_sexybookmarks_pi1 {
 				20.wrap = ?linkto=|
 				20 {
 					10 = TEXT
-					10.data = getIndpEnv:TYPO3_SITE_URL
+					10.data = getIndpEnv:TYPO3_REQUEST_URL
 					10.rawUrlEncode = 1
-					20 = TEXT
-					20.typolink.value = x
-					20.typolink.parameter.data = TSFE:id
-					20.typolink.returnLast = url
-					20.rawUrlEncode = 1
 				}
 				30 = TEXT
 				30.wrap = &title=|
@@ -1490,13 +1264,8 @@ plugin.tx_sexybookmarks_pi1 {
 				20.wrap = ?type=Article&url=|
 				20 {
 					10 = TEXT
-					10.data = getIndpEnv:TYPO3_SITE_URL
+					10.data = getIndpEnv:TYPO3_REQUEST_URL
 					10.rawUrlEncode = 1
-					20 = TEXT
-					20.typolink.value = x
-					20.typolink.parameter.data = TSFE:id
-					20.typolink.returnLast = url
-					20.rawUrlEncode = 1
 				}
 				30 = TEXT
 				30.wrap = &title=|
@@ -1522,13 +1291,8 @@ plugin.tx_sexybookmarks_pi1 {
 				20.wrap = ?link=|
 				20 {
 					10 = TEXT
-					10.data = getIndpEnv:TYPO3_SITE_URL
+					10.data = getIndpEnv:TYPO3_REQUEST_URL
 					10.rawUrlEncode = 1
-					20 = TEXT
-					20.typolink.value = x
-					20.typolink.parameter.data = TSFE:id
-					20.typolink.returnLast = url
-					20.rawUrlEncode = 1
 				}
 				30 = TEXT
 				30.wrap = &title=|
@@ -1558,13 +1322,8 @@ plugin.tx_sexybookmarks_pi1 {
 				20.wrap = ?u=|
 				20 {
 					10 = TEXT
-					10.data = getIndpEnv:TYPO3_SITE_URL
+					10.data = getIndpEnv:TYPO3_REQUEST_URL
 					10.rawUrlEncode = 1
-					20 = TEXT
-					20.typolink.value = x
-					20.typolink.parameter.data = TSFE:id
-					20.typolink.returnLast = url
-					20.rawUrlEncode = 1
 				}
 				30 = TEXT
 				30.wrap = &t=|
@@ -1594,13 +1353,8 @@ plugin.tx_sexybookmarks_pi1 {
 				20.wrap = ?url=|
 				20 {
 					10 = TEXT
-					10.data = getIndpEnv:TYPO3_SITE_URL
+					10.data = getIndpEnv:TYPO3_REQUEST_URL
 					10.rawUrlEncode = 1
-					20 = TEXT
-					20.typolink.value = x
-					20.typolink.parameter.data = TSFE:id
-					20.typolink.returnLast = url
-					20.rawUrlEncode = 1
 				}
 				30 = TEXT
 				30.wrap = &title=|
@@ -1630,13 +1384,8 @@ plugin.tx_sexybookmarks_pi1 {
 				20.wrap = ?popup=no&url=|
 				20 {
 					10 = TEXT
-					10.data = getIndpEnv:TYPO3_SITE_URL
+					10.data = getIndpEnv:TYPO3_REQUEST_URL
 					10.rawUrlEncode = 1
-					20 = TEXT
-					20.typolink.value = x
-					20.typolink.parameter.data = TSFE:id
-					20.typolink.returnLast = url
-					20.rawUrlEncode = 1
 				}
 				30 = TEXT
 				30.wrap = &title=|
@@ -1662,13 +1411,8 @@ plugin.tx_sexybookmarks_pi1 {
 				20.wrap = ?url=|
 				20 {
 					10 = TEXT
-					10.data = getIndpEnv:TYPO3_SITE_URL
+					10.data = getIndpEnv:TYPO3_REQUEST_URL
 					10.rawUrlEncode = 1
-					20 = TEXT
-					20.typolink.value = x
-					20.typolink.parameter.data = TSFE:id
-					20.typolink.returnLast = url
-					20.rawUrlEncode = 1
 				}
 				30 = TEXT
 				30.wrap = &title=|
@@ -1694,13 +1438,8 @@ plugin.tx_sexybookmarks_pi1 {
 				20.wrap = ?url=|
 				20 {
 					10 = TEXT
-					10.data = getIndpEnv:TYPO3_SITE_URL
+					10.data = getIndpEnv:TYPO3_REQUEST_URL
 					10.rawUrlEncode = 1
-					20 = TEXT
-					20.typolink.value = x
-					20.typolink.parameter.data = TSFE:id
-					20.typolink.returnLast = url
-					20.rawUrlEncode = 1
 				}
 				30 = TEXT
 				30.wrap = &title=|
@@ -1726,13 +1465,8 @@ plugin.tx_sexybookmarks_pi1 {
 				20.wrap = ?url=|
 				20 {
 					10 = TEXT
-					10.data = getIndpEnv:TYPO3_SITE_URL
+					10.data = getIndpEnv:TYPO3_REQUEST_URL
 					10.rawUrlEncode = 1
-					20 = TEXT
-					20.typolink.value = x
-					20.typolink.parameter.data = TSFE:id
-					20.typolink.returnLast = url
-					20.rawUrlEncode = 1
 				}
 				30 = TEXT
 				30.wrap = &title=|
@@ -1758,13 +1492,8 @@ plugin.tx_sexybookmarks_pi1 {
 				20.wrap = ?url=|
 				20 {
 					10 = TEXT
-					10.data = getIndpEnv:TYPO3_SITE_URL
+					10.data = getIndpEnv:TYPO3_REQUEST_URL
 					10.rawUrlEncode = 1
-					20 = TEXT
-					20.typolink.value = x
-					20.typolink.parameter.data = TSFE:id
-					20.typolink.returnLast = url
-					20.rawUrlEncode = 1
 				}
 				30 = TEXT
 				30.wrap = &title=|
@@ -1794,13 +1523,8 @@ plugin.tx_sexybookmarks_pi1 {
 				20.wrap = ?url=|
 				20 {
 					10 = TEXT
-					10.data = getIndpEnv:TYPO3_SITE_URL
+					10.data = getIndpEnv:TYPO3_REQUEST_URL
 					10.rawUrlEncode = 1
-					20 = TEXT
-					20.typolink.value = x
-					20.typolink.parameter.data = TSFE:id
-					20.typolink.returnLast = url
-					20.rawUrlEncode = 1
 				}
 				30 = TEXT
 				30.wrap = &title=|
@@ -1826,13 +1550,8 @@ plugin.tx_sexybookmarks_pi1 {
 				20.wrap = ?url=|
 				20 {
 					10 = TEXT
-					10.data = getIndpEnv:TYPO3_SITE_URL
+					10.data = getIndpEnv:TYPO3_REQUEST_URL
 					10.rawUrlEncode = 1
-					20 = TEXT
-					20.typolink.value = x
-					20.typolink.parameter.data = TSFE:id
-					20.typolink.returnLast = url
-					20.rawUrlEncode = 1
 				}
 			}
 			30 = TEXT
@@ -1862,13 +1581,8 @@ plugin.tx_sexybookmarks_pi1 {
 				40.wrap = +-+|&rating=5
 				40 {
 					10 = TEXT
-					10.data = getIndpEnv:TYPO3_SITE_URL
+					10.data = getIndpEnv:TYPO3_REQUEST_URL
 					10.rawUrlEncode = 1
-					20 = TEXT
-					20.typolink.value = x
-					20.typolink.parameter.data = TSFE:id
-					20.typolink.returnLast = url
-					20.rawUrlEncode = 1
 				}
 			}
 			30 = TEXT
@@ -1890,13 +1604,8 @@ plugin.tx_sexybookmarks_pi1 {
 				20.wrap = ?url=|
 				20 {
 					10 = TEXT
-					10.data = getIndpEnv:TYPO3_SITE_URL
+					10.data = getIndpEnv:TYPO3_REQUEST_URL
 					10.rawUrlEncode = 1
-					20 = TEXT
-					20.typolink.value = x
-					20.typolink.parameter.data = TSFE:id
-					20.typolink.returnLast = url
-					20.rawUrlEncode = 1
 				}
 				30 = TEXT
 				30.wrap = &title=|
@@ -1922,13 +1631,8 @@ plugin.tx_sexybookmarks_pi1 {
 				20.wrap = ?mode=confirm&url=|
 				20 {
 					10 = TEXT
-					10.data = getIndpEnv:TYPO3_SITE_URL
+					10.data = getIndpEnv:TYPO3_REQUEST_URL
 					10.rawUrlEncode = 1
-					20 = TEXT
-					20.typolink.value = x
-					20.typolink.parameter.data = TSFE:id
-					20.typolink.returnLast = url
-					20.rawUrlEncode = 1
 				}
 				30 = TEXT
 				30.wrap = &title=|
@@ -1954,13 +1658,8 @@ plugin.tx_sexybookmarks_pi1 {
 				20.wrap = ?u=|
 				20 {
 					10 = TEXT
-					10.data = getIndpEnv:TYPO3_SITE_URL
+					10.data = getIndpEnv:TYPO3_REQUEST_URL
 					10.rawUrlEncode = 1
-					20 = TEXT
-					20.typolink.value = x
-					20.typolink.parameter.data = TSFE:id
-					20.typolink.returnLast = url
-					20.rawUrlEncode = 1
 				}
 				30 = TEXT
 				30.wrap = &n=|
@@ -1986,13 +1685,8 @@ plugin.tx_sexybookmarks_pi1 {
 				20.wrap = ?url=|
 				20 {
 					10 = TEXT
-					10.data = getIndpEnv:TYPO3_SITE_URL
+					10.data = getIndpEnv:TYPO3_REQUEST_URL
 					10.rawUrlEncode = 1
-					20 = TEXT
-					20.typolink.value = x
-					20.typolink.parameter.data = TSFE:id
-					20.typolink.returnLast = url
-					20.rawUrlEncode = 1
 				}
 				30 = TEXT
 				30.wrap = &title=|
@@ -2018,13 +1712,8 @@ plugin.tx_sexybookmarks_pi1 {
 				20.wrap = ?|
 				20 {
 					10 = TEXT
-					10.data = getIndpEnv:TYPO3_SITE_URL
+					10.data = getIndpEnv:TYPO3_REQUEST_URL
 					10.rawUrlEncode = 1
-					20 = TEXT
-					20.typolink.value = x
-					20.typolink.parameter.data = TSFE:id
-					20.typolink.returnLast = url
-					20.rawUrlEncode = 1
 				}
 			}
 			30 = TEXT
@@ -2046,13 +1735,8 @@ plugin.tx_sexybookmarks_pi1 {
 				20.wrap = ?url=|
 				20 {
 					10 = TEXT
-					10.data = getIndpEnv:TYPO3_SITE_URL
+					10.data = getIndpEnv:TYPO3_REQUEST_URL
 					10.rawUrlEncode = 1
-					20 = TEXT
-					20.typolink.value = x
-					20.typolink.parameter.data = TSFE:id
-					20.typolink.returnLast = url
-					20.rawUrlEncode = 1
 				}
 			}
 			30 = TEXT
@@ -2074,13 +1758,8 @@ plugin.tx_sexybookmarks_pi1 {
 				20.wrap = ?url=|
 				20 {
 					10 = TEXT
-					10.data = getIndpEnv:TYPO3_SITE_URL
+					10.data = getIndpEnv:TYPO3_REQUEST_URL
 					10.rawUrlEncode = 1
-					20 = TEXT
-					20.typolink.value = x
-					20.typolink.parameter.data = TSFE:id
-					20.typolink.returnLast = url
-					20.rawUrlEncode = 1
 				}
 			}
 			30 = TEXT
@@ -2102,13 +1781,8 @@ plugin.tx_sexybookmarks_pi1 {
 				20.wrap = ?url=|
 				20 {
 					10 = TEXT
-					10.data = getIndpEnv:TYPO3_SITE_URL
+					10.data = getIndpEnv:TYPO3_REQUEST_URL
 					10.rawUrlEncode = 1
-					20 = TEXT
-					20.typolink.value = x
-					20.typolink.parameter.data = TSFE:id
-					20.typolink.returnLast = url
-					20.rawUrlEncode = 1
 				}
 				30 = TEXT
 				30.wrap = &title=|
@@ -2134,13 +1808,8 @@ plugin.tx_sexybookmarks_pi1 {
 				20.wrap = ?url=|
 				20 {
 					10 = TEXT
-					10.data = getIndpEnv:TYPO3_SITE_URL
+					10.data = getIndpEnv:TYPO3_REQUEST_URL
 					10.rawUrlEncode = 1
-					20 = TEXT
-					20.typolink.value = x
-					20.typolink.parameter.data = TSFE:id
-					20.typolink.returnLast = url
-					20.rawUrlEncode = 1
 				}
 			}
 			30 = TEXT
@@ -2162,13 +1831,8 @@ plugin.tx_sexybookmarks_pi1 {
 				20.wrap = |
 				20 {
 					10 = TEXT
-					10.data = getIndpEnv:TYPO3_SITE_URL
+					10.data = getIndpEnv:TYPO3_REQUEST_URL
 					10.rawUrlEncode = 1
-					20 = TEXT
-					20.typolink.value = x
-					20.typolink.parameter.data = TSFE:id
-					20.typolink.returnLast = url
-					20.rawUrlEncode = 1
 				}
 			}
 			30 = TEXT
@@ -2190,13 +1854,8 @@ plugin.tx_sexybookmarks_pi1 {
 				20.wrap = ?url=|
 				20 {
 					10 = TEXT
-					10.data = getIndpEnv:TYPO3_SITE_URL
+					10.data = getIndpEnv:TYPO3_REQUEST_URL
 					10.rawUrlEncode = 1
-					20 = TEXT
-					20.typolink.value = x
-					20.typolink.parameter.data = TSFE:id
-					20.typolink.returnLast = url
-					20.rawUrlEncode = 1
 				}
 				30 = TEXT
 				30.wrap = &title=|
@@ -2222,13 +1881,8 @@ plugin.tx_sexybookmarks_pi1 {
 				20.wrap = ?Url=|
 				20 {
 					10 = TEXT
-					10.data = getIndpEnv:TYPO3_SITE_URL
+					10.data = getIndpEnv:TYPO3_REQUEST_URL
 					10.rawUrlEncode = 1
-					20 = TEXT
-					20.typolink.value = x
-					20.typolink.parameter.data = TSFE:id
-					20.typolink.returnLast = url
-					20.rawUrlEncode = 1
 				}
 				30 = TEXT
 				30.wrap = &Title=|
@@ -2254,13 +1908,8 @@ plugin.tx_sexybookmarks_pi1 {
 				20.wrap = ?url=|
 				20 {
 					10 = TEXT
-					10.data = getIndpEnv:TYPO3_SITE_URL
+					10.data = getIndpEnv:TYPO3_REQUEST_URL
 					10.rawUrlEncode = 1
-					20 = TEXT
-					20.typolink.value = x
-					20.typolink.parameter.data = TSFE:id
-					20.typolink.returnLast = url
-					20.rawUrlEncode = 1
 				}
 				30 = TEXT
 				30.wrap = &title=|
@@ -2286,13 +1935,8 @@ plugin.tx_sexybookmarks_pi1 {
 				20.wrap = ?url=|
 				20 {
 					10 = TEXT
-					10.data = getIndpEnv:TYPO3_SITE_URL
+					10.data = getIndpEnv:TYPO3_REQUEST_URL
 					10.rawUrlEncode = 1
-					20 = TEXT
-					20.typolink.value = x
-					20.typolink.parameter.data = TSFE:id
-					20.typolink.returnLast = url
-					20.rawUrlEncode = 1
 				}
 				30 = TEXT
 				30.wrap = &title=|
@@ -2318,13 +1962,8 @@ plugin.tx_sexybookmarks_pi1 {
 				20.wrap = ?nt=orkut.com&du=|
 				20 {
 					10 = TEXT
-					10.data = getIndpEnv:TYPO3_SITE_URL
+					10.data = getIndpEnv:TYPO3_REQUEST_URL
 					10.rawUrlEncode = 1
-					20 = TEXT
-					20.typolink.value = x
-					20.typolink.parameter.data = TSFE:id
-					20.typolink.returnLast = url
-					20.rawUrlEncode = 1
 				}
 				30 = TEXT
 				30.wrap = &tt=|
@@ -2354,13 +1993,8 @@ plugin.tx_sexybookmarks_pi1 {
 				20.wrap = ?v=3&u=|
 				20 {
 					10 = TEXT
-					10.data = getIndpEnv:TYPO3_SITE_URL
+					10.data = getIndpEnv:TYPO3_REQUEST_URL
 					10.rawUrlEncode = 1
-					20 = TEXT
-					20.typolink.value = x
-					20.typolink.parameter.data = TSFE:id
-					20.typolink.returnLast = url
-					20.rawUrlEncode = 1
 				}
 				30 = TEXT
 				30.wrap = &t=|
@@ -2386,13 +2020,8 @@ plugin.tx_sexybookmarks_pi1 {
 				20.wrap = ?url=|
 				20 {
 					10 = TEXT
-					10.data = getIndpEnv:TYPO3_SITE_URL
+					10.data = getIndpEnv:TYPO3_REQUEST_URL
 					10.rawUrlEncode = 1
-					20 = TEXT
-					20.typolink.value = x
-					20.typolink.parameter.data = TSFE:id
-					20.typolink.returnLast = url
-					20.rawUrlEncode = 1
 				}
 				30 = TEXT
 				30.wrap = &title=|
@@ -2418,13 +2047,8 @@ plugin.tx_sexybookmarks_pi1 {
 				20.wrap = ?url=|
 				20 {
 					10 = TEXT
-					10.data = getIndpEnv:TYPO3_SITE_URL
+					10.data = getIndpEnv:TYPO3_REQUEST_URL
 					10.rawUrlEncode = 1
-					20 = TEXT
-					20.typolink.value = x
-					20.typolink.parameter.data = TSFE:id
-					20.typolink.returnLast = url
-					20.rawUrlEncode = 1
 				}
 				30 = TEXT
 				30.wrap = &title=|
@@ -2450,13 +2074,8 @@ plugin.tx_sexybookmarks_pi1 {
 				20.wrap = ?t&pli=1&u=|
 				20 {
 					10 = TEXT
-					10.data = getIndpEnv:TYPO3_SITE_URL
+					10.data = getIndpEnv:TYPO3_REQUEST_URL
 					10.rawUrlEncode = 1
-					20 = TEXT
-					20.typolink.value = x
-					20.typolink.parameter.data = TSFE:id
-					20.typolink.returnLast = url
-					20.rawUrlEncode = 1
 				}
 				30 = TEXT
 				30.wrap = &n=|
@@ -2486,13 +2105,8 @@ plugin.tx_sexybookmarks_pi1 {
 				30.wrap = &+-+|&qualifier=shares
 				30 {
 					10 = TEXT
-					10.data = getIndpEnv:TYPO3_SITE_URL
+					10.data = getIndpEnv:TYPO3_REQUEST_URL
 					10.rawUrlEncode = 1
-					20 = TEXT
-					20.typolink.value = x
-					20.typolink.parameter.data = TSFE:id
-					20.typolink.returnLast = url
-					20.rawUrlEncode = 1
 				}
 			}
 			30 = TEXT

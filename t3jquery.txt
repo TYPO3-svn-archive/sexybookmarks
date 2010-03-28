@@ -1,0 +1,2 @@
+script=res/jquery/js/sexybookmarks.js
+components=Core,Easing
