@@ -60,40 +60,7 @@
 								<type>select</type>
 								<size>1</size>
 								<maxitems>1</maxitems>
-								<items type="array">
-									<numIndex index="0" type="array">
-										<numIndex index="0">none</numIndex>
-										<numIndex index="1"></numIndex>
-									</numIndex>
-									<numIndex index="1" type="array">
-										<numIndex index="0">sexy</numIndex>
-										<numIndex index="1">sexy</numIndex>
-									</numIndex>
-									<numIndex index="2" type="array">
-										<numIndex index="0">caring</numIndex>
-										<numIndex index="1">caring</numIndex>
-									</numIndex>
-									<numIndex index="3" type="array">
-										<numIndex index="0">caring-old</numIndex>
-										<numIndex index="1">caring-old</numIndex>
-									</numIndex>
-									<numIndex index="4" type="array">
-										<numIndex index="0">love</numIndex>
-										<numIndex index="1">love</numIndex>
-									</numIndex>
-									<numIndex index="5" type="array">
-										<numIndex index="0">wealth</numIndex>
-										<numIndex index="1">wealth</numIndex>
-									</numIndex>
-									<numIndex index="6" type="array">
-										<numIndex index="0">enjoy</numIndex>
-										<numIndex index="1">enjoy</numIndex>
-									</numIndex>
-									<numIndex index="7" type="array">
-										<numIndex index="0">german</numIndex>
-										<numIndex index="1">german</numIndex>
-									</numIndex>
-								</items>
+								<itemsProcFunc>tx_sexybookmarks_itemsProcFunc->getBackgroundClasses</itemsProcFunc>
 							</config>
 						</TCEforms>
 					</bookmarkBackground>

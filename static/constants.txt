@@ -26,7 +26,7 @@ plugin.tx_sexybookmarks_pi1 {
 	# cat=plugin.tx_sexybookmarks/typo/020; type=boolean; label=Expandable: Display all bookmarks on mouseover
 	bookmarkExpandable = 0
 
-	# cat=plugin.tx_sexybookmarks/typo/030; type=options[,sexy,caring,caring-old,love,wealth,enjoy,german]; label=Background style: Set the background of Sexy-Bookmarks
+	# cat=plugin.tx_sexybookmarks/typo/030; type=string; label=Background style: Set the background of Sexy-Bookmarks. Possible values are: sexy, caring, caring-old, love, wealth, enjoy, german or any class defined in Your CSS like .sexybookmarks-bg-[value]
 	bookmarkBackground = 
 }
 
