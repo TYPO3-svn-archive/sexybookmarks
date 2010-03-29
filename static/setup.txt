@@ -10,8 +10,12 @@ plugin.tx_sexybookmarks_pi1 {
 	bookmarkExpandable = {$plugin.tx_sexybookmarks_pi1.bookmarkExpandable}
 	bookmarkBackground = {$plugin.tx_sexybookmarks_pi1.bookmarkBackground}
 
+	transition = {$plugin.tx_sexybookmarks_pi1.transition}
+	transitionDir = {$plugin.tx_sexybookmarks_pi1.transitionDir}
+	transitionDuration = {$plugin.tx_sexybookmarks_pi1.transitionDuration}
+
 	stdWrap {
-		dataWrap = <div class="{register:classes}"><ul class="socials"> | </ul><div style="clear:both;"></div></div>
+		dataWrap = <div id="{register:key}" class="{register:classes}"><ul class="socials"> | </ul><div style="clear:both;"></div></div>
 		required = 1
 	}
 

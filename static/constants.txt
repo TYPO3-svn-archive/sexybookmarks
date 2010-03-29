@@ -28,5 +28,14 @@ plugin.tx_sexybookmarks_pi1 {
 
 	# cat=plugin.tx_sexybookmarks/typo/030; type=string; label=Background style: Set the background of Sexy-Bookmarks. Possible values are: sexy, caring, caring-old, love, wealth, enjoy, german or any class defined in Your CSS like .sexybookmarks-bg-[value]
 	bookmarkBackground = 
+
+	# cat=plugin.tx_sexybookmarks/typo/040; type=options[,Quad,Cubic,Quart,Quint,Expo,Circ,Sine,Back,Bounce,Elastic]; label=Transition: Effect of transition (Quad, Cubic, Quart, Quint, Expo, Circ, Sine, Back, Bounce, Elastic)
+	transition = 
+
+	# cat=plugin.tx_sexybookmarks/typo/050; type=options[,In,Out,InOut]; label=Transition direction: Direction of transition (In, Out, InOut)
+	transitionDir = 
+
+	# cat=plugin.tx_sexybookmarks/typo/060; type=int+; label=Duration transition: The duration of the transition in milliseconds
+	transitionDuration = 500
 }
 

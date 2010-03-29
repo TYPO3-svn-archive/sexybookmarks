@@ -3,25 +3,6 @@ jQuery(document).ready(function() {
 	// xhtml 1.0 strict way of using target _blank
 	jQuery('.sexybookmarks a.external').attr("target", "_blank");
 
-	// this block sets the auto vertical expand when there are more than 
-	// one row of bookmarks.
-	var sexyBaseHeight = jQuery('.sexybookmarks').height();
-	var sexyFullHeight = jQuery('.sexybookmarks ul.socials').height();
-	if (sexyFullHeight>sexyBaseHeight) {
-		jQuery('.sexybookmarks-expand').hover(
-			function() {
-				jQuery(this).animate({
-					height: sexyFullHeight+'px'
-				}, {duration: 400, queue: false});
-			},
-			function() {
-				jQuery(this).animate({
-					height: sexyBaseHeight+'px'
-				}, {duration: 400, queue: false});
-			}
-		);
-	}
-
 	// autocentering
 	if (jQuery('.sexybookmarks-center') || jQuery('.sexybookmarks-spaced')) {
 		var sexyFullWidth = jQuery('.sexybookmarks').width();

@@ -77,12 +77,22 @@ class tx_sexybookmarks_pi1 extends tslib_pibase {
 					}
 				}
 			}
+
+			// define the key of the element
+			$this->contentKey .= "c" . $this->cObj->data['uid'];
+
+			// If the bookmarks are not defined, the config bookmarks will be taken
 			if ($this->lConf['bookmarks']) {
 				$this->conf['bookmarks'] = $this->lConf['bookmarks'];
 			}
 			$this->conf['bookmarkCenter']     = $this->lConf['bookmarkCenter'];
 			$this->conf['bookmarkExpandable'] = $this->lConf['bookmarkExpandable'];
 			$this->conf['bookmarkBackground'] = $this->lConf['bookmarkBackground'];
+			$this->conf['transition']         = $this->lConf['transition'];
+			$this->conf['transitionDir']      = $this->lConf['transitionDir'];
+			if (is_numeric($this->lConf['transitionDuration'])) {
+				$this->conf['transitionDuration'] = $this->lConf['transitionDuration'];
+			}
 		}
 
 		return $this->pi_wrapInBaseClass($this->parseTemplate());
@@ -99,6 +109,33 @@ class tx_sexybookmarks_pi1 extends tslib_pibase {
 		if ($this->contentKey == '') {
 			$this->contentKey = "sexybookmarks_key";
 		}
+
+		$animaion = array();
+		$animaion[] = "duration:".($this->conf['transitionDuration'] ? $this->conf['transitionDuration'] : 500)."";
+		$animaion[] = "queue:false";
+		if ($this->conf['transition'] && $this->conf['transitionDir']) {
+			$animaion[] = "easing:'ease{$this->conf['transitionDir']}{$this->conf['transition']}'";
+		}
+		// Add the animation settings
+		$this->addJS("
+jQuery(document).ready(function() {
+	var sexyBaseHeight = jQuery('#{$this->contentKey}.sexybookmarks').height();
+	var sexyFullHeight = jQuery('#{$this->contentKey}.sexybookmarks ul.socials').height();
+	if (sexyFullHeight>sexyBaseHeight) {
+		jQuery('#{$this->contentKey}.sexybookmarks-expand').hover(
+			function() {
+				jQuery(this).animate({
+					height: sexyFullHeight+'px'
+				}, {".implode(",", $animaion)."});
+			},
+			function() {
+				jQuery(this).animate({
+					height: sexyBaseHeight+'px'
+				}, {".implode(",", $animaion)."});
+			}
+		);
+	}
+});");
 
 		// add the JS file
 		$this->addJsFile($this->conf['jsFile']);
@@ -135,6 +172,7 @@ class tx_sexybookmarks_pi1 extends tslib_pibase {
 		}
 
 		$GLOBALS['TSFE']->register['classes'] = implode(" ", $classes);
+		$GLOBALS['TSFE']->register['key']     = $this->contentKey;
 
 		$return_string = $this->cObj->stdWrap($bookmarkContent, $this->conf['stdWrap.']);
 
