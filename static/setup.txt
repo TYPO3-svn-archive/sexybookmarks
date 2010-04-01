@@ -1,5 +1,7 @@
 plugin.tx_sexybookmarks_pi1 {
 	jsInFooter = {$plugin.tx_sexybookmarks_pi1.jsInFooter}
+	rssPID = {$plugin.tx_sexybookmarks_pi1.rssPID}
+	rssNumType = {$plugin.tx_sexybookmarks_pi1.rssNumType}
 
 	jQueryLibrary = {$plugin.tx_sexybookmarks_pi1.file.jQueryLibrary}
 	jQueryEasing = {$plugin.tx_sexybookmarks_pi1.file.jQueryEasing}
@@ -490,11 +492,18 @@ plugin.tx_sexybookmarks_pi1 {
 				10.wrap = |
 				10 {
 					10 = TEXT
-					10.data = getIndpEnv:TYPO3_REQUEST_URL
+					10.data = getIndpEnv:TYPO3_SITE_URL
+					20 = TEXT
+					20.typolink {
+						parameter = {$plugin.tx_sexybookmarks_pi1.rssPID}
+						parameter.ifEmpty.override.data = page:uid
+						returnLast= url
+						additionalParams = &type={$plugin.tx_sexybookmarks_pi1.rssNumType}
+					}
 				}
 			}
 			30 = TEXT
-			30.value = Subscribe to the comments for this post?
+			30.value = Subscribe to RSS
 			40 = TEXT
 			40.value = </a></li>
 		}
