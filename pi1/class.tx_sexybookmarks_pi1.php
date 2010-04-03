@@ -48,6 +48,7 @@ class tx_sexybookmarks_pi1 extends tslib_pibase {
 	var $contentKey = null;
 	var $jsFiles = array();
 	var $js = array();
+	var $cssFiles = array();
 	var $css = array();
 
 	/**
