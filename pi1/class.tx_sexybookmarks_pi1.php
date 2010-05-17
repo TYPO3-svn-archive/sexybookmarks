@@ -218,7 +218,7 @@ jQuery(document).ready(function() {
 			}
 			$conf = array();
 			$conf['jsdata'] = $temp_js;
-			if (T3JQUERY === true && t3lib_div::int_from_ver(t3lib_extMgm::getExtensionVersion('t3jquery')) >= 1002000) {
+			if (T3JQUERY === true && t3lib_div::int_from_ver($this->getExtensionVersion('t3jquery')) >= 1002000) {
 				if ($this->conf['jsInFooter']) {
 					$conf['tofooter'] = true;
 					tx_t3jquery::addJS('', $conf);
@@ -323,6 +323,21 @@ jQuery(document).ready(function() {
 		if (! in_array($script, $this->css)) {
 			$this->css[] = $script;
 		}
+	}
+
+	/**
+	 * Returns the version of an extension (in 4.4 its possible to this with t3lib_extMgm::getExtensionVersion)
+	 * @param string $key
+	 * @return string
+	 */
+	function getExtensionVersion($key)
+	{
+		if (! t3lib_extMgm::isLoaded($key)) {
+			return '';
+		}
+		$_EXTKEY = $key;
+		include(t3lib_extMgm::extPath($key) . 'ext_emconf.php');
+		return $EM_CONF[$key]['version'];
 	}
 }
 
