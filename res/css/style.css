@@ -27,7 +27,7 @@ div.sexybookmarks ul.socials li {
 	clear: none !important;
 }
 div.sexybookmarks ul.socials li:before, div.sexybookmarks ul.socials li:after, div.sexybookmarks ul.socials li a:before, div.sexybookmarks ul.socials li a:after {
-	content: none !important;
+	content: '' !important;
 }
 div.sexybookmarks ul.socials a {
 	display: block !important;
