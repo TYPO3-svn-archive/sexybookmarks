@@ -111,6 +111,11 @@ class tx_sexybookmarks_pi1 extends tslib_pibase {
 			$this->contentKey = "sexybookmarks_key";
 		}
 
+		// define the jQuery mode and function
+		if ($this->conf['jQueryNoConflict']) {
+			$this->addJS("jQuery.noConflict();");
+		}
+
 		$animaion = array();
 		$animaion[] = "duration:".($this->conf['transitionDuration'] ? $this->conf['transitionDuration'] : 500)."";
 		$animaion[] = "queue:false";
