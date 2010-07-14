@@ -21,11 +21,6 @@
 *
 *  This copyright notice MUST APPEAR in all copies of the script!
 ***************************************************************/
-/**
- * [CLASS/FUNCTION INDEX of SCRIPT]
- *
- * Hint: use extdeveval to insert/update function index above.
- */
 
 require_once(PATH_tslib.'class.tslib_pibase.php');
 
@@ -40,16 +35,17 @@ if (t3lib_extMgm::isLoaded('t3jquery')) {
  * @package	TYPO3
  * @subpackage	tx_sexybookmarks
  */
-class tx_sexybookmarks_pi1 extends tslib_pibase {
-	var $prefixId      = 'tx_sexybookmarks_pi1';		// Same as class name
-	var $scriptRelPath = 'pi1/class.tx_sexybookmarks_pi1.php';	// Path to this script relative to the extension dir.
-	var $extKey        = 'sexybookmarks';	// The extension key.
-	var $pi_checkCHash = true;
-	var $contentKey = null;
-	var $jsFiles = array();
-	var $js = array();
-	var $cssFiles = array();
-	var $css = array();
+class tx_sexybookmarks_pi1 extends tslib_pibase
+{
+	public $prefixId      = 'tx_sexybookmarks_pi1';		// Same as class name
+	public $scriptRelPath = 'pi1/class.tx_sexybookmarks_pi1.php';	// Path to this script relative to the extension dir.
+	public $extKey        = 'sexybookmarks';	// The extension key.
+	public $pi_checkCHash = true;
+	private $contentKey = null;
+	private $jsFiles = array();
+	private $js = array();
+	private $cssFiles = array();
+	private $css = array();
 
 	/**
 	 * The main method of the PlugIn
@@ -58,13 +54,16 @@ class tx_sexybookmarks_pi1 extends tslib_pibase {
 	 * @param	array		$conf: The PlugIn configuration
 	 * @return	The content that is displayed on the website
 	 */
-	function main($content, $conf) {
+	public function main($content, $conf)
+	{
 		$this->conf = $conf;
 		$this->pi_setPiVarDefaults();
 		$this->pi_loadLL();
 
 		// define the key of the element
-		$this->contentKey = "sexybookmarks";
+		if ($this->getContentKey() == null) {
+			$this->setContentKey();
+		}
 
 		if ($this->cObj->data['list_type'] == $this->extKey.'_pi1') {
 			// content
@@ -80,7 +79,7 @@ class tx_sexybookmarks_pi1 extends tslib_pibase {
 			}
 
 			// define the key of the element
-			$this->contentKey .= "c" . $this->cObj->data['uid'];
+			$this->setContentKey('sexybookmarks_c' . $this->cObj->data['uid']);
 
 			// If the bookmarks are not defined, the config bookmarks will be taken
 			if ($this->lConf['bookmarks']) {
@@ -99,18 +98,40 @@ class tx_sexybookmarks_pi1 extends tslib_pibase {
 		return $this->pi_wrapInBaseClass($this->parseTemplate());
 	}
 
+	/**
+	 * Set the contentKey
+	 * @param string $contentKey
+	 */
+	public function setContentKey($contentKey=null)
+	{
+		$this->contentKey = ($contentKey == null ? $this->extKey : $contentKey);
+	}
+
+	/**
+	 * Get the contentKey
+	 * @return string
+	 */
+	public function getContentKey()
+	{
+		return $this->contentKey;
+	}
+
+	/**
+	 * Set the cObj
+	 * @param tslib_cObj $cObj
+	 */
+	public function setCObj(tslib_cObj $cObj)
+	{
+		$this->cObj = $cObj;
+	}
+
 		/**
 	 * Parse all images into the template
 	 * @param $data
 	 * @return string
 	 */
-	function parseTemplate()
+	public function parseTemplate()
 	{
-		// define the contentKey if not exist
-		if ($this->contentKey == '') {
-			$this->contentKey = "sexybookmarks_key";
-		}
-
 		// define the jQuery mode and function
 		if ($this->conf['jQueryNoConflict']) {
 			$this->addJS("jQuery.noConflict();");
@@ -125,10 +146,10 @@ class tx_sexybookmarks_pi1 extends tslib_pibase {
 		// Add the animation settings
 		$this->addJS("
 jQuery(document).ready(function() {
-	var sexyBaseHeight = jQuery('#{$this->contentKey}.sexybookmarks').height();
-	var sexyFullHeight = jQuery('#{$this->contentKey}.sexybookmarks ul.socials').height();
+	var sexyBaseHeight = jQuery('#{$this->getContentKey()}.sexybookmarks').height();
+	var sexyFullHeight = jQuery('#{$this->getContentKey()}.sexybookmarks ul.socials').height();
 	if (sexyFullHeight>sexyBaseHeight) {
-		jQuery('#{$this->contentKey}.sexybookmarks-expand').hover(
+		jQuery('#{$this->getContentKey()}.sexybookmarks-expand').hover(
 			function() {
 				jQuery(this).animate({
 					height: sexyFullHeight+'px'
@@ -178,7 +199,7 @@ jQuery(document).ready(function() {
 		}
 
 		$GLOBALS['TSFE']->register['classes'] = implode(" ", $classes);
-		$GLOBALS['TSFE']->register['key']     = $this->contentKey;
+		$GLOBALS['TSFE']->register['key']     = $this->getContentKey();
 
 		$return_string = $this->cObj->stdWrap($bookmarkContent, $this->conf['stdWrap.']);
 
@@ -191,7 +212,7 @@ jQuery(document).ready(function() {
 	 *
 	 * @return void
 	 */
-	function addResources()
+	public function addResources()
 	{
 		// checks if t3jquery is loaded
 		if (T3JQUERY === true) {
@@ -200,20 +221,29 @@ jQuery(document).ready(function() {
 			$this->addJsFile($this->conf['jQueryLibrary'], true);
 			$this->addJsFile($this->conf['jQueryEasing']);
 		}
+		// Fix moveJsFromHeaderToFooter (add all scripts to the footer)
+		if ($GLOBALS['TSFE']->config['config']['moveJsFromHeaderToFooter']) {
+			$allJsInFooter = true;
+		} else {
+			$allJsInFooter = false;
+		}
 		// add all defined JS files
 		if (count($this->jsFiles) > 0) {
 			foreach ($this->jsFiles as $jsToLoad) {
 				if (T3JQUERY === true) {
-					tx_t3jquery::addJS('', array('jsfile' => $this->getPath($jsToLoad)));
+					tx_t3jquery::addJS('', array('jsfile' => $jsToLoad));
 				} else {
 					// Add script only once
-					if (! preg_match("/".preg_quote($this->getPath($jsToLoad), "/")."/", $GLOBALS['TSFE']->additionalHeaderData['jsFile_'.$this->extKey])) {
-						$GLOBALS['TSFE']->additionalHeaderData['jsFile_'.$this->extKey] .= ($this->getPath($jsToLoad) ? '<script src="'.$this->getPath($jsToLoad).'" type="text/javascript"></script>'.chr(10) :'');
+					$hash = md5($this->getPath($jsToLoad));
+					if ($allJsInFooter) {
+						$GLOBALS['TSFE']->additionalFooterData['jsFile_'.$this->extKey.'_'.$hash] = ($this->getPath($jsToLoad) ? '<script src="'.$this->getPath($jsToLoad).'" type="text/javascript"></script>'.chr(10) : '');
+					} else {
+						$GLOBALS['TSFE']->additionalHeaderData['jsFile_'.$this->extKey.'_'.$hash] = ($this->getPath($jsToLoad) ? '<script src="'.$this->getPath($jsToLoad).'" type="text/javascript"></script>'.chr(10) : '');
 					}
 				}
 			}
 		}
-		// add all defined JS Script
+		// add all defined JS script
 		if (count($this->js) > 0) {
 			foreach ($this->js as $jsToPut) {
 				$temp_js .= $jsToPut;
@@ -224,15 +254,10 @@ jQuery(document).ready(function() {
 			$conf = array();
 			$conf['jsdata'] = $temp_js;
 			if (T3JQUERY === true && t3lib_div::int_from_ver($this->getExtensionVersion('t3jquery')) >= 1002000) {
-				if ($this->conf['jsInFooter']) {
-					$conf['tofooter'] = true;
-					tx_t3jquery::addJS('', $conf);
-				} else {
-					$conf['tofooter'] = false;
-					tx_t3jquery::addJS('', $conf);
-				}
+				$conf['tofooter'] = ($this->conf['jsInFooter']);
+				tx_t3jquery::addJS('', $conf);
 			} else {
-				if ($this->conf['jsInFooter']) {
+				if ($this->conf['jsInFooter'] || $allJsInFooter) {
 					$GLOBALS['TSFE']->additionalFooterData['js_'.$this->extKey] .= t3lib_div::wrapJS($temp_js, true);
 				} else {
 					$GLOBALS['TSFE']->additionalHeaderData['js_'.$this->extKey] .= t3lib_div::wrapJS($temp_js, true);
@@ -243,9 +268,8 @@ jQuery(document).ready(function() {
 		if (count($this->cssFiles) > 0) {
 			foreach ($this->cssFiles as $cssToLoad) {
 				// Add script only once
-				if (! preg_match("/".preg_quote($this->getPath($cssToLoad), "/")."/", $GLOBALS['TSFE']->additionalHeaderData['cssFile_'.$this->extKey])) {
-					$GLOBALS['TSFE']->additionalHeaderData['cssFile_'.$this->extKey] .= ($this->getPath($cssToLoad) ? '<link rel="stylesheet" href="'.$this->getPath($cssToLoad).'" type="text/css" />'.chr(10) :'');
-				}
+				$hash = md5($this->getPath($cssToLoad));
+				$GLOBALS['TSFE']->additionalHeaderData['cssFile_'.$this->extKey.'_'.$hash] = ($this->getPath($cssToLoad) ? '<link rel="stylesheet" href="'.$this->getPath($cssToLoad).'" type="text/css" />'.chr(10) :'');
 			}
 		}
 		// add all defined CSS Script
@@ -266,7 +290,7 @@ jQuery(document).ready(function() {
 	 * @param string $path
 	 * return string
 	 */
-	function getPath($path="")
+	private function getPath($path="")
 	{
 		return $GLOBALS['TSFE']->tmpl->getFileName($path);
 	}
@@ -278,10 +302,10 @@ jQuery(document).ready(function() {
 	 * @param boolean $first
 	 * @return void
 	 */
-	function addJsFile($script="", $first=false)
+	private function addJsFile($script="", $first=false)
 	{
 		$script = t3lib_div::fixWindowsFilePath($script);
-		if ($this->getPath($script) && ! in_array($script, $this->jsFiles)) {
+		if (! in_array($script, $this->jsFiles)) {// $this->getPath($script) &&
 			if ($first === true) {
 				$this->jsFiles = array_merge(array($script), $this->jsFiles);
 			} else {
@@ -296,7 +320,7 @@ jQuery(document).ready(function() {
 	 * @param string $script
 	 * @return void
 	 */
-	function addJS($script="")
+	private function addJS($script="")
 	{
 		if (! in_array($script, $this->js)) {
 			$this->js[] = $script;
@@ -309,7 +333,7 @@ jQuery(document).ready(function() {
 	 * @param string $script
 	 * @return void
 	 */
-	function addCssFile($script="")
+	private function addCssFile($script="")
 	{
 		$script = t3lib_div::fixWindowsFilePath($script);
 		if ($this->getPath($script) && ! in_array($script, $this->cssFiles)) {
@@ -323,7 +347,7 @@ jQuery(document).ready(function() {
 	 * @param string $script
 	 * @return void
 	 */
-	function addCSS($script="")
+	private function addCSS($script="")
 	{
 		if (! in_array($script, $this->css)) {
 			$this->css[] = $script;
@@ -335,7 +359,7 @@ jQuery(document).ready(function() {
 	 * @param string $key
 	 * @return string
 	 */
-	function getExtensionVersion($key)
+	private function getExtensionVersion($key)
 	{
 		if (! t3lib_extMgm::isLoaded($key)) {
 			return '';
