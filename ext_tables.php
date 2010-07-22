@@ -7,7 +7,7 @@ t3lib_div::loadTCA('tt_content');
 $TCA['tt_content']['types']['list']['subtypes_excludelist'][$_EXTKEY.'_pi1'] = 'layout,select_key';
 
 // Static
-t3lib_extMgm::addStaticFile($_EXTKEY,'static/', 'Sexy-Bookmarks');
+t3lib_extMgm::addStaticFile($_EXTKEY, 'static/', 'Sexy-Bookmarks');
 
 // For the content plugin
 t3lib_div::loadTCA('tt_content');

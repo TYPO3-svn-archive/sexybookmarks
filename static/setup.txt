@@ -2131,3 +2131,13 @@ plugin.tx_sexybookmarks_pi1 {
 		}
 	}
 }
+
+[globalString = TYPO3_LOADED_EXT|t3blog|type=*]
+plugin.tx_t3blog_pi2 {
+	tx_sexybookmarks_sexybookmarks {
+		includeLibs = EXT:sexybookmarks/widgets/sexybookmarks/class.tx_sexybookmarks_sexybookmarks.php
+		config < plugin.tx_sexybookmarks_pi1
+	}
+}
+plugin.tx_t3blog_pi1.tx_sexybookmarks_sexybookmarks < plugin.tx_t3blog_pi2.tx_sexybookmarks_sexybookmarks
+[global]
