@@ -134,7 +134,9 @@ class tx_sexybookmarks_pi1 extends tslib_pibase
 	{
 		// define the jQuery mode and function
 		if ($this->conf['jQueryNoConflict']) {
-			$this->addJS("jQuery.noConflict();");
+			$jQueryNoConflict = "jQuery.noConflict();";
+		} else {
+			$jQueryNoConflict = "";
 		}
 
 		$animaion = array();
@@ -143,26 +145,23 @@ class tx_sexybookmarks_pi1 extends tslib_pibase
 		if ($this->conf['transition'] && $this->conf['transitionDir']) {
 			$animaion[] = "easing:'ease{$this->conf['transitionDir']}{$this->conf['transition']}'";
 		}
-		// Add the animation settings
-		$this->addJS("
-jQuery(document).ready(function() {
-	var sexyBaseHeight = jQuery('#{$this->getContentKey()}.sexybookmarks').height();
-	var sexyFullHeight = jQuery('#{$this->getContentKey()}.sexybookmarks ul.socials').height();
-	if (sexyFullHeight>sexyBaseHeight) {
-		jQuery('#{$this->getContentKey()}.sexybookmarks-expand').hover(
-			function() {
-				jQuery(this).animate({
-					height: sexyFullHeight+'px'
-				}, {".implode(",", $animaion)."});
-			},
-			function() {
-				jQuery(this).animate({
-					height: sexyBaseHeight+'px'
-				}, {".implode(",", $animaion)."});
-			}
-		);
-	}
-});");
+
+		// The template for JS
+		if (! $this->templateFileJS = $this->cObj->fileResource($this->conf['templateFileJS'])) {
+			$this->templateFileJS = $this->cObj->fileResource("EXT:sexybookmarks/pi1/tx_sexybookmarks_pi1.js");
+		}
+		// get the Template of the Javascript
+		if (! $templateCode = trim($this->cObj->getSubpart($this->templateFileJS, "###TEMPLATE_JS###"))) {
+			$templateCode = "alert('Template TEMPLATE_JS is missing')";
+		}
+		// set the key
+		$markerArray = array();
+		$markerArray["KEY"] = $this->getContentKey();
+		$markerArray["ANIMATION"] = implode(",", $animaion);
+		// set the markers
+		$templateCode = $this->cObj->substituteMarkerArray($templateCode, $markerArray, '###|###', 0);
+
+		$this->addJS($jQueryNoConflict . $templateCode);
 
 		// add the JS file
 		$this->addJsFile($this->conf['jsFile']);

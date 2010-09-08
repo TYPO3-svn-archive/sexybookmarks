@@ -7,6 +7,7 @@ plugin.tx_sexybookmarks_pi1 {
 
 	jQueryLibrary = {$plugin.tx_sexybookmarks_pi1.file.jQueryLibrary}
 	jQueryEasing = {$plugin.tx_sexybookmarks_pi1.file.jQueryEasing}
+	templateFileJS = {$plugin.tx_sexybookmarks_pi1.file.templateFileJS}
 	jsFile = {$plugin.tx_sexybookmarks_pi1.file.jsFile}
 	cssFile = {$plugin.tx_sexybookmarks_pi1.file.cssFile}
 

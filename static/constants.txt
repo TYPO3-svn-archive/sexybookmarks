@@ -19,17 +19,22 @@ plugin.tx_sexybookmarks_pi1 {
 	rssNumType = 100
 
 
+
 	# cat=plugin.tx_sexybookmarks/file/010; type=file[js]; label=jQuery Library: Location of the jQuery Lib
 	file.jQueryLibrary = EXT:sexybookmarks/res/jquery/js/jquery-1.4.2.min.js
 
 	# cat=plugin.tx_sexybookmarks/file/020; type=file[js]; label=jQuery Easing: Location of the jQuery Easing
 	file.jQueryEasing = EXT:sexybookmarks/res/jquery/js/jquery.easing-1.3.js
 
-	# cat=plugin.tx_sexybookmarks/file/030; type=file[js]; label=Sexy-Bookmarks JS: Location of the Sexy-Bookmarks JS
+	# cat=plugin.tx_sexybookmarks/file/030; type=file[js]; label=JS-Template file: Location of the used template for JS
+	file.templateFileJS = EXT:sexybookmarks/res/tx_sexybookmarks_pi1.js
+
+	# cat=plugin.tx_sexybookmarks/file/040; type=file[js]; label=Sexy-Bookmarks JS: Location of the Sexy-Bookmarks JS
 	file.jsFile = EXT:sexybookmarks/res/jquery/js/sexybookmarks.js
 
-	# cat=plugin.tx_sexybookmarks/file/040; type=file[css]; label=CSS file: CSS-File to include
+	# cat=plugin.tx_sexybookmarks/file/050; type=file[css]; label=CSS file: CSS-File to include
 	file.cssFile = EXT:sexybookmarks/res/css/style.css
+
 
 
 	# cat=plugin.tx_sexybookmarks/typo/010; type=boolean; label=Center: Center the bookmarks
