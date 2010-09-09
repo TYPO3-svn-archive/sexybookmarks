@@ -46,6 +46,7 @@ class tx_sexybookmarks_pi1 extends tslib_pibase
 	private $js = array();
 	private $cssFiles = array();
 	private $css = array();
+	private $templateFileJS = null;
 
 	/**
 	 * The main method of the PlugIn
@@ -148,7 +149,7 @@ class tx_sexybookmarks_pi1 extends tslib_pibase
 
 		// The template for JS
 		if (! $this->templateFileJS = $this->cObj->fileResource($this->conf['templateFileJS'])) {
-			$this->templateFileJS = $this->cObj->fileResource("EXT:sexybookmarks/pi1/tx_sexybookmarks_pi1.js");
+			$this->templateFileJS = $this->cObj->fileResource("EXT:sexybookmarks/res/tx_sexybookmarks_pi1.js");
 		}
 		// get the Template of the Javascript
 		if (! $templateCode = trim($this->cObj->getSubpart($this->templateFileJS, "###TEMPLATE_JS###"))) {
