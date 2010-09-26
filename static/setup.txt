@@ -2,6 +2,8 @@ plugin.tx_sexybookmarks_pi1 {
 	jQueryNoConflict = {$plugin.tx_sexybookmarks_pi1.jQueryNoConflict}
 	jsInFooter = {$plugin.tx_sexybookmarks_pi1.jsInFooter}
 	jsMinify = {$plugin.tx_sexybookmarks_pi1.jsMinify}
+	jsInline = {$plugin.tx_sexybookmarks_pi1.jsInline}
+	cssMinify = {$plugin.tx_sexybookmarks_pi1.cssMinify}
 	rssPID = {$plugin.tx_sexybookmarks_pi1.rssPID}
 	rssNumType = {$plugin.tx_sexybookmarks_pi1.rssNumType}
 

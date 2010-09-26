@@ -9,13 +9,19 @@ plugin.tx_sexybookmarks_pi1 {
 	# cat=plugin.tx_sexybookmarks/enable/030; type=boolean; label=Minify Javascript: If set, the Javascript will be minified
 	jsMinify = 0
 
-	# cat=plugin.tx_sexybookmarks/enable/040; type=string; label=Bookmarks: Define used bookmarks and order of the bookmarks (possible values are: 100zakladok, bebo, bitacoras, blinklist, blogengage, blogger, blogmarks, blogospherenews, bobrdobr, comfeed, current, delicious, designbump, designfloat, designmoo, devmarks, digg, diigo, ekudos, evernote, facebook, faqpal, favorite, fleck, friendfeed, fwisp, globalgrind, google, hackernews, hatena, hyves, identica, izeby, jumptags, linkedin, mail, memoryru, meneame, misterwong, mixx, moemesto, mylinkvault, myspace, n4g, netvibes, netvouz, newsvine, ning, nujij, orkut, pfbuzz, pingfm, plurk, posterous, printfriendly, propeller, pusha, reddit, scriptstyle, slashdot, sphinn, squidoo, strands, stumbleupon, stumpedia, techmeme, technorati, tipd, tomuse, tumblr, twitter, twittley, webblend, wikio, wykop, xerpi, yahoobuzz, yandex)
+	# cat=plugin.tx_sexybookmarks/enable/040; type=boolean; label=Javascript to Inline: If set, the Javascript will be inserted into the inlineJS, after this, its possible to put it into externel files (config.removeDefaultJS = external)
+	jsInline = 0
+
+	# cat=plugin.tx_sexybookmarks/enable/050; type=boolean; label=Minify CSS: If set, the CSS will be minified
+	cssMinify = 0
+
+	# cat=plugin.tx_sexybookmarks/enable/060; type=string; label=Bookmarks: Define used bookmarks and order of the bookmarks (possible values are: 100zakladok, bebo, bitacoras, blinklist, blogengage, blogger, blogmarks, blogospherenews, bobrdobr, comfeed, current, delicious, designbump, designfloat, designmoo, devmarks, digg, diigo, ekudos, evernote, facebook, faqpal, favorite, fleck, friendfeed, fwisp, globalgrind, google, hackernews, hatena, hyves, identica, izeby, jumptags, linkedin, mail, memoryru, meneame, misterwong, mixx, moemesto, mylinkvault, myspace, n4g, netvibes, netvouz, newsvine, ning, nujij, orkut, pfbuzz, pingfm, plurk, posterous, printfriendly, propeller, pusha, reddit, scriptstyle, slashdot, sphinn, squidoo, strands, stumbleupon, stumpedia, techmeme, technorati, tipd, tomuse, tumblr, twitter, twittley, webblend, wikio, wykop, xerpi, yahoobuzz, yandex)
 	bookmarks = 100zakladok, bebo, bitacoras, blinklist, blogengage, blogger, blogmarks, blogospherenews, bobrdobr, comfeed, current, delicious, designbump, designfloat, designmoo, devmarks, digg, diigo, ekudos, evernote, facebook, faqpal, favorite, fleck, friendfeed, fwisp, globalgrind, google, hackernews, hatena, hyves, identica, izeby, jumptags, linkedin, mail, memoryru, meneame, misterwong, mixx, moemesto, mylinkvault, myspace, n4g, netvibes, netvouz, newsvine, ning, nujij, orkut, pfbuzz, pingfm, plurk, posterous, printfriendly, propeller, pusha, reddit, scriptstyle, slashdot, sphinn, squidoo, strands, stumbleupon, stumpedia, techmeme, technorati, tipd, tomuse, tumblr, twitter, twittley, webblend, wikio, wykop, xerpi, yahoobuzz, yandex
 
-	# cat=plugin.tx_sexybookmarks/enable/050; type=string; label=RSS PID: Page ID where the RSS is displayed
+	# cat=plugin.tx_sexybookmarks/enable/070; type=string; label=RSS PID: Page ID where the RSS is displayed
 	rssPID = 
 
-	# cat=plugin.tx_sexybookmarks/enable/060; type=string; label=RSS numType: Defines the page type number used for RSS
+	# cat=plugin.tx_sexybookmarks/enable/080; type=string; label=RSS numType: Defines the page type number used for RSS
 	rssNumType = 100
 
 
