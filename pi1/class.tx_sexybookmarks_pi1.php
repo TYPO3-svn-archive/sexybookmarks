@@ -195,7 +195,7 @@ class tx_sexybookmarks_pi1 extends tslib_pibase
 				foreach( $bookmarks as $bookmark) {
 					$bookmarkItem = $this->cObj->cObjGetSingle($this->conf['bookmarkConf.'][$bookmark], $this->conf['bookmarkConf.'][$bookmark.'.']);
 					// fix the xhtml
-					if ($GLOBALS['TSFE']->xhtmlVersion > 0) {
+					if ($GLOBALS['TSFE']->xhtmlVersion > 0 || $GLOBALS['TSFE']->config['config']['doctype'] == 'html5') {
 						$bookmarkContent .= preg_replace("/&(?!(?i:\#((x([\dA-F]){1,5})|(104857[0-5]|10485[0-6]\d|1048[0-4]\d\d|104[0-7]\d{3}|10[0-3]\d{4}|0?\d{1,6}))|([A-Za-z\d.]{2,31}));)/", "&amp;", $bookmarkItem);
 					} else {
 						$bookmarkContent .= $bookmarkItem;
