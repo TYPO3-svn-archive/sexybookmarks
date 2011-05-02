@@ -68,17 +68,16 @@ class tx_sexybookmarks_pi1 extends tslib_pibase
 
 		if ($this->cObj->data['list_type'] == $this->extKey.'_pi1') {
 			// content
-			// Set the Flexform information
-			$this->pi_initPIflexForm();
-			$piFlexForm = $this->cObj->data['pi_flexform'];
-			foreach ($piFlexForm['data'] as $sheet => $data) {
-				foreach ($data as $lang => $value) {
-					foreach ($value as $key => $val) {
-						$this->lConf[$key] = $this->pi_getFFvalue($piFlexForm, $key, $sheet);
-					}
-				}
-			}
-
+			$this->lConf['bookmarks'] = $this->getFlexformData('general', 'bookmarks');
+			
+			$this->lConf['bookmarkCenter']     = $this->getFlexformData('settings', 'bookmarkCenter');
+			$this->lConf['bookmarkExpandable'] = $this->getFlexformData('settings', 'bookmarkExpandable');
+			$this->lConf['bookmarkBackground'] = $this->getFlexformData('settings', 'bookmarkBackground');
+			
+			$this->lConf['transition']         = $this->getFlexformData('movement', 'transition');
+			$this->lConf['transitionDir']      = $this->getFlexformData('movement', 'transitionDir');
+			$this->lConf['transitionDuration'] = $this->getFlexformData('movement', 'transitionDuration');
+			
 			// define the key of the element
 			$this->setContentKey('sexybookmarks_c' . $this->cObj->data['uid']);
 
@@ -418,6 +417,42 @@ class tx_sexybookmarks_pi1 extends tslib_pibase
 		$_EXTKEY = $key;
 		include(t3lib_extMgm::extPath($key) . 'ext_emconf.php');
 		return $EM_CONF[$key]['version'];
+	}
+
+	/**
+	 * Extract the requested information from flexform
+	 * @param string $sheet
+	 * @param string $name
+	 * @param boolean $devlog
+	 * @return string
+	 */
+	protected function getFlexformData($sheet='', $name='', $devlog=true)
+	{
+		$this->pi_initPIflexForm();
+		$piFlexForm = $this->cObj->data['pi_flexform'];
+		if (! isset($piFlexForm['data'])) {
+			if ($devlog === true) {
+				t3lib_div::devLog("Flexform Data not set", $this->extKey, 1);
+			}
+			return null;
+		}
+		if (! isset($piFlexForm['data'][$sheet])) {
+			if ($devlog === true) {
+				t3lib_div::devLog("Flexform sheet '{$sheet}' not defined", $this->extKey, 1);
+			}
+			return null;
+		}
+		if (! isset($piFlexForm['data'][$sheet]['lDEF'][$name])) {
+			if ($devlog === true) {
+				t3lib_div::devLog("Flexform Data [{$sheet}][{$name}] does not exist", $this->extKey, 1);
+			}
+			return null;
+		}
+		if (isset($piFlexForm['data'][$sheet]['lDEF'][$name]['vDEF'])) {
+			return $this->pi_getFFvalue($piFlexForm, $name, $sheet);
+		} else {
+			return $piFlexForm['data'][$sheet]['lDEF'][$name];
+		}
 	}
 }
 
