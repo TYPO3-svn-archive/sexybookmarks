@@ -35,7 +35,7 @@
  * @package	TYPO3
  * @subpackage	tx_sexybookmarks
  */
-class tx_sexybookmarks_pi1_wizicon
+class tx_sexybookmarks_pi2_wizicon
 {
 	/**
 	 * Processing the wizard items array
@@ -46,11 +46,11 @@ class tx_sexybookmarks_pi1_wizicon
 	function proc($wizardItems)
 	{
 		$LL = $this->includeLocalLang();
-		$wizardItems['plugins_tx_sexybookmarks_pi1'] = array(
-			'icon' => t3lib_extMgm::extRelPath('sexybookmarks').'pi1/ce_wiz.gif',
-			'title' => $GLOBALS['LANG']->getLLL('pi1_title',$LL),
-			'description' => $GLOBALS['LANG']->getLLL('pi1_plus_wiz_description',$LL),
-			'params' => '&defVals[tt_content][CType]=list&defVals[tt_content][list_type]=sexybookmarks_pi1'
+		$wizardItems['plugins_tx_sexybookmarks_pi2'] = array(
+			'icon' => t3lib_extMgm::extRelPath('sexybookmarks').'pi2/ce_wiz.gif',
+			'title' => $GLOBALS['LANG']->getLLL('pi2_title',$LL),
+			'description' => $GLOBALS['LANG']->getLLL('pi2_plus_wiz_description',$LL),
+			'params'=>'&defVals[tt_content][CType]=list&defVals[tt_content][list_type]=sexybookmarks_pi2'
 		);
 
 		return $wizardItems;
@@ -70,7 +70,7 @@ class tx_sexybookmarks_pi1_wizicon
 	}
 }
 
-if (defined('TYPO3_MODE') && $TYPO3_CONF_VARS[TYPO3_MODE]['XCLASS']['ext/sexybookmarks/pi1/class.tx_sexybookmarks_pi1_wizicon.php']) {
-	include_once($TYPO3_CONF_VARS[TYPO3_MODE]['XCLASS']['ext/sexybookmarks/pi1/class.tx_sexybookmarks_pi1_wizicon.php']);
+if (defined('TYPO3_MODE') && $TYPO3_CONF_VARS[TYPO3_MODE]['XCLASS']['ext/sexybookmarks/pi2/class.tx_sexybookmarks_pi2_wizicon.php']) {
+	include_once($TYPO3_CONF_VARS[TYPO3_MODE]['XCLASS']['ext/sexybookmarks/pi2/class.tx_sexybookmarks_pi2_wizicon.php']);
 }
 ?>

@@ -1,64 +1,67 @@
 plugin.tx_sexybookmarks_pi1 {
 
-	# cat=plugin.tx_sexybookmarks/enable/010; type=boolean; label=jQuery noConflict: Use jQuery in noConflict mode
+	# cat=plugin.tx_sexybookmarks_pi1/enable/010; type=boolean; label=jQuery noConflict: Use jQuery in noConflict mode
 	jQueryNoConflict = 0
 
-	# cat=plugin.tx_sexybookmarks/enable/020; type=boolean; label=Javascript in Footer: If set, the Javascript will be rendered in Footer
+	# cat=plugin.tx_sexybookmarks_pi1/enable/020; type=boolean; label=Javascript in Footer: If set, the Javascript will be rendered in Footer
 	jsInFooter = 0
 
-	# cat=plugin.tx_sexybookmarks/enable/030; type=boolean; label=Minify Javascript: If set, the Javascript will be minified
+	# cat=plugin.tx_sexybookmarks_pi1/enable/030; type=boolean; label=Minify Javascript: If set, the Javascript will be minified
 	jsMinify = 0
 
-	# cat=plugin.tx_sexybookmarks/enable/040; type=boolean; label=Javascript to Inline: If set, the Javascript will be inserted into the inlineJS, after this, its possible to put it into externel files (config.removeDefaultJS = external)
+	# cat=plugin.tx_sexybookmarks_pi1/enable/040; type=boolean; label=Javascript to Inline: If set, the Javascript will be inserted into the inlineJS, after this, its possible to put it into externel files (config.removeDefaultJS = external)
 	jsInline = 0
 
-	# cat=plugin.tx_sexybookmarks/enable/050; type=boolean; label=Minify CSS: If set, the CSS will be minified
+	# cat=plugin.tx_sexybookmarks_pi1/enable/050; type=boolean; label=Minify CSS: If set, the CSS will be minified
 	cssMinify = 0
 
-	# cat=plugin.tx_sexybookmarks/enable/060; type=string; label=Bookmarks: Define used bookmarks and order of the bookmarks (possible values are: 100zakladok, bebo, bitacoras, blinklist, blogengage, blogger, blogmarks, blogospherenews, bobrdobr, comfeed, current, delicious, designbump, designfloat, designmoo, devmarks, digg, diigo, ekudos, evernote, facebook, faqpal, favorite, fleck, friendfeed, fwisp, globalgrind, google, hackernews, hatena, hyves, identica, izeby, jumptags, linkedin, mail, memoryru, meneame, misterwong, mixx, moemesto, mylinkvault, myspace, n4g, netvibes, netvouz, newsvine, ning, nujij, orkut, pfbuzz, pingfm, plurk, posterous, printfriendly, propeller, pusha, reddit, scriptstyle, slashdot, sphinn, squidoo, strands, stumbleupon, stumpedia, techmeme, technorati, tipd, tomuse, tumblr, twitter, twittley, webblend, wikio, wykop, xerpi, yahoobuzz, yandex)
-	bookmarks = 100zakladok, bebo, bitacoras, blinklist, blogengage, blogger, blogmarks, blogospherenews, bobrdobr, comfeed, current, delicious, designbump, designfloat, designmoo, devmarks, digg, diigo, ekudos, evernote, facebook, faqpal, favorite, fleck, friendfeed, fwisp, globalgrind, google, hackernews, hatena, hyves, identica, izeby, jumptags, linkedin, mail, memoryru, meneame, misterwong, mixx, moemesto, mylinkvault, myspace, n4g, netvibes, netvouz, newsvine, ning, nujij, orkut, pfbuzz, pingfm, plurk, posterous, printfriendly, propeller, pusha, reddit, scriptstyle, slashdot, sphinn, squidoo, strands, stumbleupon, stumpedia, techmeme, technorati, tipd, tomuse, tumblr, twitter, twittley, webblend, wikio, wykop, xerpi, yahoobuzz, yandex
+	# cat=plugin.tx_sexybookmarks_pi1/enable/060; type=string; label=Bookmarks: Define used bookmarks and order of the bookmarks (possible values are: 100zakladok, bebo, bitacoras, blinklist, blogengage, blogger, blogmarks, bobrdobr, bonzobox, box, buzzster, comfeed, current, delicious, designbump, designfloat, digg, diigo, dzone, ekudos, evernote, facebook, faqpal, favorite, fleck, friendfeed, fwisp, globalgrind, gmail, google, googlebuzz, googlereader, hackernews, hatena, hotmail, hyves, identica, izeby, jumptags, kaevur, linkedin, mail, memoryru, meneame, misterwong, mixx, moemesto, mylinkvault, myspace, n4g, netvibes, netvouz, newsvine, ning, nujij, oknotizie, orkut, pfbuzz, pingfm, plaxo, plurk, posterous, printfriendly, propeller, pusha, reddit, scriptstyle, slashdot, sphinn, springpad, squidoo, strands, stumbleupon, stumpedia, techmeme, technorati, tipd, tomuse, tumblr, twitter, twittley, viadeo, virb, webblend, wikio, wykop, xerpi, yahoobuzz, yahoomail, yandex, zabox)
+	bookmarks = 100zakladok, bebo, bitacoras, blinklist, blogengage, blogger, blogmarks, bobrdobr, bonzobox, box, buzzster, comfeed, current, delicious, designbump, designfloat, digg, diigo, dzone, ekudos, evernote, facebook, faqpal, favorite, fleck, friendfeed, fwisp, globalgrind, gmail, google, googlebuzz, googlereader, hackernews, hatena, hotmail, hyves, identica, izeby, jumptags, kaevur, linkedin, mail, memoryru, meneame, misterwong, mixx, moemesto, mylinkvault, myspace, n4g, netvibes, netvouz, newsvine, ning, nujij, oknotizie, orkut, pfbuzz, pingfm, plaxo, plurk, posterous, printfriendly, propeller, pusha, reddit, scriptstyle, slashdot, sphinn, springpad, squidoo, strands, stumbleupon, stumpedia, techmeme, technorati, tipd, tomuse, tumblr, twitter, twittley, viadeo, virb, webblend, wikio, wykop, xerpi, yahoobuzz, yahoomail, yandex, zabox
 
-	# cat=plugin.tx_sexybookmarks/enable/070; type=string; label=RSS PID: Page ID where the RSS is displayed
+	# cat=plugin.tx_sexybookmarks_pi1/enable/070; type=string; label=RSS PID: Page ID where the RSS is displayed
 	rssPID = 
 
-	# cat=plugin.tx_sexybookmarks/enable/080; type=string; label=RSS numType: Defines the page type number used for RSS
+	# cat=plugin.tx_sexybookmarks_pi1/enable/080; type=string; label=RSS numType: Defines the page type number used for RSS
 	rssNumType = 100
 
+	# cat=plugin.tx_sexybookmarks_pi1/enable/090; type=string; label=Viadeo Number: Insert your Viadeo affiliate number here
+	viadeo = 
 
 
-	# cat=plugin.tx_sexybookmarks/file/010; type=file[js]; label=jQuery Library: Location of the jQuery Lib
-	file.jQueryLibrary = EXT:sexybookmarks/res/jquery/js/jquery-1.5.2.min.js
 
-	# cat=plugin.tx_sexybookmarks/file/020; type=file[js]; label=jQuery Easing: Location of the jQuery Easing
+	# cat=plugin.tx_sexybookmarks_pi1/file/010; type=file[js]; label=jQuery Library: Location of the jQuery Lib
+	file.jQueryLibrary = EXT:sexybookmarks/res/jquery/js/jquery-1.6.0.min.js
+
+	# cat=plugin.tx_sexybookmarks_pi1/file/020; type=file[js]; label=jQuery Easing: Location of the jQuery Easing
 	file.jQueryEasing = EXT:sexybookmarks/res/jquery/js/jquery.easing-1.3.js
 
-	# cat=plugin.tx_sexybookmarks/file/030; type=file[js]; label=JS-Template file: Location of the used template for JS
-	file.templateFileJS = EXT:sexybookmarks/res/tx_sexybookmarks_pi1.js
+	# cat=plugin.tx_sexybookmarks_pi1/file/030; type=file[js]; label=JS-Template file: Location of the used template for JS
+	file.templateFileJS = EXT:sexybookmarks/res/tx_sexybookmarks.js
 
-	# cat=plugin.tx_sexybookmarks/file/040; type=file[js]; label=Sexy-Bookmarks JS: Location of the Sexy-Bookmarks JS
+	# cat=plugin.tx_sexybookmarks_pi1/file/040; type=file[js]; label=Sexy-Bookmarks JS: Location of the Sexy-Bookmarks JS
 	file.jsFile = EXT:sexybookmarks/res/jquery/js/sexybookmarks.js
 
-	# cat=plugin.tx_sexybookmarks/file/050; type=file[css]; label=CSS file: CSS-File to include
+	# cat=plugin.tx_sexybookmarks_pi1/file/050; type=file[css]; label=CSS file: CSS-File to include
 	file.cssFile = EXT:sexybookmarks/res/css/style.css
 
 
 
-	# cat=plugin.tx_sexybookmarks/typo/010; type=boolean; label=Center: Center the bookmarks
+	# cat=plugin.tx_sexybookmarks_pi1/typo/010; type=boolean; label=Center: Center the bookmarks
 	bookmarkCenter = 0
 
-	# cat=plugin.tx_sexybookmarks/typo/020; type=boolean; label=Expandable: Display all bookmarks on mouseover
+	# cat=plugin.tx_sexybookmarks_pi1/typo/020; type=boolean; label=Expandable: Display all bookmarks on mouseover
 	bookmarkExpandable = 0
 
-	# cat=plugin.tx_sexybookmarks/typo/030; type=string; label=Background style: Set the background of Sexy-Bookmarks. Possible values are: sexy, caring, caring-old, love, wealth, enjoy, german or any class defined in Your CSS like .sexybookmarks-bg-[value]
+	# cat=plugin.tx_sexybookmarks_pi1/typo/030; type=string; label=Background style: Set the background of Sexy-Bookmarks. Possible values are: sexy, caring, caring-old, love, wealth, enjoy, german or any class defined in Your CSS like .sexybookmarks-bg-[value]
 	bookmarkBackground = 
 
-	# cat=plugin.tx_sexybookmarks/typo/040; type=options[,Quad,Cubic,Quart,Quint,Expo,Circ,Sine,Back,Bounce,Elastic]; label=Transition: Effect of transition (Quad, Cubic, Quart, Quint, Expo, Circ, Sine, Back, Bounce, Elastic)
+	# cat=plugin.tx_sexybookmarks_pi1/typo/040; type=options[,Quad,Cubic,Quart,Quint,Expo,Circ,Sine,Back,Bounce,Elastic]; label=Transition: Effect of transition (Quad, Cubic, Quart, Quint, Expo, Circ, Sine, Back, Bounce, Elastic)
 	transition = 
 
-	# cat=plugin.tx_sexybookmarks/typo/050; type=options[,In,Out,InOut]; label=Transition direction: Direction of transition (In, Out, InOut)
+	# cat=plugin.tx_sexybookmarks_pi1/typo/050; type=options[,In,Out,InOut]; label=Transition direction: Direction of transition (In, Out, InOut)
 	transitionDir = 
 
-	# cat=plugin.tx_sexybookmarks/typo/060; type=int+; label=Duration transition: The duration of the transition in milliseconds
+	# cat=plugin.tx_sexybookmarks_pi1/typo/060; type=int+; label=Duration transition: The duration of the transition in milliseconds
 	transitionDuration = 500
 }
 

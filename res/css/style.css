@@ -1,57 +1,85 @@
 div.sexybookmarks { margin: 20px 0 0 0; clear: both !important; }
-div.sexybookmarks-expand { height: 29px; overflow: hidden; }
-.sexybookmarks-bg-sexy, .sexybookmarks-bg-caring, .sexybookmarks-bg-caring-old, .sexybookmarks-bg-love, .sexybookmarks-bg-wealth, .sexybookmarks-bg-enjoy, .sexybookmarks-bg-german {
-	background: url('../images/sexy-trans.png') no-repeat !important;
+div.sexybookmarks-expand { height: 32px; overflow: hidden; }
+
+div.sexybookmarks-bg-sexy { padding: 28px 0 0 10px !important; background: transparent url('../images/share-sexy.png') no-repeat !important; }
+div.sexybookmarks-bg-caring { padding: 26px 0 0 10px !important; background: transparent url('../images/share-caring-hearts.png') no-repeat !important; }
+div.sexybookmarks-bg-caring-old { padding: 26px 0 0 10px !important; background: transparent url('../images/share-caring.png') no-repeat !important; }
+div.sexybookmarks-bg-love { padding: 26px 0 0 10px !important; background: transparent url('../images/share-love-hearts.png') no-repeat !important; }
+div.sexybookmarks-bg-wealth { margin-left: 15px !important; padding: 35px 0 0 20px !important; background: transparent url('../images/share-wealth.png') no-repeat !important; }
+div.sexybookmarks-bg-enjoy { padding: 26px 0 0 10px !important; background: transparent url('../images/share-enjoy.png') no-repeat !important; }
+div.sexybookmarks-bg-german { padding: 35px 0 0 20px !important; background: transparent url('../images/share-german.png') no-repeat !important; }
+div.sexybookmarks-bg-knowledge { padding: 35px 0 0 10px !important; background: transparent url('../images/share-knowledge.png') no-repeat !important; }
+
+div.sexybookmarks ul.socials {
+	width: 100% !important;
+	margin: 0 !important;
+	padding: 0 !important;
+	float: left !important;
+	background: transparent none !important;
+	border: 0 none !important;
+	outline: 0 none !important;
 }
-div.sexybookmarks-bg-sexy { padding: 28px 0 0 10px !important; background-position: left -348px !important; }
-div.sexybookmarks-bg-caring { padding: 26px 0 0 10px !important; background-position: left 0 !important; }
-div.sexybookmarks-bg-caring-old { padding: 26px 0 0 10px !important; background-position: left -748px !important; }
-div.sexybookmarks-bg-love { padding: 26px 0 0 10px !important; background-position: left -1148px !important; }	
-div.sexybookmarks-bg-wealth { margin-left: 15px !important; padding: 35px 0 0 20px !important; background-position: left -1535px !important; }
-div.sexybookmarks-bg-enjoy { padding: 26px 0 0 10px !important; background-position: left -1895px !important; }
-div.sexybookmarks-bg-german { padding: 35px 0 0 20px !important; background-position: left -2248px !important; }
-div.sexybookmarks ul.socials { width: 100% !important; margin: 0 !important; padding: 0 !important; float: left !important; }
-div.sexybookmarks ul.socials { background: transparent none !important; border: 0 none !important; outline: 0 none !important; }
 div.sexybookmarks ul.socials li {
+	background-image: url('../images/sexy-sprite.png') !important;
+	background-repeat: no-repeat !important;
 	display: inline !important;
 	float: left !important;
 	list-style-type: none !important;
-	margin: 0;
+	padding: 0 !important;
 	height: 29px !important;
 	width: 60px !important;
 	cursor: pointer !important;
-	padding: 0 !important;
+	margin: 3px 0 0 !important;
 	background-color: transparent !important;
 	border: 0 none !important;
 	outline: 0 none !important;
 	clear: none !important;
 }
-div.sexybookmarks ul.socials li:before, div.sexybookmarks ul.socials li:after, div.sexybookmarks ul.socials li a:before, div.sexybookmarks ul.socials li a:after {
-	content: '' !important;
+div.sexybookmarks ul.socials li:before,
+div.sexybookmarks ul.socials li:after,
+div.sexybookmarks ul.socials li a:before,
+div.sexybookmarks ul.socials li a:after { 
+	content:'' !important
 }
-div.sexybookmarks ul.socials a {
+div.sexybookmarks ul.socials a,
+div.sexybookmarks ul.socials a:hover {
 	display: block !important;
 	width: 60px !important;
 	height: 29px !important;
 	text-indent: -9999px !important;
 	background-color: transparent !important;
+	text-decoration: none !important;
+	border: 0 none !important;
+	margin: 0 !important;
+	padding: 0 !important;
 }
-div.sexybookmarks ul.socials a:hover, div.sexybookmarks ul.socials li:hover {
-	background-color:transparent !important;
+div.sexybookmarks div.shr-getshr {
+	line-height: 15px !important;
+	padding-top: 2px !important;
+	padding-left: 8px !important;
+	float: left !important;
+}
+div.sexybookmarks div.shr-getshr a {
+	width: auto !important;
+	font-size: 10px !important;
+	text-indent: 0px !important;
+	text-decoration: none !important;
+}
+div.sexybookmarks ul.socials a:hover,
+div.sexybookmarks ul.socials li:hover {
+	background-color: transparent !important;
 	border: 0 none !important;
 	outline: 0 none !important;
 }
-li.sexy-diigo, li.sexy-diigo:hover, li.sexy-digg, li.sexy-digg:hover, li.sexy-reddit, li.sexy-reddit:hover, li.sexy-stumbleupon, li.sexy-stumbleupon:hover, li.sexy-delicious, li.sexy-delicious:hover, li.sexy-yahoobuzz, li.sexy-yahoobuzz:hover, li.sexy-blinklist, li.sexy-blinklist:hover, li.sexy-technorati, li.sexy-technorati:hover, li.sexy-facebook, li.sexy-facebook:hover, li.sexy-twitter, li.sexy-twitter:hover, li.sexy-myspace, li.sexy-myspace:hover, li.sexy-mixx, li.sexy-mixx:hover, li.sexy-scriptstyle, li.sexy-scriptstyle:hover, li.sexy-designfloat, li.sexy-designfloat:hover, li.sexy-mail, li.sexy-mail:hover, li.sexy-comfeed, li.sexy-comfeed:hover, li.sexy-newsvine, li.sexy-newsvine:hover, li.sexy-devmarks, li.sexy-devmarks:hover, li.sexy-linkedin, li.sexy-linkedin:hover, li.sexy-google, li.sexy-google:hover, li.sexy-misterwong, li.sexy-misterwong:hover, li.sexy-izeby, li.sexy-izeby:hover, li.sexy-twittley, li.sexy-twittley:hover, li.sexy-tipd, li.sexy-tipd:hover, li.sexy-pfbuzz, li.sexy-pfbuzz:hover, li.sexy-friendfeed, li.sexy-friendfeed:hover, li.sexy-blogmarks, li.sexy-blogmarks:hover, li.sexy-fwisp, li.sexy-fwisp:hover, li.sexy-designmoo, li.sexy-designmoo:hover, li.sexy-bobrdobr, li.sexy-bobrdobr:hover, li.sexy-yandex, li.sexy-yandex:hover, li.sexy-memoryru, li.sexy-memoryru:hover, li.sexy-100zakladok, li.sexy-100zakladok:hover, li.sexy-moemesto, li.sexy-moemesto:hover, li.sexy-ning, li.sexy-ning:hover, li.sexy-hackernews, li.sexy-hackernews:hover, li.sexy-identica, li.sexy-identica:hover, li.sexy-printfriendly, li.sexy-printfriendly:hover, li.sexy-designbump, li.sexy-designbump:hover, li.sexy-fleck, li.sexy-fleck:hover, li.sexy-netvibes, li.sexy-netvibes:hover, li.sexy-netvouz, li.sexy-netvouz:hover, li.sexy-nujij, li.sexy-nujij:hover, li.sexy-globalgrind, li.sexy-globalgrind:hover, li.sexy-wikio, li.sexy-wikio:hover, li.sexy-xerpi, li.sexy-xerpi:hover, li.sexy-sphinn, li.sexy-sphinn:hover, li.sexy-blogospherenews, li.sexy-blogospherenews:hover, li.sexy-posterous, li.sexy-posterous:hover, li.sexy-techmeme, li.sexy-techmeme:hover, li.sexy-ekudos, li.sexy-ekudos:hover, li.sexy-pingfm, li.sexy-pingfm:hover, li.sexy-tomuse, li.sexy-tomuse:hover, li.sexy-webblend, li.sexy-webblend:hover, li.sexy-wykop, li.sexy-wykop:hover, li.sexy-blogengage, li.sexy-blogengage:hover, li.sexy-hyves, li.sexy-hyves:hover, li.sexy-pusha, li.sexy-pusha:hover, li.sexy-hatena, li.sexy-hatena:hover, li.sexy-mylinkvault, li.sexy-mylinkvault:hover, li.sexy-slashdot, li.sexy-slashdot:hover, li.sexy-squidoo, li.sexy-squidoo:hover, li.sexy-propeller, li.sexy-propeller:hover, li.sexy-faqpal, li.sexy-faqpal:hover, li.sexy-evernote, li.sexy-evernote:hover, li.sexy-meneame, li.sexy-meneame:hover, li.sexy-bitacoras, li.sexy-bitacoras:hover, li.sexy-jumptags, li.sexy-jumptags:hover, li.sexy-bebo, li.sexy-bebo:hover, li.sexy-n4g, li.sexy-n4g:hover, li.sexy-strands, li.sexy-strands:hover, li.sexy-orkut, li.sexy-orkut:hover, li.sexy-tumblr, li.sexy-tumblr:hover, li.sexy-stumpedia, li.sexy-stumpedia:hover, li.sexy-current, li.sexy-current:hover, li.sexy-blogger, li.sexy-blogger:hover, li.sexy-plurk, li.sexy-plurk:hover, li.sexy-favorite, li.sexy-favorite:hover {
-	background: url('../images/sexy-sprite.png') no-repeat !important;
-}
+
 li.sexy-newsvine { background-position:left bottom !important; }
 li.sexy-newsvine:hover { background-position:left top !important; }
 li.sexy-linkedin { background-position:-70px bottom !important; }
 li.sexy-linkedin:hover { background-position:-70px top !important; }
-li.sexy-devmarks { background-position:-140px bottom !important; }
-li.sexy-devmarks:hover { background-position:-140px top !important; }
-li.sexy-google { background-position:-210px bottom !important; }
-li.sexy-google:hover { background-position:-210px top !important; }
+li.sexy-google { background-position: -140px bottom !important; }
+li.sexy-google:hover { background-position: -140px top !important; }
+li.sexy-googlereader { background-position:-210px bottom !important; }
+li.sexy-googlereader:hover { background-position:-210px top !important; }
 li.sexy-scriptstyle { background-position:-280px bottom !important; }
 li.sexy-scriptstyle:hover { background-position:-280px top !important; }
 li.sexy-mail { background-position:-350px bottom !important; }
@@ -100,8 +128,8 @@ li.sexy-blogmarks { background-position:-1820px bottom !important; }
 li.sexy-blogmarks:hover { background-position:-1820px top !important; }
 li.sexy-fwisp { background-position:-1890px bottom !important; }
 li.sexy-fwisp:hover { background-position:-1890px top !important; }
-li.sexy-designmoo { background-position:-1960px bottom !important; }
-li.sexy-designmoo:hover { background-position:-1960px top !important; }
+li.sexy-yahoomail { background-position: -1960px bottom !important; }
+li.sexy-yahoomail:hover { background-position: -1960px top !important; }
 li.sexy-bobrdobr { background-position:-2030px bottom !important; }
 li.sexy-bobrdobr:hover { background-position:-2030px top !important; }
 li.sexy-memoryru { background-position:-2100px bottom !important; }
@@ -140,8 +168,8 @@ li.sexy-xerpi{ background-position:-3220px bottom !important; }
 li.sexy-xerpi:hover{ background-position:-3220px top !important; }
 li.sexy-sphinn{ background-position:-3290px bottom !important; }
 li.sexy-sphinn:hover{ background-position:-3290px top !important; }
-li.sexy-blogospherenews{ background-position:-3360px bottom !important; }
-li.sexy-blogospherenews:hover{ background-position:-3360px top !important; }
+li.sexy-hotmail { background-position: -3360px bottom !important; }
+li.sexy-hotmail:hover { background-position: -3360px top !important; }
 li.sexy-posterous{ background-position:-3430px bottom !important; }
 li.sexy-posterous:hover{ background-position:-3430px top !important; }
 li.sexy-techmeme{ background-position:-3500px bottom !important; }
@@ -200,5 +228,37 @@ li.sexy-blogger { background-position:-5320px bottom !important; }
 li.sexy-blogger:hover { background-position:-5320px top !important; }
 li.sexy-plurk { background-position:-5390px bottom !important; }
 li.sexy-plurk:hover { background-position:-5390px top !important; }
-li.sexy-favorite { background-position:-5460px bottom !important; }
-li.sexy-favorite:hover { background-position:-5460px top !important; }
+li.sexy-virb { background-position: -5460px bottom !important; }
+li.sexy-virb:hover { background-position:-5460px top !important; }
+li.sexy-dzone { background-position: -5530px bottom !important; }
+li.sexy-dzone:hover { background-position: -5530px top !important; }
+li.sexy-kaevur { background-position: -5600px bottom !important; }
+li.sexy-kaevur:hover { background-position: -5600px top !important; }
+li.sexy-box { background-position: -5670px bottom !important; }
+li.sexy-box:hover { background-position: -5670px top !important; }
+li.sexy-oknotizie { background-position: -5740px bottom !important; }
+li.sexy-oknotizie:hover { background-position: -5740px top !important; }
+li.sexy-bonzobox { background-position: -5810px bottom !important; }
+li.sexy-bonzobox:hover { background-position: -5810px top !important; }
+li.sexy-plaxo { background-position: -5880px bottom !important; }
+li.sexy-plaxo:hover { background-position: -5880px top !important; }
+li.sexy-springpad { background-position: -5950px bottom !important; }
+li.sexy-springpad:hover { background-position: -5950px top !important; }
+li.sexy-zabox { background-position: -6020px bottom !important; }
+li.sexy-zabox:hover { background-position: -6020px top !important; }
+li.sexy-viadeo { background-position: -6090px bottom !important; }
+li.sexy-viadeo:hover { background-position: -6090px top !important; }
+li.sexy-googlebuzz { background-position: -6160px bottom !important; }
+li.sexy-googlebuzz:hover { background-position: -6160px top !important; }
+li.sexy-gmail { background-position: -6230px bottom !important; }
+li.sexy-gmail:hover { background-position: -6230px top !important; }
+li.sexy-buzzster { background-position: -6300px bottom !important; }
+li.sexy-buzzster:hover { background-position: -6300px top !important; }
+
+li.sexy-favorite { background-position:-6370px bottom !important; }
+li.sexy-favorite:hover { background-position:-6370px top !important; }
+li.sexy-xing { background-position:-6440px bottom !important; }
+li.sexy-xing:hover { background-position:-6440px top !important; }
+li.sexy-youtube { background-position:-6510px bottom !important; }
+li.sexy-youtube:hover { background-position:-6510px top !important; }
+

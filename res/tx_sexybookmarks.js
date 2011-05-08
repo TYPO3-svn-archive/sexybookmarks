@@ -6,12 +6,12 @@ jQuery(document).ready(function() {
 	if (sexyFullHeight>sexyBaseHeight) {
 		jQuery('####KEY###.sexybookmarks-expand').hover(
 			function() {
-				jQuery(this).animate({
+				jQuery(this).stop().animate({
 					height: sexyFullHeight+'px'
 				}, {###ANIMATION###});
 			},
 			function() {
-				jQuery(this).animate({
+				jQuery(this).stop().animate({
 					height: sexyBaseHeight+'px'
 				}, {###ANIMATION###});
 			}

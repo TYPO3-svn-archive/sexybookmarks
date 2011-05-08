@@ -1,0 +1,123 @@
+plugin.tx_sexybookmarks_pi2 {
+	jQueryNoConflict = {$plugin.tx_sexybookmarks_pi1.jQueryNoConflict}
+	jsInFooter = {$plugin.tx_sexybookmarks_pi1.jsInFooter}
+	jsMinify = {$plugin.tx_sexybookmarks_pi1.jsMinify}
+	jsInline = {$plugin.tx_sexybookmarks_pi1.jsInline}
+	cssMinify = {$plugin.tx_sexybookmarks_pi1.cssMinify}
+
+	xing_profile = {$plugin.tx_sexybookmarks_pi2.xing_profile}
+	facebook_profile = {$plugin.tx_sexybookmarks_pi2.facebook_profile}
+	twitter_profile = {$plugin.tx_sexybookmarks_pi2.twitter_profile}
+	youtube_profile = {$plugin.tx_sexybookmarks_pi2.youtube_profile}
+
+	jQueryLibrary = {$plugin.tx_sexybookmarks_pi1.file.jQueryLibrary}
+	jQueryEasing = {$plugin.tx_sexybookmarks_pi1.file.jQueryEasing}
+	templateFileJS = {$plugin.tx_sexybookmarks_pi1.file.templateFileJS}
+	jsFile = {$plugin.tx_sexybookmarks_pi1.file.jsFile}
+	cssFile = {$plugin.tx_sexybookmarks_pi1.file.cssFile}
+
+	bookmarkCenter = {$plugin.tx_sexybookmarks_pi1.bookmarkCenter}
+	bookmarkExpandable = {$plugin.tx_sexybookmarks_pi1.bookmarkExpandable}
+	bookmarkBackground = {$plugin.tx_sexybookmarks_pi1.bookmarkBackground}
+
+	transition = {$plugin.tx_sexybookmarks_pi1.transition}
+	transitionDir = {$plugin.tx_sexybookmarks_pi1.transitionDir}
+	transitionDuration = {$plugin.tx_sexybookmarks_pi1.transitionDuration}
+
+	stdWrap {
+		dataWrap = <div id="{register:key}" class="{register:classes}"><ul class="socials"> | </ul><div style="clear:both;"></div></div>
+		required = 1
+	}
+
+	bookmarks = {$plugin.tx_sexybookmarks_pi2.bookmarks}
+	bookmarkConf {
+		xing = COA
+		xing {
+			10 = TEXT
+			10.value = <li class="sexy-xing">
+			20 = COA
+			20.htmlSpecialChars = 1
+			20.wrap = <a href="|" class="external">
+			20 {
+				10 = COA
+				10.wrap = |
+				10 {
+					10 = TEXT
+					10.value = http://www.xing.com/profile/
+					20 = TEXT
+					20.value = {$plugin.tx_sexybookmarks_pi2.xing_profile}
+				}
+			}
+			30 = TEXT
+			30.value = Follow me on XING
+			40 = TEXT
+			40.value = </a></li>
+		}
+		facebook = COA
+		facebook {
+			10 = TEXT
+			10.value = <li class="sexy-facebook">
+			20 = COA
+			20.htmlSpecialChars = 1
+			20.wrap = <a href="|" class="external">
+			20 {
+				10 = COA
+				10.wrap = |
+				10 {
+					10 = TEXT
+					10.value = http://www.facebook.com/
+					20 = TEXT
+					20.value = {$plugin.tx_sexybookmarks_pi2.facebook_profile}
+				}
+			}
+			30 = TEXT
+			30.value = Follow me on Facebook
+			40 = TEXT
+			40.value = </a></li>
+		}
+		twitter = COA
+		twitter {
+			10 = TEXT
+			10.value = <li class="sexy-twitter">
+			20 = COA
+			20.htmlSpecialChars = 1
+			20.wrap = <a href="|" class="external">
+			20 {
+				10 = COA
+				10.wrap = |
+				10 {
+					10 = TEXT
+					10.value = http://twitter.com/#!/
+					20 = TEXT
+					20.value = {$plugin.tx_sexybookmarks_pi2.twitter_profile}
+				}
+			}
+			30 = TEXT
+			30.value = Follow me on youTube
+			40 = TEXT
+			40.value = </a></li>
+		}
+		youtube = COA
+		youtube {
+			10 = TEXT
+			10.value = <li class="sexy-youtube">
+			20 = COA
+			20.htmlSpecialChars = 1
+			20.wrap = <a href="|" class="external">
+			20 {
+				10 = COA
+				10.wrap = |
+				10 {
+					10 = TEXT
+					10.value = http://www.youtube.com/user/
+					20 = TEXT
+					20.value = {$plugin.tx_sexybookmarks_pi2.youtube_profile}
+				}
+			}
+			30 = TEXT
+			30.value = Follow me on youTube
+			40 = TEXT
+			40.value = </a></li>
+		}
+	}
+}

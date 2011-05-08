@@ -1,0 +1,18 @@
+plugin.tx_sexybookmarks_pi2 {
+
+	# cat=plugin.tx_sexybookmarks_pi2/enable/010; type=string; label=Bookmarks: Define used bookmarks and order of the bookmarks (possible values are: xing, facebook, twitter, youtube)
+	bookmarks = xing,facebook,twitter,youtube
+
+	# cat=plugin.tx_sexybookmarks_pi2/enable/020; type=string; label=Xing profile: Define your Xing profile name
+	xing_profile = 
+
+	# cat=plugin.tx_sexybookmarks_pi2/enable/030; type=string; label=Facebook profile: Define your Facebook profile name
+	facebook_profile = 
+
+	# cat=plugin.tx_sexybookmarks_pi2/enable/040; type=string; label=Twitter profile: Define your Twitter profile name
+	twitter_profile = 
+
+	# cat=plugin.tx_sexybookmarks_pi2/enable/050; type=string; label=YouTube profile: Define your YouTube profile name
+	youtube_profile = 
+}
+

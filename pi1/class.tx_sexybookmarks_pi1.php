@@ -37,16 +37,16 @@ if (t3lib_extMgm::isLoaded('t3jquery')) {
  */
 class tx_sexybookmarks_pi1 extends tslib_pibase
 {
-	public $prefixId      = 'tx_sexybookmarks_pi1';		// Same as class name
-	public $scriptRelPath = 'pi1/class.tx_sexybookmarks_pi1.php';	// Path to this script relative to the extension dir.
-	public $extKey        = 'sexybookmarks';	// The extension key.
+	public $prefixId      = 'tx_sexybookmarks_pi1';
+	public $scriptRelPath = 'pi1/class.tx_sexybookmarks_pi1.php';
+	public $extKey        = 'sexybookmarks';
 	public $pi_checkCHash = true;
-	private $contentKey = null;
-	private $jsFiles = array();
-	private $js = array();
-	private $cssFiles = array();
-	private $css = array();
-	private $templateFileJS = null;
+	protected $contentKey = null;
+	protected $jsFiles = array();
+	protected $js = array();
+	protected $cssFiles = array();
+	protected $css = array();
+	protected $templateFileJS = null;
 
 	/**
 	 * The main method of the PlugIn
@@ -340,7 +340,7 @@ class tx_sexybookmarks_pi1 extends tslib_pibase
 	 * @param string $path
 	 * return string
 	 */
-	private function getPath($path="")
+	protected function getPath($path="")
 	{
 		return $GLOBALS['TSFE']->tmpl->getFileName($path);
 	}
@@ -352,7 +352,7 @@ class tx_sexybookmarks_pi1 extends tslib_pibase
 	 * @param boolean $first
 	 * @return void
 	 */
-	private function addJsFile($script="", $first=false)
+	protected function addJsFile($script="", $first=false)
 	{
 		$script = t3lib_div::fixWindowsFilePath($script);
 		if (! in_array($script, $this->jsFiles)) {// $this->getPath($script) &&
@@ -370,7 +370,7 @@ class tx_sexybookmarks_pi1 extends tslib_pibase
 	 * @param string $script
 	 * @return void
 	 */
-	private function addJS($script="")
+	protected function addJS($script="")
 	{
 		if (! in_array($script, $this->js)) {
 			$this->js[] = $script;
@@ -383,7 +383,7 @@ class tx_sexybookmarks_pi1 extends tslib_pibase
 	 * @param string $script
 	 * @return void
 	 */
-	private function addCssFile($script="")
+	protected function addCssFile($script="")
 	{
 		$script = t3lib_div::fixWindowsFilePath($script);
 		if ($this->getPath($script) && ! in_array($script, $this->cssFiles)) {
@@ -397,7 +397,7 @@ class tx_sexybookmarks_pi1 extends tslib_pibase
 	 * @param string $script
 	 * @return void
 	 */
-	private function addCSS($script="")
+	protected function addCSS($script="")
 	{
 		if (! in_array($script, $this->css)) {
 			$this->css[] = $script;
@@ -409,7 +409,7 @@ class tx_sexybookmarks_pi1 extends tslib_pibase
 	 * @param string $key
 	 * @return string
 	 */
-	private function getExtensionVersion($key)
+	protected function getExtensionVersion($key)
 	{
 		if (! t3lib_extMgm::isLoaded($key)) {
 			return '';

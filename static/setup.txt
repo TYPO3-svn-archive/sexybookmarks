@@ -6,6 +6,7 @@ plugin.tx_sexybookmarks_pi1 {
 	cssMinify = {$plugin.tx_sexybookmarks_pi1.cssMinify}
 	rssPID = {$plugin.tx_sexybookmarks_pi1.rssPID}
 	rssNumType = {$plugin.tx_sexybookmarks_pi1.rssNumType}
+	viadeo = {$plugin.tx_sexybookmarks_pi1.viadeo}
 
 	jQueryLibrary = {$plugin.tx_sexybookmarks_pi1.file.jQueryLibrary}
 	jQueryEasing = {$plugin.tx_sexybookmarks_pi1.file.jQueryEasing}
@@ -570,37 +571,6 @@ plugin.tx_sexybookmarks_pi1 {
 			40 = TEXT
 			40.value = </a></li>
 		}
-		devmarks = COA
-		devmarks {
-			10 = TEXT
-			10.value = <li class="sexy-devmarks">
-			20 = COA
-			20.htmlSpecialChars = 1
-			20.wrap = <a href="|" class="external">
-			20 {
-				10 = TEXT
-				10.value = http://devmarks.com/index.php
-				20 = COA
-				20.wrap = ?posturl=|
-				20 {
-					10 = TEXT
-					10.data = getIndpEnv:TYPO3_REQUEST_URL
-					10.rawUrlEncode = 1
-				}
-				30 = TEXT
-				30.wrap = &posttitle=|
-				30.data = page:title
-				30.rawUrlEncode = 1
-				40 = TEXT
-				40.wrap = &posttext=|
-				40.data = page:subtitle
-				40.rawUrlEncode = 1
-			}
-			30 = TEXT
-			30.value = Share this on Devmarks
-			40 = TEXT
-			40.value = </a></li>
-		}
 		google = COA
 		google {
 			10 = TEXT
@@ -625,6 +595,33 @@ plugin.tx_sexybookmarks_pi1 {
 			}
 			30 = TEXT
 			30.value = Add this to Google Bookmarks
+			40 = TEXT
+			40.value = </a></li>
+		}
+		googlereader = COA
+		googlereader {
+			10 = TEXT
+			10.value = <li class="sexy-googlereader">
+			20 = COA
+			20.htmlSpecialChars = 1
+			20.wrap = <a href="|" class="external">
+			20 {
+				10 = TEXT
+				10.value = http://www.google.com/reader/link
+				20 = COA
+				20.wrap = ?url=|
+				20 {
+					10 = TEXT
+					10.data = getIndpEnv:TYPO3_REQUEST_URL
+					10.rawUrlEncode = 1
+				}
+				30 = TEXT
+				30.wrap = &title=|
+				30.data = page:title
+				30.rawUrlEncode = 1
+			}
+			30 = TEXT
+			30.value = Add this to Google Reader
 			40 = TEXT
 			40.value = </a></li>
 		}
@@ -832,34 +829,37 @@ plugin.tx_sexybookmarks_pi1 {
 			40 = TEXT
 			40.value = </a></li>
 		}
-		designmoo = COA
-		designmoo {
+		yahoomail = COA
+		yahoomail {
 			10 = TEXT
-			10.value = <li class="sexy-designmoo">
+			10.value = <li class="sexy-yahoomail">
 			20 = COA
 			20.htmlSpecialChars = 1
 			20.wrap = <a href="|" class="external">
 			20 {
 				10 = TEXT
-				10.value = http://designmoo.com/submit
-				20 = COA
-				20.wrap = ?url=|
-				20 {
+				10.value = http://compose.mail.yahoo.com/
+				20 = TEXT
+				20.wrap = ?Subject=|
+				20.data = page:title
+				20.rawUrlEncode = 1
+				30 = COA
+				30.wrap = &body=Link:%20|
+				30 {
 					10 = TEXT
 					10.data = getIndpEnv:TYPO3_REQUEST_URL
 					10.rawUrlEncode = 1
+					20 = TEXT
+					20.value = (sent via sexybookmark)
+					20.noTrimWrap = | | |
+					20.rawUrlEncode = 1
+					30 = TEXT
+					30.data = page:subtitle
+					30.rawUrlEncode = 1
 				}
-				30 = TEXT
-				30.wrap = &title=|
-				30.data = page:title
-				30.rawUrlEncode = 1
-				40 = TEXT
-				40.wrap = &body=|
-				40.data = page:subtitle
-				40.rawUrlEncode = 1
 			}
 			30 = TEXT
-			30.value = Moo this on DesignMoo
+			30.value = Email this via Yahoo! Mail
 			40 = TEXT
 			40.value = </a></li>
 		}
@@ -1469,30 +1469,37 @@ plugin.tx_sexybookmarks_pi1 {
 			40 = TEXT
 			40.value = </a></li>
 		}
-		blogospherenews = COA
-		blogospherenews {
+		hotmail = COA
+		hotmail {
 			10 = TEXT
-			10.value = <li class="sexy-blogospherenews">
+			10.value = <li class="sexy-hotmail">
 			20 = COA
 			20.htmlSpecialChars = 1
 			20.wrap = <a href="|" class="external">
 			20 {
 				10 = TEXT
-				10.value = http://www.blogospherenews.com/submit.php
-				20 = COA
-				20.wrap = ?url=|
-				20 {
+				10.value = http://mail.live.com/?rru=compose
+				20 = TEXT
+				20.wrap = &subject=|
+				20.data = page:title
+				20.rawUrlEncode = 1
+				30 = COA
+				30.wrap = &body=Link:%20|
+				30 {
 					10 = TEXT
 					10.data = getIndpEnv:TYPO3_REQUEST_URL
 					10.rawUrlEncode = 1
+					20 = TEXT
+					20.value = (sent via sexybookmark)
+					20.noTrimWrap = | | |
+					20.rawUrlEncode = 1
+					30 = TEXT
+					30.data = page:subtitle
+					30.rawUrlEncode = 1
 				}
-				30 = TEXT
-				30.wrap = &title=|
-				30.data = page:subtitle // page:title
-				30.rawUrlEncode = 1
 			}
 			30 = TEXT
-			30.value = Share this on Blogosphere News
+			30.value = Email this via Hotmail
 			40 = TEXT
 			40.value = </a></li>
 		}
@@ -2129,6 +2136,357 @@ plugin.tx_sexybookmarks_pi1 {
 			}
 			30 = TEXT
 			30.value = Share this on Plurk
+			40 = TEXT
+			40.value = </a></li>
+		}
+
+		virb = COA
+		virb {
+			10 = TEXT
+			10.value = <li class="sexy-virb">
+			20 = COA
+			20.htmlSpecialChars = 1
+			20.wrap = <a href="|" class="external">
+			20 {
+				10 = TEXT
+				10.value = http://virb.com/share?external&v=2
+				20 = COA
+				20.wrap = &url=|
+				20 {
+					10 = TEXT
+					10.data = getIndpEnv:TYPO3_REQUEST_URL
+					10.rawUrlEncode = 1
+				}
+				30 = TEXT
+				30.wrap = &title=|
+				30.data = page:subtitle // page:title
+				30.rawUrlEncode = 1
+			}
+			30 = TEXT
+			30.value = Share this on Virb
+			40 = TEXT
+			40.value = </a></li>
+		}
+		dzone = COA
+		dzone {
+			10 = TEXT
+			10.value = <li class="sexy-dzone">
+			20 = COA
+			20.htmlSpecialChars = 1
+			20.wrap = <a href="|" class="external">
+			20 {
+				10 = TEXT
+				10.value = http://www.dzone.com/links/add.html
+				20 = COA
+				20.wrap = ?url=|
+				20 {
+					10 = TEXT
+					10.data = getIndpEnv:TYPO3_REQUEST_URL
+					10.rawUrlEncode = 1
+				}
+				30 = TEXT
+				30.wrap = &title=|
+				30.data = page:subtitle // page:title
+				30.rawUrlEncode = 1
+			}
+			30 = TEXT
+			30.value = Add this to DZone
+			40 = TEXT
+			40.value = </a></li>
+		}
+		kaevur = COA
+		kaevur {
+			10 = TEXT
+			10.value = <li class="sexy-kaevur">
+			20 = COA
+			20.htmlSpecialChars = 1
+			20.wrap = <a href="|" class="external">
+			20 {
+				10 = TEXT
+				10.value = http://kaevur.com/submit.php
+				20 = COA
+				20.wrap = ?url=|
+				20 {
+					10 = TEXT
+					10.data = getIndpEnv:TYPO3_REQUEST_URL
+					10.rawUrlEncode = 1
+				}
+			}
+			30 = TEXT
+			30.value = Share this on Kaevur
+			40 = TEXT
+			40.value = </a></li>
+		}
+		box = COA
+		box {
+			10 = TEXT
+			10.value = <li class="sexy-box">
+			20 = COA
+			20.htmlSpecialChars = 1
+			20.wrap = <a href="|" class="external">
+			20 {
+				10 = TEXT
+				10.value = https://www.box.net/api/1.0/import
+				20 = COA
+				20.wrap = ?url=|
+				20 {
+					10 = TEXT
+					10.data = getIndpEnv:TYPO3_REQUEST_URL
+					10.rawUrlEncode = 1
+				}
+				30 = TEXT
+				30.wrap = &name=|
+				30.data = page:subtitle // page:title
+				30.rawUrlEncode = 1
+				40 = TEXT
+				40.value = import_as=link
+			}
+			30 = TEXT
+			30.value = Add this link to Box.net
+			40 = TEXT
+			40.value = </a></li>
+		}
+		oknotizie = COA
+		oknotizie {
+			10 = TEXT
+			10.value = <li class="sexy-oknotizie">
+			20 = COA
+			20.htmlSpecialChars = 1
+			20.wrap = <a href="|" class="external">
+			20 {
+				10 = TEXT
+				10.value = http://oknotizie.virgilio.it/post
+				20 = COA
+				20.wrap = ?url=|
+				20 {
+					10 = TEXT
+					10.data = getIndpEnv:TYPO3_REQUEST_URL
+					10.rawUrlEncode = 1
+				}
+				30 = TEXT
+				30.wrap = &title=|
+				30.data = page:subtitle // page:title
+				30.rawUrlEncode = 1
+			}
+			30 = TEXT
+			30.value = Share this on OkNotizie
+			40 = TEXT
+			40.value = </a></li>
+		}
+		bonzobox = COA
+		bonzobox {
+			10 = TEXT
+			10.value = <li class="sexy-bonzobox">
+			20 = COA
+			20.htmlSpecialChars = 1
+			20.wrap = <a href="|" class="external">
+			20 {
+				10 = TEXT
+				10.value = http://bonzobox.com/toolbar/add?pop=1
+				20 = COA
+				20.wrap = &u=|
+				20 {
+					10 = TEXT
+					10.data = getIndpEnv:TYPO3_REQUEST_URL
+					10.rawUrlEncode = 1
+				}
+				30 = TEXT
+				30.wrap = &t=|
+				30.data = page:title
+				30.rawUrlEncode = 1
+				40 = TEXT
+				40.wrap = &d=|
+				40.data = page:subtitle
+				40.rawUrlEncode = 1
+			}
+			30 = TEXT
+			30.value = Add this to BonzoBox
+			40 = TEXT
+			40.value = </a></li>
+		}
+		plaxo = COA
+		plaxo {
+			10 = TEXT
+			10.value = <li class="sexy-plaxo">
+			20 = COA
+			20.htmlSpecialChars = 1
+			20.wrap = <a href="|" class="external">
+			20 {
+				10 = TEXT
+				10.value = http://www.plaxo.com/
+				20 = COA
+				20.wrap = ?share_link=|
+				20 {
+					10 = TEXT
+					10.data = getIndpEnv:TYPO3_REQUEST_URL
+					10.rawUrlEncode = 1
+				}
+			}
+			30 = TEXT
+			30.value = Share this on Plaxo
+			40 = TEXT
+			40.value = </a></li>
+		}
+		springpad = COA
+		springpad {
+			10 = TEXT
+			10.value = <li class="sexy-springpad">
+			20 = COA
+			20.htmlSpecialChars = 1
+			20.wrap = <a href="|" class="external">
+			20 {
+				10 = TEXT
+				10.value = http://springpadit.com/clip.action
+				20 = TEXT
+				20.wrap = ?body=|
+				20.data = page:subtitle
+				30 = COA
+				30.wrap = &url=|
+				30 {
+					10 = TEXT
+					10.data = getIndpEnv:TYPO3_REQUEST_URL
+					10.rawUrlEncode = 1
+				}
+				40 = TEXT
+				40.value = &format=microclip
+				50 = TEXT
+				50.wrap = &title=|
+				50.data = page:subtitle // page:title
+				50.rawUrlEncode = 1
+			}
+			30 = TEXT
+			30.value = Spring this on SpringPad
+			40 = TEXT
+			40.value = </a></li>
+		}
+		zabox = COA
+		zabox {
+			10 = TEXT
+			10.value = <li class="sexy-zabox">
+			20 = COA
+			20.htmlSpecialChars = 1
+			20.wrap = <a href="|" class="external">
+			20 {
+				10 = TEXT
+				10.value = http://www.zabox.net/submit.php
+				20 = COA
+				20.wrap = ?url=|
+				20 {
+					10 = TEXT
+					10.data = getIndpEnv:TYPO3_REQUEST_URL
+					10.rawUrlEncode = 1
+				}
+			}
+			30 = TEXT
+			30.value = Box this on Zabox
+			40 = TEXT
+			40.value = </a></li>
+		}
+		viadeo = COA
+		viadeo {
+			10 = TEXT
+			10.value = <li class="sexy-viadeo">
+			20 = COA
+			20.htmlSpecialChars = 1
+			20.wrap = <a href="|" class="external">
+			20 {
+				10 = TEXT
+				10.value = http://www.viadeo.com/shareit/share/
+				20 = COA
+				20.wrap = ?url=|
+				20 {
+					10 = TEXT
+					10.data = getIndpEnv:TYPO3_REQUEST_URL
+					10.rawUrlEncode = 1
+				}
+				30 = TEXT
+				30.wrap = &title=|
+				30.data = page:subtitle // page:title
+				30.rawUrlEncode = 1
+				40 = TEXT
+				40.wrap = &urlaffiliate=|
+				40.value = {$plugin.tx_sexybookmarks_pi1.viadeo}
+				40.rawUrlEncode = 1
+			}
+			30 = TEXT
+			30.value = Share this on Viadeo
+			40 = TEXT
+			40.value = </a></li>
+		}
+		googlebuzz = COA
+		googlebuzz {
+			10 = TEXT
+			10.value = <li class="sexy-googlebuzz">
+			20 = COA
+			20.htmlSpecialChars = 1
+			20.wrap = <a href="|" class="external">
+			20 {
+				10 = TEXT
+				10.value = http://www.google.com/buzz/post
+				20 = COA
+				20.wrap = ?url=|
+				20 {
+					10 = TEXT
+					10.data = getIndpEnv:TYPO3_REQUEST_URL
+					10.rawUrlEncode = 1
+				}
+				30 = TEXT
+				30.wrap = &imageurl=|
+				30.value = 
+				30.rawUrlEncode = 1
+			}
+			30 = TEXT
+			30.value = Post on Google Buzz
+			40 = TEXT
+			40.value = </a></li>
+		}
+		gmail = COA
+		gmail {
+			10 = TEXT
+			10.value = <li class="sexy-gmail">
+			20 = COA
+			20.htmlSpecialChars = 1
+			20.wrap = <a href="|" class="external">
+			20 {
+				10 = TEXT
+				10.value = https://mail.google.com/mail/?ui=2&view=cm&fs=1&tf=1
+				20 = TEXT
+				20.wrap = &su=|
+				20.data = page:title
+				20.rawUrlEncode = 1
+				30 = COA
+				30.wrap = &body=Link:%20|
+				30 {
+					10 = TEXT
+					10.data = getIndpEnv:TYPO3_REQUEST_URL
+					10.rawUrlEncode = 1
+					20 = TEXT
+					20.value = (sent via sexybookmark)
+					20.noTrimWrap = | | |
+					20.rawUrlEncode = 1
+					30 = TEXT
+					30.data = page:subtitle
+					30.rawUrlEncode = 1
+				}
+			}
+			30 = TEXT
+			30.value = Email this via Gmail
+			40 = TEXT
+			40.value = </a></li>
+		}
+		buzzster = COA
+		buzzster {
+			10 = TEXT
+			10.value = <li class="sexy-buzzster">
+			20 = COA
+			20.htmlSpecialChars = 1
+			20.wrap = <a href="|">
+			20 {
+				10 = TEXT
+				10.value = javascript:var%20s=document.createElement('script');s.src='http://www.buzzster.com/javascripts/bzz_adv.js';s.type='text/javascript';void(document.getElementsByTagName('head')[0].appendChild(s));
+			}
+			30 = TEXT
+			30.value = Share this via Buzzster!
 			40 = TEXT
 			40.value = </a></li>
 		}
