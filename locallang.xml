@@ -1,1 +1,16 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?><T3locallang>	<meta type="array">		<type>module</type>		<description>Language labels for extension 'sexybookmarks'</description>	</meta>	<data type="array">		<languageKey index="default" type="array">			<label index="pi1_title">Sexy-Bookmarks (ShareThis)</label>			<label index="pi1_plus_wiz_description">Add Sexy-Bookmark ShareThis to your page</label>			<label index="pi2_title">Sexy-Bookmarks (FollowUs)</label>			<label index="pi2_plus_wiz_description">Add Sexy-Bookmark FollowUs to your page</label>		</languageKey>	</data></T3locallang>
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<T3locallang>
+	<meta type="array">
+		<type>module</type>
+		<description>Language labels for extension 'sexybookmarks'</description>
+	</meta>
+	<data type="array">
+		<languageKey index="default" type="array">
+			<label index="pi1_title">Sexy-Bookmarks (ShareThis)</label>
+			<label index="pi1_plus_wiz_description">Add Sexy-Bookmark ShareThis to your page</label>
+
+			<label index="pi2_title">Sexy-Bookmarks (FollowUs)</label>
+			<label index="pi2_plus_wiz_description">Add Sexy-Bookmark FollowUs to your page</label>
+		</languageKey>
+	</data>
+</T3locallang>

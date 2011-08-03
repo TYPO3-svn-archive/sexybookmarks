@@ -3,6 +3,13 @@ jQuery(document).ready(function() {
 	// xhtml 1.0 strict way of using target _blank
 	jQuery('.sexybookmarks a.external').attr("target", "_blank");
 
+	// set the title tag to the link
+	jQuery('.sexybookmarks a').each(function(){
+		if (! jQuery(this).attr('title')) {
+			jQuery(this).attr('title', jQuery(this).text());
+		}
+	});
+
 	// autocentering
 	if (jQuery('.sexybookmarks-center') || jQuery('.sexybookmarks-spaced')) {
 		var sexyFullWidth = jQuery('.sexybookmarks').width();

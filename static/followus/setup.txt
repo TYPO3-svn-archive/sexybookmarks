@@ -37,7 +37,7 @@ plugin.tx_sexybookmarks_pi2 {
 			10.value = <li class="sexy-xing">
 			20 = COA
 			20.htmlSpecialChars = 1
-			20.wrap = <a href="|" class="external">
+			20.wrap = <a href="|" class="external" title="XING">
 			20 {
 				10 = COA
 				10.wrap = |
@@ -59,7 +59,7 @@ plugin.tx_sexybookmarks_pi2 {
 			10.value = <li class="sexy-facebook">
 			20 = COA
 			20.htmlSpecialChars = 1
-			20.wrap = <a href="|" class="external">
+			20.wrap = <a href="|" class="external" title="Facebook">
 			20 {
 				10 = COA
 				10.wrap = |
@@ -81,7 +81,7 @@ plugin.tx_sexybookmarks_pi2 {
 			10.value = <li class="sexy-twitter">
 			20 = COA
 			20.htmlSpecialChars = 1
-			20.wrap = <a href="|" class="external">
+			20.wrap = <a href="|" class="external" title="Twitter">
 			20 {
 				10 = COA
 				10.wrap = |
@@ -103,7 +103,7 @@ plugin.tx_sexybookmarks_pi2 {
 			10.value = <li class="sexy-youtube">
 			20 = COA
 			20.htmlSpecialChars = 1
-			20.wrap = <a href="|" class="external">
+			20.wrap = <a href="|" class="external" title="youTube">
 			20 {
 				10 = COA
 				10.wrap = |
@@ -116,6 +116,28 @@ plugin.tx_sexybookmarks_pi2 {
 			}
 			30 = TEXT
 			30.value = Follow me on youTube
+			40 = TEXT
+			40.value = </a></li>
+		}
+		googleplus = COA
+		googleplus {
+			10 = TEXT
+			10.value = <li class="sexy-googleplus">
+			20 = COA
+			20.htmlSpecialChars = 1
+			20.wrap = <a href="|" class="external" title="Google+">
+			20 {
+				10 = COA
+				10.wrap = |
+				10 {
+					10 = TEXT
+					10.value = https://plus.google.com/
+					20 = TEXT
+					20.value = {$plugin.tx_sexybookmarks_pi2.googleplus_profile}
+				}
+			}
+			30 = TEXT
+			30.value = Follow me on Google+
 			40 = TEXT
 			40.value = </a></li>
 		}

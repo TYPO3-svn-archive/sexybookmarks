@@ -34,7 +34,7 @@ plugin.tx_sexybookmarks_pi1 {
 			10 = TEXT
 			10.value = <li class="sexy-favorite">
 			20 = COA
-			20.wrap = <a href="|" class="external">
+			20.wrap = <a href="|" class="external" title="Favorite">
 			20 {
 				10 = TEXT
 				10.data = getIndpEnv:TYPO3_REQUEST_URL
@@ -50,7 +50,7 @@ plugin.tx_sexybookmarks_pi1 {
 			10.value = <li class="sexy-scriptstyle">
 			20 = COA
 			20.htmlSpecialChars = 1
-			20.wrap = <a href="|" class="external">
+			20.wrap = <a href="|" class="external" title="Script&Style">
 			20 {
 				10 = TEXT
 				10.value = http://scriptandstyle.com/submit
@@ -77,7 +77,7 @@ plugin.tx_sexybookmarks_pi1 {
 			10.value = <li class="sexy-blinklist">
 			20 = COA
 			20.htmlSpecialChars = 1
-			20.wrap = <a href="|" class="external">
+			20.wrap = <a href="|" class="external" title="Blinklist">
 			20 {
 				10 = TEXT
 				10.value = http://www.blinklist.com/index.php
@@ -104,7 +104,7 @@ plugin.tx_sexybookmarks_pi1 {
 			10.value = <li class="sexy-delicious">
 			20 = COA
 			20.htmlSpecialChars = 1
-			20.wrap = <a href="|" class="external">
+			20.wrap = <a href="|" class="external" title="del.icio.us">
 			20 {
 				10 = TEXT
 				10.value = http://del.icio.us/post
@@ -131,7 +131,7 @@ plugin.tx_sexybookmarks_pi1 {
 			10.value = <li class="sexy-digg">
 			20 = COA
 			20.htmlSpecialChars = 1
-			20.wrap = <a href="|" class="external">
+			20.wrap = <a href="|" class="external" title="Digg">
 			20 {
 				10 = TEXT
 				10.value = http://digg.com/submit
@@ -162,7 +162,7 @@ plugin.tx_sexybookmarks_pi1 {
 			10.value = <li class="sexy-diigo">
 			20 = COA
 			20.htmlSpecialChars = 1
-			20.wrap = <a href="|" class="external">
+			20.wrap = <a href="|" class="external" title="Diigo">
 			20 {
 				10 = TEXT
 				10.value = http://www.diigo.com/post
@@ -193,7 +193,7 @@ plugin.tx_sexybookmarks_pi1 {
 			10.value = <li class="sexy-reddit">
 			20 = COA
 			20.htmlSpecialChars = 1
-			20.wrap = <a href="|" class="external">
+			20.wrap = <a href="|" class="external" title="Reddit">
 			20 {
 				10 = TEXT
 				10.value = http://reddit.com/submit
@@ -220,7 +220,7 @@ plugin.tx_sexybookmarks_pi1 {
 			10.value = <li class="sexy-yahoobuzz">
 			20 = COA
 			20.htmlSpecialChars = 1
-			20.wrap = <a href="|" class="external">
+			20.wrap = <a href="|" class="external" title="YahooBuzz">
 			20 {
 				10 = TEXT
 				10.value = http://buzz.yahoo.com/submit/
@@ -251,7 +251,7 @@ plugin.tx_sexybookmarks_pi1 {
 			10.value = <li class="sexy-stumbleupon">
 			20 = COA
 			20.htmlSpecialChars = 1
-			20.wrap = <a href="|" class="external">
+			20.wrap = <a href="|" class="external" title="StubleUpon">
 			20 {
 				10 = TEXT
 				10.value = http://www.stumbleupon.com/submit
@@ -278,7 +278,7 @@ plugin.tx_sexybookmarks_pi1 {
 			10.value = <li class="sexy-technorati">
 			20 = COA
 			20.htmlSpecialChars = 1
-			20.wrap = <a href="|" class="external">
+			20.wrap = <a href="|" class="external" title="Technorati">
 			20 {
 				10 = TEXT
 				10.value = http://technorati.com/faves
@@ -301,7 +301,7 @@ plugin.tx_sexybookmarks_pi1 {
 			10.value = <li class="sexy-mixx">
 			20 = COA
 			20.htmlSpecialChars = 1
-			20.wrap = <a href="|" class="external">
+			20.wrap = <a href="|" class="external" title="Mixx">
 			20 {
 				10 = TEXT
 				10.value = http://www.mixx.com/submit
@@ -328,7 +328,7 @@ plugin.tx_sexybookmarks_pi1 {
 			10.value = <li class="sexy-myspace">
 			20 = COA
 			20.htmlSpecialChars = 1
-			20.wrap = <a href="|" class="external">
+			20.wrap = <a href="|" class="external" title="MySpace">
 			20 {
 				10 = TEXT
 				10.value = http://www.myspace.com/Modules/PostTo/Pages/
@@ -355,7 +355,7 @@ plugin.tx_sexybookmarks_pi1 {
 			10.value = <li class="sexy-designfloat">
 			20 = COA
 			20.htmlSpecialChars = 1
-			20.wrap = <a href="|" class="external">
+			20.wrap = <a href="|" class="external" title="DesignFloat">
 			20 {
 				10 = TEXT
 				10.value = http://www.designfloat.com/submit.php
@@ -382,7 +382,7 @@ plugin.tx_sexybookmarks_pi1 {
 			10.value = <li class="sexy-facebook">
 			20 = COA
 			20.htmlSpecialChars = 1
-			20.wrap = <a href="|" class="external">
+			20.wrap = <a href="|" class="external" title="Facebook">
 			20 {
 				10 = TEXT
 				10.value = http://www.facebook.com/share.php
@@ -409,7 +409,7 @@ plugin.tx_sexybookmarks_pi1 {
 			10.value = <li class="sexy-twitter">
 			20 = COA
 			20.htmlSpecialChars = 1
-			20.wrap = <a href="|" class="external">
+			20.wrap = <a href="|" class="external" title="Twitter">
 			20 {
 				10 = TEXT
 				10.value = http://twitter.com/share
@@ -447,7 +447,7 @@ plugin.tx_sexybookmarks_pi1 {
 			10.value = <li class="sexy-mail">
 			20 = COA
 			20.htmlSpecialChars = 1
-			20.wrap = <a href="|" class="external">
+			20.wrap = <a href="|" class="external" title="E-Mail">
 			20 {
 				10 = TEXT
 				10.wrap = mailto:?subject=%22|%22
@@ -475,7 +475,7 @@ plugin.tx_sexybookmarks_pi1 {
 			10.value = <li class="sexy-tomuse">
 			20 = COA
 			20.htmlSpecialChars = 1
-			20.wrap = <a href="|" class="external">
+			20.wrap = <a href="|" class="external" title="ToMuse">
 			20 {
 				10 = TEXT
 				10.wrap = mailto:tips@tomuse.com?subject=New%20tip%20submitted%20via%20the%20SexyBookmarks%20Plugin!&body=I%20would%20like%20to%20submit%20this%20article%3A%20%22|%22%20for%20possible%20inclusion%20on%20ToMuse.
@@ -503,7 +503,7 @@ plugin.tx_sexybookmarks_pi1 {
 			10.value = <li class="sexy-comfeed">
 			20 = COA
 			20.htmlSpecialChars = 1
-			20.wrap = <a href="|" class="external">
+			20.wrap = <a href="|" class="external" title="RSS">
 			20 {
 				10 = COA
 				10.wrap = |
@@ -530,7 +530,7 @@ plugin.tx_sexybookmarks_pi1 {
 			10.value = <li class="sexy-linkedin">
 			20 = COA
 			20.htmlSpecialChars = 1
-			20.wrap = <a href="|" class="external">
+			20.wrap = <a href="|" class="external" title="LinkedIn">
 			20 {
 				10 = TEXT
 				10.value = http://www.linkedin.com/shareArticle
@@ -561,7 +561,7 @@ plugin.tx_sexybookmarks_pi1 {
 			10.value = <li class="sexy-newsvine">
 			20 = COA
 			20.htmlSpecialChars = 1
-			20.wrap = <a href="|" class="external">
+			20.wrap = <a href="|" class="external" title="Newsvine">
 			20 {
 				10 = TEXT
 				10.value = http://www.newsvine.com/_tools/seed&amp;save
@@ -588,7 +588,7 @@ plugin.tx_sexybookmarks_pi1 {
 			10.value = <li class="sexy-google">
 			20 = COA
 			20.htmlSpecialChars = 1
-			20.wrap = <a href="|" class="external">
+			20.wrap = <a href="|" class="external" title="Google Bookmarks">
 			20 {
 				10 = TEXT
 				10.value = http://www.google.com/bookmarks/mark
@@ -615,7 +615,7 @@ plugin.tx_sexybookmarks_pi1 {
 			10.value = <li class="sexy-googlereader">
 			20 = COA
 			20.htmlSpecialChars = 1
-			20.wrap = <a href="|" class="external">
+			20.wrap = <a href="|" class="external" title="Google Reader">
 			20 {
 				10 = TEXT
 				10.value = http://www.google.com/reader/link
@@ -642,7 +642,7 @@ plugin.tx_sexybookmarks_pi1 {
 			10.value = <li class="sexy-misterwong">
 			20 = COA
 			20.htmlSpecialChars = 1
-			20.wrap = <a href="|" class="external">
+			20.wrap = <a href="|" class="external" title="Mister Wrong">
 			20 {
 				10 = TEXT
 				10.value = http://www.mister-wong.com/addurl/
@@ -669,7 +669,7 @@ plugin.tx_sexybookmarks_pi1 {
 			10.value = <li class="sexy-izeby">
 			20 = COA
 			20.htmlSpecialChars = 1
-			20.wrap = <a href="|" class="external">
+			20.wrap = <a href="|" class="external" title="Izeby">
 			20 {
 				10 = TEXT
 				10.value = http://izeby.com/submit.php
@@ -692,7 +692,7 @@ plugin.tx_sexybookmarks_pi1 {
 			10.value = <li class="sexy-tipd">
 			20 = COA
 			20.htmlSpecialChars = 1
-			20.wrap = <a href="|" class="external">
+			20.wrap = <a href="|" class="external" title="Tipd">
 			20 {
 				10 = TEXT
 				10.value = http://tipd.com/submit.php
@@ -715,7 +715,7 @@ plugin.tx_sexybookmarks_pi1 {
 			10.value = <li class="sexy-pfbuzz">
 			20 = COA
 			20.htmlSpecialChars = 1
-			20.wrap = <a href="|" class="external">
+			20.wrap = <a href="|" class="external" title="PFBuzz">
 			20 {
 				10 = TEXT
 				10.value = http://pfbuzz.com/submit
@@ -742,7 +742,7 @@ plugin.tx_sexybookmarks_pi1 {
 			10.value = <li class="sexy-friendfeed">
 			20 = COA
 			20.htmlSpecialChars = 1
-			20.wrap = <a href="|" class="external">
+			20.wrap = <a href="|" class="external" title="FriendFeed">
 			20 {
 				10 = TEXT
 				10.value = http://www.friendfeed.com/share
@@ -769,7 +769,7 @@ plugin.tx_sexybookmarks_pi1 {
 			10.value = <li class="sexy-blogmarks">
 			20 = COA
 			20.htmlSpecialChars = 1
-			20.wrap = <a href="|" class="external">
+			20.wrap = <a href="|" class="external" title="BlogMarks">
 			20 {
 				10 = TEXT
 				10.value = http://blogmarks.net/my/new.php
@@ -796,7 +796,7 @@ plugin.tx_sexybookmarks_pi1 {
 			10.value = <li class="sexy-twittley">
 			20 = COA
 			20.htmlSpecialChars = 1
-			20.wrap = <a href="|" class="external">
+			20.wrap = <a href="|" class="external" title="Twittley">
 			20 {
 				10 = TEXT
 				10.value = http://twittley.com/submit/
@@ -823,7 +823,7 @@ plugin.tx_sexybookmarks_pi1 {
 			10.value = <li class="sexy-fwisp">
 			20 = COA
 			20.htmlSpecialChars = 1
-			20.wrap = <a href="|" class="external">
+			20.wrap = <a href="|" class="external" title="Fwisp">
 			20 {
 				10 = TEXT
 				10.value = http://fwisp.com/submit
@@ -846,7 +846,7 @@ plugin.tx_sexybookmarks_pi1 {
 			10.value = <li class="sexy-yahoomail">
 			20 = COA
 			20.htmlSpecialChars = 1
-			20.wrap = <a href="|" class="external">
+			20.wrap = <a href="|" class="external" title="Yahoo! Mail">
 			20 {
 				10 = TEXT
 				10.value = http://compose.mail.yahoo.com/
@@ -880,7 +880,7 @@ plugin.tx_sexybookmarks_pi1 {
 			10.value = <li class="sexy-bobrdobr">
 			20 = COA
 			20.htmlSpecialChars = 1
-			20.wrap = <a href="|" class="external">
+			20.wrap = <a href="|" class="external" title="BobrDobr">
 			20 {
 				10 = TEXT
 				10.value = http://bobrdobr.ru/addext.html
@@ -907,7 +907,7 @@ plugin.tx_sexybookmarks_pi1 {
 			10.value = <li class="sexy-yandex">
 			20 = COA
 			20.htmlSpecialChars = 1
-			20.wrap = <a href="|" class="external">
+			20.wrap = <a href="|" class="external" title="Yandex.Bookmarks">
 			20 {
 				10 = TEXT
 				10.value = http://zakladki.yandex.ru/userarea/links/addfromfav.asp
@@ -934,7 +934,7 @@ plugin.tx_sexybookmarks_pi1 {
 			10.value = <li class="sexy-memoryru">
 			20 = COA
 			20.htmlSpecialChars = 1
-			20.wrap = <a href="|" class="external">
+			20.wrap = <a href="|" class="external" title="Memory.ru">
 			20 {
 				10 = TEXT
 				10.value = http://memori.ru/link/
@@ -961,7 +961,7 @@ plugin.tx_sexybookmarks_pi1 {
 			10.value = <li class="sexy-100zakladok">
 			20 = COA
 			20.htmlSpecialChars = 1
-			20.wrap = <a href="|" class="external">
+			20.wrap = <a href="|" class="external" title="100 Bookmarks">
 			20 {
 				10 = TEXT
 				10.value = http://www.100zakladok.ru/save/
@@ -988,7 +988,7 @@ plugin.tx_sexybookmarks_pi1 {
 			10.value = <li class="sexy-moemesto">
 			20 = COA
 			20.htmlSpecialChars = 1
-			20.wrap = <a href="|" class="external">
+			20.wrap = <a href="|" class="external" title="MyPlace">
 			20 {
 				10 = TEXT
 				10.value = http://moemesto.ru/post.php
@@ -1015,7 +1015,7 @@ plugin.tx_sexybookmarks_pi1 {
 			10.value = <li class="sexy-hackernews">
 			20 = COA
 			20.htmlSpecialChars = 1
-			20.wrap = <a href="|" class="external">
+			20.wrap = <a href="|" class="external" title="Hacker News">
 			20 {
 				10 = TEXT
 				10.value = http://news.ycombinator.com/submitlink
@@ -1042,7 +1042,7 @@ plugin.tx_sexybookmarks_pi1 {
 			10.value = <li class="sexy-printfriendly">
 			20 = COA
 			20.htmlSpecialChars = 1
-			20.wrap = <a href="|" class="external">
+			20.wrap = <a href="|" class="external" title="Print Friendly">
 			20 {
 				10 = TEXT
 				10.value = http://www.printfriendly.com/print
@@ -1065,7 +1065,7 @@ plugin.tx_sexybookmarks_pi1 {
 			10.value = <li class="sexy-designbump">
 			20 = COA
 			20.htmlSpecialChars = 1
-			20.wrap = <a href="|" class="external">
+			20.wrap = <a href="|" class="external" title="Hacker News">
 			20 {
 				10 = TEXT
 				10.value = http://designbump.com/submit
@@ -1096,7 +1096,7 @@ plugin.tx_sexybookmarks_pi1 {
 			10.value = <li class="sexy-ning">
 			20 = COA
 			20.htmlSpecialChars = 1
-			20.wrap = <a href="|" class="external">
+			20.wrap = <a href="|" class="external" title="Ning">
 			20 {
 				10 = TEXT
 				10.value = http://bookmarks.ning.com/addItem.php
@@ -1123,7 +1123,7 @@ plugin.tx_sexybookmarks_pi1 {
 			10.value = <li class="sexy-identica">
 			20 = COA
 			20.htmlSpecialChars = 1
-			20.wrap = <a href="|" class="external">
+			20.wrap = <a href="|" class="external" title="Identica">
 			20 {
 				10 = TEXT
 				10.value = http://identi.ca/index.php
@@ -1150,7 +1150,7 @@ plugin.tx_sexybookmarks_pi1 {
 			10.value = <li class="sexy-xerpi">
 			20 = COA
 			20.htmlSpecialChars = 1
-			20.wrap = <a href="|" class="external">
+			20.wrap = <a href="|" class="external" title="Xerpi">
 			20 {
 				10 = TEXT
 				10.value = http://www.xerpi.com/block/add_link_from_extension
@@ -1177,7 +1177,7 @@ plugin.tx_sexybookmarks_pi1 {
 			10.value = <li class="sexy-wikio">
 			20 = COA
 			20.htmlSpecialChars = 1
-			20.wrap = <a href="|" class="external">
+			20.wrap = <a href="|" class="external" title="Wikio">
 			20 {
 				10 = TEXT
 				10.value = http://www.wikio.com/sharethis
@@ -1204,7 +1204,7 @@ plugin.tx_sexybookmarks_pi1 {
 			10.value = <li class="sexy-techmeme">
 			20 = COA
 			20.htmlSpecialChars = 1
-			20.wrap = <a href="|" class="external">
+			20.wrap = <a href="|" class="external" title="TechMeme">
 			20 {
 				10 = TEXT
 				10.value = http://twitter.com/home/
@@ -1231,7 +1231,7 @@ plugin.tx_sexybookmarks_pi1 {
 			10.value = <li class="sexy-sphinn">
 			20 = COA
 			20.htmlSpecialChars = 1
-			20.wrap = <a href="|" class="external">
+			20.wrap = <a href="|" class="external" title="Sphinn">
 			20 {
 				10 = TEXT
 				10.value = http://sphinn.com/index.php
@@ -1254,7 +1254,7 @@ plugin.tx_sexybookmarks_pi1 {
 			10.value = <li class="sexy-posterous">
 			20 = COA
 			20.htmlSpecialChars = 1
-			20.wrap = <a href="|" class="external">
+			20.wrap = <a href="|" class="external" title="Posterous">
 			20 {
 				10 = TEXT
 				10.value = http://posterous.com/share
@@ -1285,7 +1285,7 @@ plugin.tx_sexybookmarks_pi1 {
 			10.value = <li class="sexy-globalgrind">
 			20 = COA
 			20.htmlSpecialChars = 1
-			20.wrap = <a href="|" class="external">
+			20.wrap = <a href="|" class="external" title="Global Grind">
 			20 {
 				10 = TEXT
 				10.value = http://globalgrind.com/submission/submit.aspx
@@ -1312,7 +1312,7 @@ plugin.tx_sexybookmarks_pi1 {
 			10.value = <li class="sexy-pingfm">
 			20 = COA
 			20.htmlSpecialChars = 1
-			20.wrap = <a href="|" class="external">
+			20.wrap = <a href="|" class="external" title="Ping.fm">
 			20 {
 				10 = TEXT
 				10.value = http://ping.fm/ref/
@@ -1343,7 +1343,7 @@ plugin.tx_sexybookmarks_pi1 {
 			10.value = <li class="sexy-nujij">
 			20 = COA
 			20.htmlSpecialChars = 1
-			20.wrap = <a href="|" class="external">
+			20.wrap = <a href="|" class="external" title="NUjij">
 			20 {
 				10 = TEXT
 				10.value = http://nujij.nl/jij.lynkx
@@ -1374,7 +1374,7 @@ plugin.tx_sexybookmarks_pi1 {
 			10.value = <li class="sexy-ekudos">
 			20 = COA
 			20.htmlSpecialChars = 1
-			20.wrap = <a href="|" class="external">
+			20.wrap = <a href="|" class="external" title="eKudos">
 			20 {
 				10 = TEXT
 				10.value = http://www.ekudos.nl/artikel/nieuw
@@ -1405,7 +1405,7 @@ plugin.tx_sexybookmarks_pi1 {
 			10.value = <li class="sexy-netvouz">
 			20 = COA
 			20.htmlSpecialChars = 1
-			20.wrap = <a href="|" class="external">
+			20.wrap = <a href="|" class="external" title="Netvouz">
 			20 {
 				10 = TEXT
 				10.value = http://www.netvouz.com/action/submitBookmark
@@ -1432,7 +1432,7 @@ plugin.tx_sexybookmarks_pi1 {
 			10.value = <li class="sexy-netvibes">
 			20 = COA
 			20.htmlSpecialChars = 1
-			20.wrap = <a href="|" class="external">
+			20.wrap = <a href="|" class="external" title="Netvibes">
 			20 {
 				10 = TEXT
 				10.value = http://www.netvibes.com/share
@@ -1459,7 +1459,7 @@ plugin.tx_sexybookmarks_pi1 {
 			10.value = <li class="sexy-fleck">
 			20 = COA
 			20.htmlSpecialChars = 1
-			20.wrap = <a href="|" class="external">
+			20.wrap = <a href="|" class="external" title="Fleck">
 			20 {
 				10 = TEXT
 				10.value = http://beta3.fleck.com/bookmarklet.php
@@ -1486,7 +1486,7 @@ plugin.tx_sexybookmarks_pi1 {
 			10.value = <li class="sexy-hotmail">
 			20 = COA
 			20.htmlSpecialChars = 1
-			20.wrap = <a href="|" class="external">
+			20.wrap = <a href="|" class="external" title="Hotmail">
 			20 {
 				10 = TEXT
 				10.value = http://mail.live.com/?rru=compose
@@ -1520,7 +1520,7 @@ plugin.tx_sexybookmarks_pi1 {
 			10.value = <li class="sexy-webblend">
 			20 = COA
 			20.htmlSpecialChars = 1
-			20.wrap = <a href="|" class="external">
+			20.wrap = <a href="|" class="external" title="WebBlend">
 			20 {
 				10 = TEXT
 				10.value = http://thewebblend.com/submit
@@ -1551,7 +1551,7 @@ plugin.tx_sexybookmarks_pi1 {
 			10.value = <li class="sexy-wykop">
 			20 = COA
 			20.htmlSpecialChars = 1
-			20.wrap = <a href="|" class="external">
+			20.wrap = <a href="|" class="external" title="Wykop!">
 			20 {
 				10 = TEXT
 				10.value = http://www.wykop.pl/dodaj
@@ -1578,7 +1578,7 @@ plugin.tx_sexybookmarks_pi1 {
 			10.value = <li class="sexy-blogengage">
 			20 = COA
 			20.htmlSpecialChars = 1
-			20.wrap = <a href="|" class="external">
+			20.wrap = <a href="|" class="external" title="Blogengage">
 			20 {
 				10 = TEXT
 				10.value = http://www.blogengage.com/submit.php
@@ -1601,7 +1601,7 @@ plugin.tx_sexybookmarks_pi1 {
 			10.value = <li class="sexy-hyves">
 			20 = COA
 			20.htmlSpecialChars = 1
-			20.wrap = <a href="|" class="external">
+			20.wrap = <a href="|" class="external" title="Hyves">
 			20 {
 				10 = TEXT
 				10.value = http://www.hyves.nl/profilemanage/add/tips/
@@ -1632,7 +1632,7 @@ plugin.tx_sexybookmarks_pi1 {
 			10.value = <li class="sexy-pusha">
 			20 = COA
 			20.htmlSpecialChars = 1
-			20.wrap = <a href="|" class="external">
+			20.wrap = <a href="|" class="external" title="Pusha">
 			20 {
 				10 = TEXT
 				10.value = http://www.pusha.se/posta
@@ -1659,7 +1659,7 @@ plugin.tx_sexybookmarks_pi1 {
 			10.value = <li class="sexy-hatena">
 			20 = COA
 			20.htmlSpecialChars = 1
-			20.wrap = <a href="|" class="external">
+			20.wrap = <a href="|" class="external" title="Hartena Bookmarks">
 			20 {
 				10 = TEXT
 				10.value = http://b.hatena.ne.jp/add
@@ -1686,7 +1686,7 @@ plugin.tx_sexybookmarks_pi1 {
 			10.value = <li class="sexy-mylinkvault">
 			20 = COA
 			20.htmlSpecialChars = 1
-			20.wrap = <a href="|" class="external">
+			20.wrap = <a href="|" class="external" title="MyLinkVault">
 			20 {
 				10 = TEXT
 				10.value = http://www.mylinkvault.com/link-page.php
@@ -1713,7 +1713,7 @@ plugin.tx_sexybookmarks_pi1 {
 			10.value = <li class="sexy-slashdot">
 			20 = COA
 			20.htmlSpecialChars = 1
-			20.wrap = <a href="|" class="external">
+			20.wrap = <a href="|" class="external" title="SlashDot">
 			20 {
 				10 = TEXT
 				10.value = http://slashdot.org/bookmark.pl
@@ -1740,7 +1740,7 @@ plugin.tx_sexybookmarks_pi1 {
 			10.value = <li class="sexy-squidoo">
 			20 = COA
 			20.htmlSpecialChars = 1
-			20.wrap = <a href="|" class="external">
+			20.wrap = <a href="|" class="external" title="Squidoo">
 			20 {
 				10 = TEXT
 				10.value = http://www.squidoo.com/lensmaster/bookmark
@@ -1763,7 +1763,7 @@ plugin.tx_sexybookmarks_pi1 {
 			10.value = <li class="sexy-propeller">
 			20 = COA
 			20.htmlSpecialChars = 1
-			20.wrap = <a href="|" class="external">
+			20.wrap = <a href="|" class="external" title="Propeller">
 			20 {
 				10 = TEXT
 				10.value = http://www.propeller.com/submit/
@@ -1786,7 +1786,7 @@ plugin.tx_sexybookmarks_pi1 {
 			10.value = <li class="sexy-faqpal">
 			20 = COA
 			20.htmlSpecialChars = 1
-			20.wrap = <a href="|" class="external">
+			20.wrap = <a href="|" class="external" title="FAQpal">
 			20 {
 				10 = TEXT
 				10.value = http://www.faqpal.com/submit
@@ -1809,7 +1809,7 @@ plugin.tx_sexybookmarks_pi1 {
 			10.value = <li class="sexy-evernote">
 			20 = COA
 			20.htmlSpecialChars = 1
-			20.wrap = <a href="|" class="external">
+			20.wrap = <a href="|" class="external" title="Evernote">
 			20 {
 				10 = TEXT
 				10.value = http://www.evernote.com/clip.action
@@ -1836,7 +1836,7 @@ plugin.tx_sexybookmarks_pi1 {
 			10.value = <li class="sexy-meneame">
 			20 = COA
 			20.htmlSpecialChars = 1
-			20.wrap = <a href="|" class="external">
+			20.wrap = <a href="|" class="external" title="Meneame">
 			20 {
 				10 = TEXT
 				10.value = http://meneame.net/submit.php
@@ -1859,7 +1859,7 @@ plugin.tx_sexybookmarks_pi1 {
 			10.value = <li class="sexy-bitacoras">
 			20 = COA
 			20.htmlSpecialChars = 1
-			20.wrap = <a href="|" class="external">
+			20.wrap = <a href="|" class="external" title="Bitacoras">
 			20 {
 				10 = TEXT
 				10.value = http://bitacoras.com/anotaciones/
@@ -1882,7 +1882,7 @@ plugin.tx_sexybookmarks_pi1 {
 			10.value = <li class="sexy-jumptags">
 			20 = COA
 			20.htmlSpecialChars = 1
-			20.wrap = <a href="|" class="external">
+			20.wrap = <a href="|" class="external" title="JumpTags">
 			20 {
 				10 = TEXT
 				10.value = http://www.jumptags.com/add/
@@ -1909,7 +1909,7 @@ plugin.tx_sexybookmarks_pi1 {
 			10.value = <li class="sexy-bebo">
 			20 = COA
 			20.htmlSpecialChars = 1
-			20.wrap = <a href="|" class="external">
+			20.wrap = <a href="|" class="external" title="Bebo">
 			20 {
 				10 = TEXT
 				10.value = http://www.bebo.com/c/share
@@ -1936,7 +1936,7 @@ plugin.tx_sexybookmarks_pi1 {
 			10.value = <li class="sexy-n4g">
 			20 = COA
 			20.htmlSpecialChars = 1
-			20.wrap = <a href="|" class="external">
+			20.wrap = <a href="|" class="external" title="N4G">
 			20 {
 				10 = TEXT
 				10.value = http://www.n4g.com/tips.aspx
@@ -1963,7 +1963,7 @@ plugin.tx_sexybookmarks_pi1 {
 			10.value = <li class="sexy-strands">
 			20 = COA
 			20.htmlSpecialChars = 1
-			20.wrap = <a href="|" class="external">
+			20.wrap = <a href="|" class="external" title="Strands">
 			20 {
 				10 = TEXT
 				10.value = http://www.strands.com/tools/share/webpage
@@ -1990,7 +1990,7 @@ plugin.tx_sexybookmarks_pi1 {
 			10.value = <li class="sexy-orkut">
 			20 = COA
 			20.htmlSpecialChars = 1
-			20.wrap = <a href="|" class="external">
+			20.wrap = <a href="|" class="external" title="Orkut">
 			20 {
 				10 = TEXT
 				10.value = http://promote.orkut.com/preview
@@ -2021,7 +2021,7 @@ plugin.tx_sexybookmarks_pi1 {
 			10.value = <li class="sexy-tumblr">
 			20 = COA
 			20.htmlSpecialChars = 1
-			20.wrap = <a href="|" class="external">
+			20.wrap = <a href="|" class="external" title="Tumblr">
 			20 {
 				10 = TEXT
 				10.value = http://www.tumblr.com/share
@@ -2048,7 +2048,7 @@ plugin.tx_sexybookmarks_pi1 {
 			10.value = <li class="sexy-stumpedia">
 			20 = COA
 			20.htmlSpecialChars = 1
-			20.wrap = <a href="|" class="external">
+			20.wrap = <a href="|" class="external" title="Stumpedia">
 			20 {
 				10 = TEXT
 				10.value = http://www.stumpedia.com/submit
@@ -2075,7 +2075,7 @@ plugin.tx_sexybookmarks_pi1 {
 			10.value = <li class="sexy-current">
 			20 = COA
 			20.htmlSpecialChars = 1
-			20.wrap = <a href="|" class="external">
+			20.wrap = <a href="|" class="external" title="Current">
 			20 {
 				10 = TEXT
 				10.value = http://current.com/clipper.htm
@@ -2102,7 +2102,7 @@ plugin.tx_sexybookmarks_pi1 {
 			10.value = <li class="sexy-blogger">
 			20 = COA
 			20.htmlSpecialChars = 1
-			20.wrap = <a href="|" class="external">
+			20.wrap = <a href="|" class="external" title="Blogger">
 			20 {
 				10 = TEXT
 				10.value = http://www.blogger.com/blog_this.pyra
@@ -2129,7 +2129,7 @@ plugin.tx_sexybookmarks_pi1 {
 			10.value = <li class="sexy-plurk">
 			20 = COA
 			20.htmlSpecialChars = 1
-			20.wrap = <a href="|" class="external">
+			20.wrap = <a href="|" class="external" title="Plurk">
 			20 {
 				10 = TEXT
 				10.value = http://www.plurk.com/m
@@ -2157,7 +2157,7 @@ plugin.tx_sexybookmarks_pi1 {
 			10.value = <li class="sexy-virb">
 			20 = COA
 			20.htmlSpecialChars = 1
-			20.wrap = <a href="|" class="external">
+			20.wrap = <a href="|" class="external" title="Virb">
 			20 {
 				10 = TEXT
 				10.value = http://virb.com/share?external&v=2
@@ -2184,7 +2184,7 @@ plugin.tx_sexybookmarks_pi1 {
 			10.value = <li class="sexy-dzone">
 			20 = COA
 			20.htmlSpecialChars = 1
-			20.wrap = <a href="|" class="external">
+			20.wrap = <a href="|" class="external" title="DZone">
 			20 {
 				10 = TEXT
 				10.value = http://www.dzone.com/links/add.html
@@ -2211,7 +2211,7 @@ plugin.tx_sexybookmarks_pi1 {
 			10.value = <li class="sexy-kaevur">
 			20 = COA
 			20.htmlSpecialChars = 1
-			20.wrap = <a href="|" class="external">
+			20.wrap = <a href="|" class="external" title="Kaevur">
 			20 {
 				10 = TEXT
 				10.value = http://kaevur.com/submit.php
@@ -2234,7 +2234,7 @@ plugin.tx_sexybookmarks_pi1 {
 			10.value = <li class="sexy-box">
 			20 = COA
 			20.htmlSpecialChars = 1
-			20.wrap = <a href="|" class="external">
+			20.wrap = <a href="|" class="external" title="Box.net">
 			20 {
 				10 = TEXT
 				10.value = https://www.box.net/api/1.0/import
@@ -2263,7 +2263,7 @@ plugin.tx_sexybookmarks_pi1 {
 			10.value = <li class="sexy-oknotizie">
 			20 = COA
 			20.htmlSpecialChars = 1
-			20.wrap = <a href="|" class="external">
+			20.wrap = <a href="|" class="external" title="OkNotizie">
 			20 {
 				10 = TEXT
 				10.value = http://oknotizie.virgilio.it/post
@@ -2290,7 +2290,7 @@ plugin.tx_sexybookmarks_pi1 {
 			10.value = <li class="sexy-bonzobox">
 			20 = COA
 			20.htmlSpecialChars = 1
-			20.wrap = <a href="|" class="external">
+			20.wrap = <a href="|" class="external" title="BonzoBox">
 			20 {
 				10 = TEXT
 				10.value = http://bonzobox.com/toolbar/add?pop=1
@@ -2321,7 +2321,7 @@ plugin.tx_sexybookmarks_pi1 {
 			10.value = <li class="sexy-plaxo">
 			20 = COA
 			20.htmlSpecialChars = 1
-			20.wrap = <a href="|" class="external">
+			20.wrap = <a href="|" class="external" title="Plaxo">
 			20 {
 				10 = TEXT
 				10.value = http://www.plaxo.com/
@@ -2344,7 +2344,7 @@ plugin.tx_sexybookmarks_pi1 {
 			10.value = <li class="sexy-springpad">
 			20 = COA
 			20.htmlSpecialChars = 1
-			20.wrap = <a href="|" class="external">
+			20.wrap = <a href="|" class="external" title="SpringPad">
 			20 {
 				10 = TEXT
 				10.value = http://springpadit.com/clip.action
@@ -2376,7 +2376,7 @@ plugin.tx_sexybookmarks_pi1 {
 			10.value = <li class="sexy-zabox">
 			20 = COA
 			20.htmlSpecialChars = 1
-			20.wrap = <a href="|" class="external">
+			20.wrap = <a href="|" class="external" title="Zabox">
 			20 {
 				10 = TEXT
 				10.value = http://www.zabox.net/submit.php
@@ -2399,7 +2399,7 @@ plugin.tx_sexybookmarks_pi1 {
 			10.value = <li class="sexy-viadeo">
 			20 = COA
 			20.htmlSpecialChars = 1
-			20.wrap = <a href="|" class="external">
+			20.wrap = <a href="|" class="external" title="Viadeo">
 			20 {
 				10 = TEXT
 				10.value = http://www.viadeo.com/shareit/share/
@@ -2430,7 +2430,7 @@ plugin.tx_sexybookmarks_pi1 {
 			10.value = <li class="sexy-googlebuzz">
 			20 = COA
 			20.htmlSpecialChars = 1
-			20.wrap = <a href="|" class="external">
+			20.wrap = <a href="|" class="external" title="Google Buzz">
 			20 {
 				10 = TEXT
 				10.value = http://www.google.com/buzz/post
@@ -2443,7 +2443,7 @@ plugin.tx_sexybookmarks_pi1 {
 				}
 				30 = TEXT
 				30.wrap = &imageurl=|
-				30.value = 
+				30.value =
 				30.rawUrlEncode = 1
 			}
 			30 = TEXT
@@ -2457,7 +2457,7 @@ plugin.tx_sexybookmarks_pi1 {
 			10.value = <li class="sexy-gmail">
 			20 = COA
 			20.htmlSpecialChars = 1
-			20.wrap = <a href="|" class="external">
+			20.wrap = <a href="|" class="external" title="Gmail">
 			20 {
 				10 = TEXT
 				10.value = https://mail.google.com/mail/?ui=2&view=cm&fs=1&tf=1
@@ -2491,7 +2491,7 @@ plugin.tx_sexybookmarks_pi1 {
 			10.value = <li class="sexy-buzzster">
 			20 = COA
 			20.htmlSpecialChars = 1
-			20.wrap = <a href="|">
+			20.wrap = <a href="|" title="Buzzster">
 			20 {
 				10 = TEXT
 				10.value = javascript:var%20s=document.createElement('script');s.src='http://www.buzzster.com/javascripts/bzz_adv.js';s.type='text/javascript';void(document.getElementsByTagName('head')[0].appendChild(s));
