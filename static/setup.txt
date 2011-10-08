@@ -7,6 +7,7 @@ plugin.tx_sexybookmarks_pi1 {
 	rssPID = {$plugin.tx_sexybookmarks_pi1.rssPID}
 	rssNumType = {$plugin.tx_sexybookmarks_pi1.rssNumType}
 	viadeo = {$plugin.tx_sexybookmarks_pi1.viadeo}
+	diasporaServer = {$plugin.tx_sexybookmarks_pi1.diasporaServer}
 
 	jQueryLibrary = {$plugin.tx_sexybookmarks_pi1.file.jQueryLibrary}
 	jQueryEasing = {$plugin.tx_sexybookmarks_pi1.file.jQueryEasing}
@@ -642,7 +643,7 @@ plugin.tx_sexybookmarks_pi1 {
 			10.value = <li class="sexy-misterwong">
 			20 = COA
 			20.htmlSpecialChars = 1
-			20.wrap = <a href="|" class="external" title="Mister Wrong">
+			20.wrap = <a href="|" class="external" title="Mister Wong">
 			20 {
 				10 = TEXT
 				10.value = http://www.mister-wong.com/addurl/
@@ -2501,6 +2502,65 @@ plugin.tx_sexybookmarks_pi1 {
 			40 = TEXT
 			40.value = </a></li>
 		}
+		xing = COA
+		xing {
+			10 = TEXT
+			10.value = <li class="sexy-xing">
+			20 = COA
+			20.htmlSpecialChars = 1
+			20.wrap = <a href="|" class="external" title="XING">
+			20 {
+				10 = TEXT
+				10.value = https://www.xing.com/app/user?op=share
+				20 = COA
+				20.wrap = ;url=|
+				20 {
+					10 = TEXT
+					10.data = getIndpEnv:TYPO3_REQUEST_URL
+					10.rawUrlEncode = 1
+				}
+				30 = TEXT
+				30.wrap = &title=|
+				30.data = page:subtitle // page:title
+				30.rawUrlEncode = 1
+				40 = TEXT
+				40.wrap = &provider=|
+				40.value = 
+				40.rawUrlEncode = 1
+			}
+			30 = TEXT
+			30.value = Post on XING
+			40 = TEXT
+			40.value = </a></li>
+		}
+		diaspora = COA
+		diaspora {
+			10 = TEXT
+			10.value = <li class="sexy-diaspora">
+			20 = COA
+			20.htmlSpecialChars = 1
+			20.wrap = <a href="|" class="external" title="Diaspora">
+			20 {
+				10 = TEXT
+				10.value = http://iliketoast.net/dshare.html
+				20 = COA
+				20.wrap = ?url=|
+				20 {
+					10 = TEXT
+					10.data = getIndpEnv:TYPO3_REQUEST_URL
+					10.rawUrlEncode = 1
+				}
+				30 = TEXT
+				30.wrap = &title=|
+				30.data = page:subtitle // page:title
+				30.rawUrlEncode = 1
+			}
+			30 = TEXT
+			30.value = Post on DIASPORA*
+			40 = TEXT
+			40.value = </a></li>
+		}
+
 	}
 }
 

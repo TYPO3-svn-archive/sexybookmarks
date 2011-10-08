@@ -47,6 +47,7 @@ class tx_sexybookmarks_pi1 extends tslib_pibase
 	protected $cssFiles = array();
 	protected $css = array();
 	protected $templateFileJS = null;
+	protected $piFlexForm = array();
 
 	/**
 	 * The main method of the PlugIn
@@ -284,7 +285,7 @@ class tx_sexybookmarks_pi1 extends tslib_pibase
 				// Add script only once
 				$hash = md5($temp_js);
 				if ($this->conf['jsInline']) {
-					$GLOBALS['TSFE']->inlineJS[$hash] = $temp_css;
+					$GLOBALS['TSFE']->inlineJS[$hash] = $temp_js;
 				} elseif (t3lib_div::int_from_ver(TYPO3_version) >= 4003000) {
 					if ($this->conf['jsInFooter'] || $allJsInFooter) {
 						$pagerender->addJsFooterInlineCode($hash, $temp_js, $this->conf['jsMinify']);
@@ -420,6 +421,19 @@ class tx_sexybookmarks_pi1 extends tslib_pibase
 	}
 
 	/**
+	* Set the piFlexform data
+	*
+	* @return void
+	*/
+	protected function setFlexFormData()
+	{
+		if (! count($this->piFlexForm)) {
+			$this->pi_initPIflexForm();
+			$this->piFlexForm = $this->cObj->data['pi_flexform'];
+		}
+	}
+
+	/**
 	 * Extract the requested information from flexform
 	 * @param string $sheet
 	 * @param string $name
@@ -428,30 +442,29 @@ class tx_sexybookmarks_pi1 extends tslib_pibase
 	 */
 	protected function getFlexformData($sheet='', $name='', $devlog=true)
 	{
-		$this->pi_initPIflexForm();
-		$piFlexForm = $this->cObj->data['pi_flexform'];
-		if (! isset($piFlexForm['data'])) {
+		$this->setFlexFormData();
+		if (! isset($this->piFlexForm['data'])) {
 			if ($devlog === true) {
 				t3lib_div::devLog("Flexform Data not set", $this->extKey, 1);
 			}
 			return null;
 		}
-		if (! isset($piFlexForm['data'][$sheet])) {
+		if (! isset($this->piFlexForm['data'][$sheet])) {
 			if ($devlog === true) {
 				t3lib_div::devLog("Flexform sheet '{$sheet}' not defined", $this->extKey, 1);
 			}
 			return null;
 		}
-		if (! isset($piFlexForm['data'][$sheet]['lDEF'][$name])) {
+		if (! isset($this->piFlexForm['data'][$sheet]['lDEF'][$name])) {
 			if ($devlog === true) {
 				t3lib_div::devLog("Flexform Data [{$sheet}][{$name}] does not exist", $this->extKey, 1);
 			}
 			return null;
 		}
-		if (isset($piFlexForm['data'][$sheet]['lDEF'][$name]['vDEF'])) {
-			return $this->pi_getFFvalue($piFlexForm, $name, $sheet);
+		if (isset($this->piFlexForm['data'][$sheet]['lDEF'][$name]['vDEF'])) {
+			return $this->pi_getFFvalue($this->piFlexForm, $name, $sheet);
 		} else {
-			return $piFlexForm['data'][$sheet]['lDEF'][$name];
+			return $this->piFlexForm['data'][$sheet]['lDEF'][$name];
 		}
 	}
 }

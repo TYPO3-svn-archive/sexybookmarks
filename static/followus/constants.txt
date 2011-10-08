@@ -1,7 +1,7 @@
 plugin.tx_sexybookmarks_pi2 {
 
-	# cat=plugin.tx_sexybookmarks_pi2/enable/010; type=string; label=Bookmarks: Define used bookmarks and order of the bookmarks (possible values are: xing, facebook, twitter, youtube, googleplus)
-	bookmarks = xing,facebook,twitter,youtube,googleplus
+	# cat=plugin.tx_sexybookmarks_pi2/enable/010; type=string; label=Bookmarks: Define used bookmarks and order of the bookmarks (possible values are: diaspora, facebook, googleplus, twitter, xing, youtube)
+	bookmarks = xing,facebook,twitter,youtube,googleplus,diaspora
 
 	# cat=plugin.tx_sexybookmarks_pi2/enable/020; type=string; label=Xing profile: Define your Xing profile name
 	xing_profile = 
@@ -17,5 +17,8 @@ plugin.tx_sexybookmarks_pi2 {
 
 	# cat=plugin.tx_sexybookmarks_pi2/enable/060; type=string; label=Google+ profile: Define your Google+ profile id
 	googleplus_profile = 
+
+	# cat=plugin.tx_sexybookmarks_pi2/enable/070; type=string; label=Diaspora profile URL: Define your Diaspora profile URL (https://diasp.eu/u/[YOUR_PROFILE_NAME])
+	diaspora_profile_url = 
 }
 
