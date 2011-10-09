@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="de" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta charset="utf-8">
+	<link rel="shortcut icon" href="./favicon.ico" type="directory">
+	<link rel="icon" href="./favicon.ico" type="directory">
+	<title>Teilen auf Diaspora*</title>
+</head>
+<body>
+<script language="JavaScript">
+/**
+ * Diaspora* sharer supporting any pod. (version 1.1 - 14th Sep 2011)
+ * 
+ * Author: Jason Robinson <jaywink@joindiaspora.com || jaywink@basshero.org>
+ * Feel free to use this code as you see fit anywhere you like :)
+ * DE by E-Soft 2011 http://www.ehlertronic.de
+ */
+// function thanks to http://stackoverflow.com/questions/1403888/get-url-parameter-with-jquery/1404100#1404100
+function getURLParameter(name) {
+	return decodeURI(
+		(RegExp(name + '=' + '(.+?)(&|$)').exec(location.search)||[,null])[1]
+	);
+}
+// following 3 functions thanks to http://www.cookiecentral.com/
+function getCookieVal (offset) {
+	var endstr = document.cookie.indexOf (";", offset);
+	if (endstr == -1) {
+		endstr = document.cookie.length;
+	}
+	return unescape(document.cookie.substring(offset, endstr));
+}
+function GetCookie (name) {
+	var arg = name + "=";
+	var alen = arg.length;
+	var clen = document.cookie.length;
+	var i = 0;
+	while (i < clen) {
+		var j = i + alen;
+		if (document.cookie.substring(i, j) == arg) {
+			return getCookieVal (j);
+		}
+		i = document.cookie.indexOf(" ", i) + 1;
+		if (i == 0) {
+			break;
+		}
+	}
+	return null;
+}
+function SetCookie (name, value) {
+	var argv = SetCookie.arguments;
+	var argc = SetCookie.arguments.length;
+	var expires = (argc > 2) ? argv[2] : null;
+	var path = (argc > 3) ? argv[3] : null;
+	var domain = (argc > 4) ? argv[4] : null;
+	var secure = (argc > 5) ? argv[5] : false;
+	document.cookie = name + "=" + escape (value) +
+		((expires == null) ? "" : ("; expires=" +
+		expires.toGMTString())) +
+		((path == null) ? "" : ("; path=" + path)) +
+		((domain == null) ? "" : ("; domain=" + domain)) +
+		((secure == true) ? "; secure" : "");
+}
+function redirectToPod(podName, url, title, notes) {
+	window.location = "https://"+podName+"/bookmarklet?url="+url+"&title="+title+"&notes="+notes+"&v=1&noui=1&jump=doclose";
+}
+// main 
+var podName = GetCookie('podname');
+var url = '';
+var title = '';
+var notes = '';
+var shorten = 'yes';
+var ajaxDone = false;
+if (podName == null) {
+	podName = prompt('Bitte den Diaspora* Pod (Server) eingeben. (z.B. joindiaspora.com, pod.geraspora.de, despora.de). Cookies muessen aktiviert sein. Auf diesem Server werden keine Daten gespeichert.',"");
+	if (podName.length == 0) {
+		alert('Pod-Name ist leer oder falsch. Teilen auf Diaspora* ist nicht moeglich. Bitte die Seite aktualisieren und nochmal versuchen.'); 
+	} else {
+		pathname = location.pathname;
+		myDomain = pathname.substring(0,pathname.lastIndexOf('/')) +'/';
+		var largeExpDate = new Date ();
+		largeExpDate.setTime(largeExpDate.getTime() + (30 * 24 * 3600 * 1000));
+		SetCookie('podname',podName,largeExpDate,myDomain);
+	}
+}
+if (podName != null) {
+	url = getURLParameter('url');
+	if (url == 'null' || url.length == 0) {
+		alert('Pod-Name ist leer oder falsch. Teilen auf Diaspora* ist nicht moeglich.');
+	} else {
+		title = getURLParameter('title');
+		notes = getURLParameter('notes');
+		if (notes == 'null') {
+			notes = '';
+		}
+		if (ajaxDone == false) {
+			redirectToPod(podName, url, title, notes);
+		}
+	}
+}
+</script>
+</body>
+</html>
