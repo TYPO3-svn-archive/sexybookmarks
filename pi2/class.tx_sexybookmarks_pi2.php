@@ -24,10 +24,6 @@
 
 require_once(t3lib_extMgm::extPath('sexybookmarks').'pi1/class.tx_sexybookmarks_pi1.php');
 
-if (t3lib_extMgm::isLoaded('t3jquery')) {
-	require_once(t3lib_extMgm::extPath('t3jquery').'class.tx_t3jquery.php');
-}
-
 /**
  * Plugin 'Sexy-Bookmarks' for the 'sexybookmarks' extension.
  *
