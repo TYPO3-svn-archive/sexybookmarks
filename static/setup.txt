@@ -22,6 +22,7 @@ plugin.tx_sexybookmarks_pi1 {
 	transition = {$plugin.tx_sexybookmarks_pi1.transition}
 	transitionDir = {$plugin.tx_sexybookmarks_pi1.transitionDir}
 	transitionDuration = {$plugin.tx_sexybookmarks_pi1.transitionDuration}
+	language = {$plugin.tx_sexybookmarks_pi1.language}
 
 	stdWrap {
 		dataWrap = <div id="{register:key}" class="{register:classes}"><ul class="socials"> | </ul><div style="clear:both;"></div></div>
@@ -2562,7 +2563,40 @@ plugin.tx_sexybookmarks_pi1 {
 			40 = TEXT
 			40.value = </a></li>
 		}
-
+		googleplus = COA
+		googleplus {
+			10 = TEXT
+			10.value = <li class="sexy-googleplus">
+			20 = COA
+			20.htmlSpecialChars = 1
+			20.wrap = <a href="|" class="external" title="Google+">
+			20 {
+				10 = COA
+				10.wrap = |
+				10 {
+					10 = TEXT
+					10.value = https://plusone.google.com/_/+1/confirm
+					20 = TEXT
+					20.wrap = ?hl=|
+					20.value = {$plugin.tx_sexybookmarks_pi1.language}
+					30 = COA
+					30.wrap = &url=|
+					30 {
+						10 = TEXT
+						10.data = getIndpEnv:TYPO3_REQUEST_URL
+						10.rawUrlEncode = 1
+					}
+					40 = TEXT
+					40.wrap = &title=|
+					40.data = page:subtitle // page:title
+					40.rawUrlEncode = 1
+				}
+			}
+			30 = TEXT
+			30.value = Share this on Goole+
+			40 = TEXT
+			40.value = </a></li>
+		}
 	}
 }
 
