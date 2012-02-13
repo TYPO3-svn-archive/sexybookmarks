@@ -912,16 +912,16 @@ plugin.tx_sexybookmarks_pi1 {
 			20.wrap = <a href="|" class="external" title="Yandex.Bookmarks">
 			20 {
 				10 = TEXT
-				10.value = http://zakladki.yandex.ru/userarea/links/addfromfav.asp
+				10.value = http://zakladki.yandex.ru/newlink.xml
 				20 = COA
-				20.wrap = ?bAddLink_x=1&lurl=|
+				20.wrap = ?url=|
 				20 {
 					10 = TEXT
 					10.data = getIndpEnv:TYPO3_REQUEST_URL
 					10.rawUrlEncode = 1
 				}
 				30 = TEXT
-				30.wrap = &lname=|
+				30.wrap = &name=|
 				30.data = page:subtitle // page:title
 				30.rawUrlEncode = 1
 			}
@@ -2608,4 +2608,12 @@ plugin.tx_t3blog_pi2 {
 	}
 }
 plugin.tx_t3blog_pi1.tx_sexybookmarks_sexybookmarks < plugin.tx_t3blog_pi2.tx_sexybookmarks_sexybookmarks
+
+plugin.tx_t3blog_pi2 {
+	tx_sexybookmarks_followus {
+		includeLibs = EXT:sexybookmarks/widgets/followus/class.tx_sexybookmarks_followus.php
+		config < plugin.tx_sexybookmarks_pi2
+	}
+}
+plugin.tx_t3blog_pi1.tx_sexybookmarks_followus < plugin.tx_t3blog_pi2.tx_sexybookmarks_followus
 [global]

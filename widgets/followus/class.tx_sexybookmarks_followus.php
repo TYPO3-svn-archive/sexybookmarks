@@ -23,31 +23,36 @@
 ***************************************************************/
 
 /**
-  * This class is a hook to return widget information to t3blog.
+  * This is the widget class for t3blog. It embeds sexybookmarks followus to the page.
   *
   * @author Juergen Furrer <juergen.furrer@gmail.com>
   * @package TYPO3
-  * @subpackage tx_sexybookmarks_getwidgets
+  * @subpackage tx_sexybookmarks
   */
-class tx_sexybookmarks_getwidgets
+
+class tx_sexybookmarks_followus
 {
 	/**
-	 * Provides information about widgets in this extension
+	 * Produces the output.
 	 *
-	 * @param array $unusedParams
-	 * @return array
+	 * @param string $unused
+	 * @param array $conf
+	 * @param array $piVars
+	 * @param tslib_cObj $cObj
 	 */
-	public function getWidgets(array $unusedParams)
+	public function main($content, array $conf, $piVars, tslib_cObj $cObj)
 	{
-		return array(
-			'tx_sexybookmarks_followus'      => 'EXT:sexybookmarks/widgets/followus/',
-			'tx_sexybookmarks_sexybookmarks' => 'EXT:sexybookmarks/widgets/sexybookmarks/'
-		);
+		require_once(t3lib_extMgm::extPath('sexybookmarks') . 'pi2/class.tx_sexybookmarks_pi2.php');
+		$obj = t3lib_div::makeInstance('tx_sexybookmarks_pi2');
+		$obj->setCObj($cObj);
+		$html = $obj->main($content, $conf['config.']);
+
+		return $html;
 	}
 }
 
-if (defined('TYPO3_MODE') && $TYPO3_CONF_VARS[TYPO3_MODE]['XCLASS']['ext/sexybookmarks/widgets/class.tx_sexybookmarks_getwidgets.php'])	{
-	include_once($TYPO3_CONF_VARS[TYPO3_MODE]['XCLASS']['ext/sexybookmarks/widgets/class.tx_sexybookmarks_getwidgets.php']);
+if (defined('TYPO3_MODE') && $TYPO3_CONF_VARS[TYPO3_MODE]['XCLASS']['ext/sexybookmarks/widgets/followus/class.tx_sexybookmarks_followus.php'])	{
+	include_once($TYPO3_CONF_VARS[TYPO3_MODE]['XCLASS']['ext/sexybookmarks/widgets/followus/class.tx_sexybookmarks_followus.php']);
 }
 
 ?>
