@@ -253,7 +253,7 @@ plugin.tx_sexybookmarks_pi1 {
 			10.value = <li class="sexy-stumbleupon">
 			20 = COA
 			20.htmlSpecialChars = 1
-			20.wrap = <a href="|" class="external" title="StubleUpon">
+			20.wrap = <a href="|" class="external" title="StumbleUpon">
 			20 {
 				10 = TEXT
 				10.value = http://www.stumbleupon.com/submit
