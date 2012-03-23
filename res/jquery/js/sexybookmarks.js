@@ -18,14 +18,14 @@ jQuery(document).ready(function() {
 		}, {
 			duration: 400,
 			queue: false
-		})
+		});
 	}, function () {
 		jQuery(this).animate({
 			height: c + "px"
 		}, {
 			duration: 400,
 			queue: false
-		})
+		});
 	});
 
 	if (jQuery(".sexybookmarks-center") || jQuery(".sexybookmarks-spaced")) {
@@ -36,14 +36,14 @@ jQuery(document).ready(function() {
 		b = Math.min(f, e) * b;
 		if (jQuery(".sexybookmarks-spaced").length > 0) {
 			a = Math.floor((a - b) / (Math.min(f, e) + 1));
-			jQuery(".sexybookmarks ul.socials li").attr("style", 'margin-left:' + a + 'px !important')
+			jQuery(".sexybookmarks ul.socials li").attr("style", 'margin-left:' + a + 'px !important');
 		} else if (jQuery(true)) {
 			a = (a - b) / 2;
-			jQuery(".sexybookmarks-center").attr("style", 'margin-left:' + a + 'px !important')
+			jQuery(".sexybookmarks-center").attr("style", 'margin-left:' + a + 'px !important');
 		}
 	}
 
-	if( h > 0 &&  (jQuery(".sexybookmarks-expand").length == 0 || !(d>c))) {
+	if( h > 0 &&  (jQuery(".sexybookmarks-expand").length === 0 || !(d>c))) {
 		jQuery(".sexybookmarks").height(c+h);
 	}
 
@@ -56,13 +56,13 @@ jQuery(document).ready(function() {
 		var title = this.title;
 		if (window.sidebar) {
 			window.sidebar.addPanel(title, url,"");
-		} else if (window.external) { // IE Favorite
-			window.external.AddFavorite( url, title);
 		} else if (window.opera) { // Opera 7+
 			return false;
+		} else if (window.external && window.navigator.userAgent.indexOf("MSIE ") != -1) { // IE Favorite
+			window.external.AddFavorite(url, title);
 		} else {
-			 alert('Unfortunately, this browser does not support the requested action,'
-			 + ' please bookmark this page manually.');
+			alert('Unfortunately, this browser does not support the requested action, please bookmark this page manually.');
 		}
+		return false;
 	});
 });
