@@ -464,6 +464,7 @@ plugin.tx_sexybookmarks_pi1 {
 				30 {
 					10 = TEXT
 					10.data = getIndpEnv:TYPO3_REQUEST_URL
+					10.rawUrlEncode = 1
 				}
 			}
 			30 = TEXT
