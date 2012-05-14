@@ -2594,7 +2594,7 @@ plugin.tx_sexybookmarks_pi1 {
 				}
 			}
 			30 = TEXT
-			30.value = Share this on Goole+
+			30.value = Share this on Google+
 			40 = TEXT
 			40.value = </a></li>
 		}

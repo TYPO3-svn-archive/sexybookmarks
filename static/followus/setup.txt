@@ -95,7 +95,7 @@ plugin.tx_sexybookmarks_pi2 {
 				}
 			}
 			30 = TEXT
-			30.value = Follow me on youTube
+			30.value = Follow me on Twitter
 			40 = TEXT
 			40.value = </a></li>
 		}
@@ -117,7 +117,7 @@ plugin.tx_sexybookmarks_pi2 {
 				}
 			}
 			30 = TEXT
-			30.value = Follow me on youTube
+			30.value = Follow me on YouTube
 			40 = TEXT
 			40.value = </a></li>
 		}
