@@ -1,7 +1,7 @@
 plugin.tx_sexybookmarks_pi2 {
 
-	# cat=plugin.tx_sexybookmarks_pi2/enable/010; type=string; label=Bookmarks: Define used bookmarks and order of the bookmarks (possible values are: diaspora, facebook, googleplus, twitter, xing, youtube)
-	bookmarks = xing,facebook,twitter,youtube,googleplus,diaspora
+	# cat=plugin.tx_sexybookmarks_pi2/enable/010; type=string; label=Bookmarks: Define used bookmarks and order of the bookmarks (possible values are: comfeed, diaspora, facebook, googleplus, twitter, xing, youtube)
+	bookmarks = xing,facebook,twitter,youtube,googleplus,diaspora,comfeed
 
 	# cat=plugin.tx_sexybookmarks_pi2/enable/020; type=string; label=Xing profile: Define your Xing profile name
 	xing_profile = 

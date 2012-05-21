@@ -155,5 +155,32 @@ plugin.tx_sexybookmarks_pi2 {
 			40 = TEXT
 			40.value = </a></li>
 		}
+		comfeed = COA
+		comfeed {
+			10 = TEXT
+			10.value = <li class="sexy-comfeed">
+			20 = COA
+			20.htmlSpecialChars = 1
+			20.wrap = <a href="|" class="external" title="RSS">
+			20 {
+				10 = COA
+				10.wrap = |
+				10 {
+					10 = TEXT
+					10.data = getIndpEnv:TYPO3_SITE_URL
+					20 = TEXT
+					20.typolink {
+						parameter = {$plugin.tx_sexybookmarks_pi1.rssPID}
+						parameter.ifEmpty.override.data = page:uid
+						returnLast= url
+						additionalParams = &type={$plugin.tx_sexybookmarks_pi1.rssNumType}
+					}
+				}
+			}
+			30 = TEXT
+			30.value = Subscribe to RSS
+			40 = TEXT
+			40.value = </a></li>
+		}
 	}
 }
