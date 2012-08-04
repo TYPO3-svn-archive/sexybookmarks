@@ -2598,6 +2598,52 @@ plugin.tx_sexybookmarks_pi1 {
 			40 = TEXT
 			40.value = </a></li>
 		}
+		pinterest = COA
+		pinterest {
+			10 = TEXT
+			10.value = <li class="sexy-pin">
+			20 = COA
+			20.htmlSpecialChars = 1
+			20.wrap = <a href="|" class="external" title="Pinterest">
+			20 {
+				10 = TEXT
+				10.value = http://pinterest.com/pin/create/button/
+				20 = COA
+				20 {
+					wrap = ?url=|
+					10 = TEXT
+					10.data = getIndpEnv:TYPO3_REQUEST_URL
+					10.rawUrlEncode = 1
+				}
+				30 = COA
+				30 {
+					10 = TEXT
+					10.data = getIndpEnv:TYPO3_SITE_URL
+					10.rawUrlEncode = 1
+					20 = IMG_RESOURCE
+					20.file {
+						import.data = levelmedia:2,slide
+						import = uploads/media/
+						import.listNum = 0
+						width = 600m
+						height= 400m
+					}
+					20.rawUrlEncode = 1
+					wrap = &media=|
+				}
+				40 = TEXT
+				40 {
+					wrap = &description=|
+					data = page:subtitle // page:title
+					stdWrap >
+					rawUrlEncode = 0
+				}
+			}
+			30 = TEXT
+			30.value = Pin It!
+			40 = TEXT
+			40.value = </a></li>
+		}
 	}
 }
 
