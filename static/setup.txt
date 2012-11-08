@@ -2527,7 +2527,7 @@ plugin.tx_sexybookmarks_pi1 {
 				30.rawUrlEncode = 1
 				40 = TEXT
 				40.wrap = &provider=|
-				40.value = 
+				40.value =
 				40.rawUrlEncode = 1
 			}
 			30 = TEXT
@@ -2576,7 +2576,7 @@ plugin.tx_sexybookmarks_pi1 {
 				10.wrap = |
 				10 {
 					10 = TEXT
-					10.value = https://plusone.google.com/_/+1/confirm
+					10.value = https://plus.google.com/share
 					20 = TEXT
 					20.wrap = ?hl=|
 					20.value = {$plugin.tx_sexybookmarks_pi1.language}
