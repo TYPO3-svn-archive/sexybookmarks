@@ -215,9 +215,15 @@ class tx_sexybookmarks_pi1 extends tslib_pibase
 		$GLOBALS['TSFE']->register['classes'] = implode(" ", $classes);
 		$GLOBALS['TSFE']->register['key']     = $this->getContentKey();
 
-		$return_string = $this->cObj->stdWrap($bookmarkContent, $this->conf['stdWrap.']);
+		$version = class_exists('t3lib_utility_VersionNumber')
+			? t3lib_utility_VersionNumber::convertVersionNumberToInteger(TYPO3_version)
+			: t3lib_div::int_from_ver(TYPO3_version);
 
-		return $return_string;
+		if ($version >= 6000000) {
+			return $bookmarkContent;
+		} else {
+			return $this->cObj->stdWrap($bookmarkContent, $this->conf['stdWrap.']);
+		}
 	}
 
 	/**
