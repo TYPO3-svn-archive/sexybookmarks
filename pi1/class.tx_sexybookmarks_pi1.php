@@ -134,32 +134,33 @@ class tx_sexybookmarks_pi1 extends tslib_pibase
 
 		// define the jQuery mode and function
 		if ($this->conf['jQueryNoConflict']) {
-			$jQueryNoConflict = "jQuery.noConflict();";
+			$jQueryNoConflict = 'jQuery.noConflict();';
 		} else {
-			$jQueryNoConflict = "";
+			$jQueryNoConflict = '';
 		}
 
 		$animaion = array();
-		$animaion[] = "duration:".($this->conf['transitionDuration'] ? $this->conf['transitionDuration'] : 500)."";
-		$animaion[] = "queue:false";
+		$animaion[] = 'duration:'.($this->conf['transitionDuration'] ? $this->conf['transitionDuration'] : 500);
+		$animaion[] = 'queue:false';
 		if ($this->conf['transition'] && $this->conf['transitionDir']) {
 			$animaion[] = "easing:'ease{$this->conf['transitionDir']}{$this->conf['transition']}'";
 		}
 
 		// The template for JS
-		if (! $this->templateFileJS = $this->cObj->fileResource($this->conf['templateFileJS'])) {
-			$this->templateFileJS = $this->cObj->fileResource("EXT:sexybookmarks/res/tx_sexybookmarks.js");
+		if ($this->templateFileJS = $this->cObj->fileResource($this->conf['templateFileJS'])) {
+			// get the Template of the Javascript
+			if (! $templateCode = trim($this->cObj->getSubpart($this->templateFileJS, '###TEMPLATE_JS###'))) {
+				$templateCode = "alert('Template TEMPLATE_JS is missing')";
+			}
+			// set the key
+			$markerArray = array();
+			$markerArray['KEY'] = $this->getContentKey();
+			$markerArray['ANIMATION'] = implode(',', $animaion);
+			// set the markers
+			$templateCode = $this->cObj->substituteMarkerArray($templateCode, $markerArray, '###|###', 0);
+		} else {
+			$templateCode = '';
 		}
-		// get the Template of the Javascript
-		if (! $templateCode = trim($this->cObj->getSubpart($this->templateFileJS, "###TEMPLATE_JS###"))) {
-			$templateCode = "alert('Template TEMPLATE_JS is missing')";
-		}
-		// set the key
-		$markerArray = array();
-		$markerArray["KEY"] = $this->getContentKey();
-		$markerArray["ANIMATION"] = implode(",", $animaion);
-		// set the markers
-		$templateCode = $this->cObj->substituteMarkerArray($templateCode, $markerArray, '###|###', 0);
 
 		$this->pagerenderer->addJS($jQueryNoConflict . $templateCode);
 
@@ -181,15 +182,15 @@ class tx_sexybookmarks_pi1 extends tslib_pibase
 		$this->pagerenderer->addResources();
 
 		$classes = array();
-		$classes[] = "sexybookmarks";
+		$classes[] = 'sexybookmarks';
 		if ($this->conf['bookmarkCenter']) {
-			$classes[] = "sexybookmarks-center";
+			$classes[] = 'sexybookmarks-center';
 		}
 		if ($this->conf['bookmarkExpandable']) {
-			$classes[] = "sexybookmarks-expand";
+			$classes[] = 'sexybookmarks-expand';
 		}
 		if ($this->conf['bookmarkBackground']) {
-			$classes[] = "sexybookmarks-bg-".$this->conf['bookmarkBackground'];
+			$classes[] = 'sexybookmarks-bg-'.$this->conf['bookmarkBackground'];
 		}
 
 		$bookmarkContent = null;
@@ -211,8 +212,8 @@ class tx_sexybookmarks_pi1 extends tslib_pibase
 			}
 		}
 
-		$GLOBALS['TSFE']->register['classes'] = implode(" ", $classes);
-		$GLOBALS['TSFE']->register['key']     = $this->getContentKey();
+		$GLOBALS['TSFE']->register['classes'] = implode(' ', $classes);
+		$GLOBALS['TSFE']->register['key'] = $this->getContentKey();
 
 		$version = class_exists('t3lib_utility_VersionNumber')
 			? t3lib_utility_VersionNumber::convertVersionNumberToInteger(TYPO3_version)
@@ -250,7 +251,7 @@ class tx_sexybookmarks_pi1 extends tslib_pibase
 		$this->setFlexFormData();
 		if (! isset($this->piFlexForm['data'])) {
 			if ($devlog === true) {
-				t3lib_div::devLog("Flexform Data not set", $this->extKey, 1);
+				t3lib_div::devLog('Flexform Data not set', $this->extKey, 1);
 			}
 			return null;
 		}

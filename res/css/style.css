@@ -39,7 +39,7 @@ div.sexybookmarks ul.socials li:before,
 div.sexybookmarks ul.socials li:after,
 div.sexybookmarks ul.socials li a:before,
 div.sexybookmarks ul.socials li a:after { 
-	content:'' !important
+	content:'' !important;
 }
 div.sexybookmarks ul.socials a,
 div.sexybookmarks ul.socials a:hover {
@@ -52,6 +52,7 @@ div.sexybookmarks ul.socials a:hover {
 	border: 0 none !important;
 	margin: 0 !important;
 	padding: 0 !important;
+	outline: 0 none !important;
 }
 div.sexybookmarks div.shr-getshr {
 	line-height: 15px !important;

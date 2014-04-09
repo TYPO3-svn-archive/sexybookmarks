@@ -60,12 +60,12 @@ class tx_sexybookmarks_pi2 extends tx_sexybookmarks_pi1
 			// content
 			$this->lConf['bookmarks'] = $this->getFlexformData('general', 'bookmarks');
 			
-			$this->lConf['bookmarkCenter']     = $this->getFlexformData('settings', 'bookmarkCenter');
+			$this->lConf['bookmarkCenter'] = $this->getFlexformData('settings', 'bookmarkCenter');
 			$this->lConf['bookmarkExpandable'] = $this->getFlexformData('settings', 'bookmarkExpandable');
 			$this->lConf['bookmarkBackground'] = $this->getFlexformData('settings', 'bookmarkBackground');
 			
-			$this->lConf['transition']         = $this->getFlexformData('movement', 'transition');
-			$this->lConf['transitionDir']      = $this->getFlexformData('movement', 'transitionDir');
+			$this->lConf['transition'] = $this->getFlexformData('movement', 'transition');
+			$this->lConf['transitionDir'] = $this->getFlexformData('movement', 'transitionDir');
 			$this->lConf['transitionDuration'] = $this->getFlexformData('movement', 'transitionDuration');
 			
 			// define the key of the element
@@ -75,11 +75,11 @@ class tx_sexybookmarks_pi2 extends tx_sexybookmarks_pi1
 			if ($this->lConf['bookmarks']) {
 				$this->conf['bookmarks'] = $this->lConf['bookmarks'];
 			}
-			$this->conf['bookmarkCenter']     = $this->lConf['bookmarkCenter'];
+			$this->conf['bookmarkCenter'] = $this->lConf['bookmarkCenter'];
 			$this->conf['bookmarkExpandable'] = $this->lConf['bookmarkExpandable'];
 			$this->conf['bookmarkBackground'] = $this->lConf['bookmarkBackground'];
-			$this->conf['transition']         = $this->lConf['transition'];
-			$this->conf['transitionDir']      = $this->lConf['transitionDir'];
+			$this->conf['transition'] = $this->lConf['transition'];
+			$this->conf['transitionDir'] = $this->lConf['transitionDir'];
 			if (is_numeric($this->lConf['transitionDuration'])) {
 				$this->conf['transitionDuration'] = $this->lConf['transitionDuration'];
 			}
@@ -88,8 +88,6 @@ class tx_sexybookmarks_pi2 extends tx_sexybookmarks_pi1
 		return $this->pi_wrapInBaseClass($this->parseTemplate());
 	}
 }
-
-
 
 if (defined('TYPO3_MODE') && $TYPO3_CONF_VARS[TYPO3_MODE]['XCLASS']['ext/sexybookmarks/pi2/class.tx_sexybookmarks_pi2.php']) {
 	include_once($TYPO3_CONF_VARS[TYPO3_MODE]['XCLASS']['ext/sexybookmarks/pi2/class.tx_sexybookmarks_pi2.php']);
